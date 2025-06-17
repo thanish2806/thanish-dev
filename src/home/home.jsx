@@ -4,6 +4,7 @@ import Mainmenu from "./mainmenu";
 import Projects from "./projects";
 import Footer from "./footer";
 import "./home.css";
+import Navbar from "./navbar";
 
 function Home() {
   const [mouseX, setMouseX] = useState(0);
@@ -25,6 +26,7 @@ function Home() {
 
   return (
     <div className="home" onMouseMove={handleMouseMove}>
+      <Navbar />
       <Header />
 
       {/* Background logo with animation */}
@@ -43,9 +45,7 @@ function Home() {
         style={{
           transform: `translate(${mouseX / 100}px, ${mouseY / 100}px)`,
         }}
-      >
-        <h1>Welcome to My Portfolio</h1>
-      </div>
+      ></div>
 
       <Projects />
       <Footer />

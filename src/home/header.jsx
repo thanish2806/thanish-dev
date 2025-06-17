@@ -6,7 +6,7 @@ import useTheme from "./theme";
 import Mainmenu from "./mainmenu"; // Import Mainmenu
 
 function Header() {
-  const { isDarkTheme, toggleTheme } = useTheme();
+  const { isDarkTheme } = useTheme();
   const [isMenuVisible, setIsMenuVisible] = useState(false); // State to control menu visibility
 
   const toggleMenu = () => {
@@ -15,62 +15,7 @@ function Header() {
 
   return (
     <div className="header">
-      <div className="content" id="head">
-        {/* Logo */}
-        <a href="/">
-          <img className="logo" src="./images/my-logo-icon.png" alt="Logo" />
-        </a>
-        {/* Mobile Menu */}
-        <nav className="menu">
-          <li>
-            <a href="#">
-              <img src="/images/menu-24.png" alt="Menu Icon" />
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={toggleTheme}>
-              <img
-                id="theme-mobile"
-                src={
-                  isDarkTheme
-                    ? "./images/night-mode.png"
-                    : "./images/light-mode.png"
-                }
-                alt="Toggle Theme"
-              />
-            </a>
-          </li>
-        </nav>
-        {/* Desktop Navigation */}
-        <nav className="navigation">
-          <ul>
-            <li className="navigationpc">
-              <a href="#" onClick={toggleTheme}>
-                <img
-                  id="theme-pc"
-                  src={
-                    isDarkTheme
-                      ? "./images/night-mode.png"
-                      : "./images/light-mode.png"
-                  }
-                  alt="Toggle Theme"
-                />
-              </a>
-            </li>
-            <li className="navigationpc" id="contactpc">
-              <a onClick={toggleMenu} href="#">
-                Contact
-              </a>
-            </li>
-            <li className="navigationpc">
-              <a href="#">Experiments</a>
-            </li>
-            <li className="navigationpc">
-              <a href="#projects">Case Studies</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      
       {/* Social Icons */}
       <div className="icon">
         <a
