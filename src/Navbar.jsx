@@ -1,20 +1,18 @@
-import { useState } from "react";
-import useTheme from "./theme";
+// Navbar.jsx
+import { useTheme } from "./ThemeContext";
 import Mylogoicon from "./assets/images/my-logo-icon.png";
 import LightMode from "./assets/images/light-mode.png";
 import DarkMode from "./assets/images/night-mode.png";
-const Navbar = () => {
+
+const Navbar = ({ toggleMenu }) => {
   const { isDarkTheme, toggleTheme } = useTheme();
-  const [setIsMenuVisible] = useState(false);
-  const toggleMenu = () => {
-    setIsMenuVisible((prev) => !prev);
-  };
+
   return (
     <div className="content" id="head">
-      {/* Logo */}
       <a href="/">
         <img className="logo" src={Mylogoicon} alt="Logo" />
       </a>
+
       {/* Mobile Menu */}
       <nav className="menu">
         <li>
@@ -26,12 +24,13 @@ const Navbar = () => {
           <a href="#" onClick={toggleTheme}>
             <img
               id="theme-mobile"
-              src={isDarkTheme ? LightMode :  DarkMode }
+              src={isDarkTheme ? LightMode : DarkMode}
               alt="Toggle Theme"
             />
           </a>
         </li>
       </nav>
+
       {/* Desktop Navigation */}
       <nav className="navigation">
         <ul>
@@ -39,7 +38,7 @@ const Navbar = () => {
             <a href="#" onClick={toggleTheme}>
               <img
                 id="theme-pc"
-                src={isDarkTheme ?  DarkMode  :  LightMode }
+                src={isDarkTheme ? DarkMode : LightMode}
                 alt="Toggle Theme"
               />
             </a>

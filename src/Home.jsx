@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Header from "./header";
+import Header from "./HeroSection";
 import Mainmenu from "./mainmenu";
 import Projects from "./projects";
 import Footer from "./footer";
 import "./home.css";
-import Navbar from "./navbar";
+
+import Bglogo from "./assets/images/my-logo-icon.png";
+import HeroSection from "./HeroSection";
 
 function Home() {
   const [mouseX, setMouseX] = useState(0);
@@ -26,26 +28,26 @@ function Home() {
 
   return (
     <div className="home" onMouseMove={handleMouseMove}>
-      <Navbar />
-      <Header />
+      <HeroSection />
 
       {/* Background logo with animation */}
-      <img
-        src="./images/my-logo-icon.png"
-        className="background-logo"
-        alt="Logo"
-        style={{
-          transform: `translate(${mouseX / 80}px, ${mouseY / 80}px)`,
-        }}
-      />
-
-      {/* Dynamic text movement */}
-      <div
-        className="animated-text"
-        style={{
-          transform: `translate(${mouseX / 100}px, ${mouseY / 100}px)`,
-        }}
-      ></div>
+      <div className="ba">
+        <img
+          src={Bglogo}
+          className="background-logo"
+          alt="Logo"
+          style={{
+            transform: `translate(${mouseX / 80}px, ${mouseY / 80}px)`,
+          }}
+        />
+        {/* Dynamic text movement */}
+        <div
+          className="animated-text"
+          style={{
+            transform: `translate(${mouseX / 100}px, ${mouseY / 100}px)`,
+          }}
+        ></div>
+      </div>
 
       <Projects />
       <Footer />

@@ -1,5 +1,6 @@
 import React from "react";
 import "./projects.css";
+import cardgameimg from "./assets/images/cardgame.jpeg";
 function Projects() {
   return (
     <div className="projects" id="projects">
@@ -12,15 +13,11 @@ function Projects() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            className="project-image"
-            src="./images/cardgame.jpeg"
-            alt="cardgame"
-          />
+          <img className="project-image" src={cardgameimg} alt="cardgame" />
         </a>
         <div className="project-cover">
           <p className="p-name">Puzzle Game</p>
-          <p className="p-title">Interactive Front-end Developer</p>
+          <p className="p-title">A Mind tricky game</p>
           <button className="casestudy" type="button">
             Case Study
           </button>
@@ -40,7 +37,7 @@ function Projects() {
           />
         </a>
         <div className="project-cover">
-          <p className="p-name">Calculator</p>
+          <p className="p-name">Job Preparation Platform</p>
           <p className="p-title">Interactive Front-end Developer</p>
           <button className="casestudy" type="button">
             Case Study

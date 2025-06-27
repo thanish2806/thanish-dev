@@ -1,31 +1,6 @@
-@font-face {
-  font-family: "aquafont";
-  src: url("/fonts/aqua.ttf") format("truetype");
-}
 
-@font-face {
-  font-family: "Roliderounded";
-  src: url("/fonts/RolideRounded-Regular.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "louisgeorgecafe";
-  src: url("/fonts/Louis George Cafe.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "louisgeorgecafebold";
-  src: url("/fonts/Louis George Cafe Bold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "kionaregular";
-  src: url("/fonts/Kiona-Regular.ttf") format("truetype");
-}
-
-.header {
-  background-color: var(--primary-color); /* Match body background */
-  width: 100%;
+.herosection {
+  min-width: 100%;
   position: relative;
 }
 .logo {
@@ -260,9 +235,22 @@ span.about {
   flex-direction: column;
   align-items: left;
   position: relative;
-  top: 80px;
 }
-
+.background-logo {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  bottom: 320px;
+  height: 270px;
+  width: 270px;
+  margin: 0 auto;
+  z-index: 0;
+}
+.bg-logo-main{
+  position: relative;
+}
 .credit {
   position: relative;
   text-align: right;
