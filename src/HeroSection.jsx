@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./HeroSection.css";
 import { useTheme } from "./ThemeContext.jsx";
 import "./App.css";
@@ -10,18 +10,42 @@ import githublight from "./assets/images/github-light.png";
 import downarrowdark from "./assets/images/down-arrow-dark.png";
 import downarrowlight from "./assets/images/down-arrow-light.png";
 import Navbar from "./Navbar.jsx";
+import Bglogo from "./assets/images/my-logo-icon.png";
 function HeroSection() {
   const { isDarkTheme } = useTheme(); // get from context
   const [isMenuVisible, setIsMenuVisible] = useState(false);
 
+  const [mouseX, setMouseX] = useState(0);
+    const [mouseY, setMouseY] = useState(0);
+  
+    // Mouse move event handler
+    const handleMouseMove = (e) => {
+      setMouseX(e.clientX);
+      setMouseY(e.clientY);
+    };
+  
+    useEffect(() => {
+      // Add event listener
+      window.addEventListener("mousemove", handleMouseMove);
+      return () => {
+        window.removeEventListener("mousemove", handleMouseMove);
+      };
+    }, []);
   const toggleMenu = () => {
     setIsMenuVisible((prev) => !prev);
   };
 
   return (
-    <div className="herosection">
+    <div className="herosection" onMouseMove={handleMouseMove}>
       <Navbar toggleMenu={toggleMenu} />
-
+      <img
+          src={Bglogo}
+          className="background-logo"
+          alt="Logo"
+          style={{
+            transform: `translate(${mouseX / 80}px, ${mouseY / 80}px)`,
+          }}
+        />
       <div className="icon">
         <a
           href="https://www.linkedin.com/in/thanish-p-421204200"
@@ -46,7 +70,6 @@ function HeroSection() {
           />
         </a>
       </div>
-
       <div id="info">
         <div className="user-info">
           <p className="myname">THANISH</p>
@@ -67,7 +90,7 @@ function HeroSection() {
           </a>
         </div>
       </div>
-
+      
       {isMenuVisible && (
         <Mainmenu isVisible={isMenuVisible} onClose={toggleMenu} />
       )}

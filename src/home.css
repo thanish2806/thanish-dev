@@ -13,7 +13,7 @@ body {
 }
 /* home.css */
 .home {
-  max-width: 1450px;           /* Set maximum width for content */
+  min-width: 100%;           /* Set maximum width for content */
   margin: 0 auto;              /* Horizontally center the container */             /* Optional padding */
   position: relative;          /* So children like .background-logo can be absolutely positioned if needed */
   display: flex;

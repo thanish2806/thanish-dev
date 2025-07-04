@@ -1,6 +1,8 @@
 
 .herosection {
-  min-width: 100%;
+  min-width: 1400px;
+  max-width: 100%;
+  max-height: 100vh;
   position: relative;
 }
 .logo {
@@ -235,14 +237,18 @@ span.about {
   flex-direction: column;
   align-items: left;
   position: relative;
+  gap: 30px;
+  bottom: 250px;
+}
+.info-bglogo{
+  display: flex;
+  flex-direction: row;
 }
 .background-logo {
   display: block;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
   align-items: center;
-  bottom: 320px;
+  bottom: 0px;
   height: 270px;
   width: 270px;
   margin: 0 auto;
