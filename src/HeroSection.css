@@ -1,4 +1,3 @@
-
 .herosection {
   min-width: 1400px;
   max-width: 100%;
@@ -81,7 +80,7 @@
   text-align: center;
   text-decoration: none;
   color: var(--secondary-color);
-  font-size: 22px;
+  font-size: 20px;
   font-family: Roliderounded;
   font-style: normal;
   margin-right: 20px;
@@ -238,7 +237,7 @@ span.about {
   align-items: left;
   position: relative;
   gap: 30px;
-  bottom: 250px;
+  bottom: 350px;
 }
 .info-bglogo{
   display: flex;
@@ -249,8 +248,8 @@ span.about {
   position: relative;
   align-items: center;
   bottom: 0px;
-  height: 270px;
-  width: 270px;
+  height: 356px;
+  width: 356px;
   margin: 0 auto;
   z-index: 0;
 }

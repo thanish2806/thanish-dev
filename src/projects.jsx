@@ -20,14 +20,15 @@ function Projects() {
             rel="noopener noreferrer"
           >
             <img className="project-image1" src={cardgameimg} alt="cardgame" />
+
+            <div className="project-cover1">
+              <p className="p-name1">Puzzle Game</p>
+              <p className="p-title1">A Mind tricky game</p>
+              <button className="casestudy1" type="button">
+                Case Study
+              </button>
+            </div>
           </a>
-          <div className="project-cover1">
-            <p className="p-name1">Puzzle Game</p>
-            <p className="p-title1">A Mind tricky game</p>
-            <button className="casestudy1" type="button">
-              Case Study
-            </button>
-          </div>
         </div>
       </div>
 
@@ -38,7 +39,7 @@ function Projects() {
         <div className="image-cover2">
           <div className="projectcover"></div>
           <a
-            href="https://thanish2806.github.io/Calculator/"
+            href="https://jobfinder-frontend.onrender.com"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -47,14 +48,15 @@ function Projects() {
               src={jobfinder}
               alt="calculator-project"
             />
+
+            <div className="project-cover2">
+              <p className="p-name2">Job Preparation Platform</p>
+              <p className="p-title2">Interactive Front-end Developer</p>
+              <button className="casestudy2" type="button">
+                Case Study
+              </button>
+            </div>
           </a>
-          <div className="project-cover2">
-            <p className="p-name2">Job Preparation Platform</p>
-            <p className="p-title2">Interactive Front-end Developer</p>
-            <button className="casestudy2" type="button">
-              Case Study
-            </button>
-          </div>
         </div>
       </div>
     </div>

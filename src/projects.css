@@ -2,6 +2,10 @@
   background-color: #eaeaea;
   min-width: 100%;
   position: relative;
+  padding-top: 50px;
+}
+.projects a {
+  z-index: 2;
 }
 .heading-1 {
   font-size: 17px;
@@ -22,13 +26,13 @@
 .project1 {
   position: relative; /* Allows absolute positioning inside */
   width: 950px; /* Keep all images the same width */
-  margin: 40px auto; /* Keep images aligned */
+  margin: 100px auto; /* Keep images aligned */
   left: 30px;
   background: #000000;
-  
-  box-shadow: 3px 3px 20px #0d0d0d;
+
+  box-shadow: 3px 3px 50px #0d0d0dca;
 }
-.image-cover1{
+.image-cover1 {
   position: relative;
   overflow: hidden;
 }
@@ -43,6 +47,7 @@
   transition: transform 0.5s;
   background: transparent;
   z-index: 1;
+  pointer-events: auto;
 }
 .project-cover1:hover {
   cursor: pointer;
@@ -54,14 +59,21 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg,rgba(13, 74, 102, 1) 0%, rgba(6, 18, 71, 1) 0%, rgba(10, 47, 92, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(13, 74, 102, 1) 0%,
+    rgba(6, 18, 71, 1) 0%,
+    rgba(10, 47, 92, 1) 100%
+  );
   opacity: 75%;
   transition: left 0.5s ease-in-out;
   z-index: 1;
+  pointer-events: auto;
 }
 
 /* When hovering on the parent, slide in projectcover */
-.project1:hover .projectcover,.project2:hover .projectcover {
+.project1:hover .projectcover,
+.project2:hover .projectcover {
   left: 0; /* Slide in to cover the project area */
 }
 .projectno1 {
@@ -93,7 +105,6 @@
   color: #f7f7f7;
   background: linear-gradient(to right, #0016f9, #d10d04);
   border: none;
-  transition: box-shadow 0.3s;
   font-family: Roliderounded;
   font-size: 17px;
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out,
@@ -118,7 +129,7 @@
 .project1 img {
   height: 510px;
   width: 950px;
-  
+
   margin: 0px auto; /* Centers the image */
   position: relative;
   display: block;
@@ -137,9 +148,10 @@
 .project2 {
   position: relative; /* Allows absolute positioning inside */
   width: 950px; /* Keep all images the same width */
-  margin: 40px auto; /* Keep images aligned */
+  margin: 100px auto; /* Keep images aligned */
   right: 30px;
   background: #000000;
+  box-shadow: 3px 3px 50px #0d0d0dca;
 }
 .project-cover2 {
   color: var(--secondary-color);
@@ -152,18 +164,19 @@
   text-align: right;
   transition: transform 0.5s;
   background: transparent;
+  pointer-events: auto;
 }
 .project-cover2:hover {
   cursor: pointer;
   transform: scale(1.06);
 }
-.image-cover2{
+.image-cover2 {
   position: relative;
   overflow: hidden;
 }
 .projectno2 {
   position: absolute;
-  top:20px;
+  top: 20px;
   left: 20px;
   z-index: 2;
   opacity: 0%;
