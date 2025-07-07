@@ -51,7 +51,7 @@ function Projects() {
 
             <div className="project-cover2">
               <p className="p-name2">Job Preparation Platform</p>
-              <p className="p-title2">Interactive Front-end Developer</p>
+              <p className="p-title2">A Platfrom Upskilling</p>
               <button className="casestudy2" type="button">
                 Case Study
               </button>
