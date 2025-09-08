@@ -15,15 +15,19 @@ function Projects() {
         <div className="image-cover1">
           <div className="projectcover"></div>
           <a
-            href="https://thanish2806.github.io/cardgame/"
+            href="https://jobfinder-frontend.onrender.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className="project-image1" src={cardgameimg} alt="cardgame" />
+            <img
+              className="project-image1"
+              src={jobfinder}
+              alt="calculator-project"
+            />
 
             <div className="project-cover1">
-              <p className="p-name1">Puzzle Game</p>
-              <p className="p-title1">A Mind tricky game</p>
+              <p className="p-name1">Job Preparation Platform</p>
+              <p className="p-title1">A Platfrom for upskilling</p>
               <button className="casestudy1" type="button">
                 Case Study
               </button>
@@ -32,6 +36,7 @@ function Projects() {
         </div>
       </div>
 
+
       <div className="project2">
         <div className="projectno2">
           <h1>02</h1>
@@ -39,19 +44,15 @@ function Projects() {
         <div className="image-cover2">
           <div className="projectcover"></div>
           <a
-            href="https://jobfinder-frontend.onrender.com"
+            href="https://thanish2806.github.io/cardgame/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              className="project-image2"
-              src={jobfinder}
-              alt="calculator-project"
-            />
+            <img className="project-image2" src={cardgameimg} alt="cardgame" />
 
             <div className="project-cover2">
-              <p className="p-name2">Job Preparation Platform</p>
-              <p className="p-title2">A Platfrom for upskilling</p>
+              <p className="p-name2">Puzzle Game</p>
+              <p className="p-title2">A Mind tricky game</p>
               <button className="casestudy2" type="button">
                 Case Study
               </button>
@@ -59,6 +60,8 @@ function Projects() {
           </a>
         </div>
       </div>
+
+      
     </div>
   );
 }

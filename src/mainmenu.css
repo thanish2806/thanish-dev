@@ -1,11 +1,12 @@
 .menupage {
   display: flex; /* Show when active */
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
   z-index: 999;
@@ -20,11 +21,7 @@
 .aboutmenu {
   height: 600px;
   width: 500px;
-  position: fixed;
-  margin-left: auto;
-  margin-right: auto;
-  left: 300px;
-  bottom: 60px;
+  position: relative;
   z-index: 999;
   background-color: var(--secondary-color);
   box-shadow: 0px 0px 30px #1b1b23;
@@ -45,6 +42,18 @@
   margin-right: 20px;
   opacity: 100%;
   transition: transform 0.3s ease-in-out;
+}
+.aboutmetext-bg {
+  position: absolute;
+  top: -180px;
+  left: 0px;
+  z-index: -1;
+  color: rgba(48, 48, 48, 0.104); /* Light color for background text */
+  font-size: 180px;
+  font-family: aquafont;
+  font-weight: 400;
+  font-style: normal;
+  user-select: none; /* Prevent text selection */
 }
 .aboutmerole {
   padding-left: 70px;
@@ -83,21 +92,22 @@
 .contactmenu {
   height: 600px;
   width: 500px;
-  position: fixed;
-  left: 800px;
-  bottom: 60px;
+  position: relative;
   z-index: 999;
   background-color: var(--primary-color);
   box-shadow: 0px 0px 30px #1b1b23;
   flex-direction: column;
   list-style-type: none;
+  overflow: hidden;
 }
+/* Contact Form Container */
 #contactForm {
-  text-align: left;
-  padding-left: 40px;
-  padding-top: 20px;
-  padding-right: 40px;
-  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 420px;
+  margin: 0 auto;
+  
 }
 .contactmenutitle {
   padding-top: 0px;
@@ -114,6 +124,18 @@
   opacity: 100%;
   transition: transform 0.3s ease-in-out;
 }
+.contactmenutitle-bg {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  z-index: -1;
+  color: rgba(223, 223, 227, 0.1); /* Light color for background text */
+  font-size: 180px;
+  font-family: aquafont;
+  font-weight: 400;
+  font-style: normal;
+  user-select: none; /* Prevent text selection */
+}
 .contactmenusubtitle {
   padding-left: 40px;
   display: block;
@@ -127,37 +149,78 @@
   opacity: 100%;
   transition: transform 0.3s ease-in-out;
 }
-label {
-  font-family: louisgoergecafebold;
-  font-size: 18px;
-  color: var(--primary-color);
+
+/* Form groups */
+.form-group {
+  position: relative;
 }
-#contactForm input {
-  width: 300px;
-  height: 20px;
-  background-color: transparent;
-  border-top: transparent;
-  border-right: transparent;
-  border-left: transparent;
-  border-width: 2px;
-  color: var(--primary-color);
-}
+
+/* Inputs + Textarea */
+#contactForm input,
 #contactForm textarea {
-  width: 300px;
-  height: 100px;
-  border-top: transparent;
-  border-right: transparent;
-  border-left: transparent;
-  border-width: 2px;
-  color: var(--primary-color);
+  width: 100%;
   background-color: transparent;
-  border-color: var(--primary-color);
+  border: none;
+  border-bottom: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+  font-family: louisgeorgecafe, sans-serif;
+  font-size: 16px;
+  outline: none;
+  padding: 8px 4px;
+  transition: border-color 0.3s ease;
+}
+
+/* Placeholder style */
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+  color: rgba(234, 234, 234, 0.5);
+}
+
+/* Floating Labels */
+.form-group label {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  font-family: louisgeorgecafe, sans-serif;
+  color: var(--secondary-color);
+  font-size: 16px;
+  letter-spacing: 1px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+/* Floating effect */
+#contactForm input:focus + label,
+#contactForm input:not(:placeholder-shown) + label,
+#contactForm textarea:focus + label,
+#contactForm textarea:not(:placeholder-shown) + label {
+  top: -12px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* Textarea tweaks */
+#contactForm textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+/* Validation feedback */
+#contactForm input:invalid,
+#contactForm textarea:invalid {
+  border-color: #d10d04; /* red */
+}
+
+#contactForm input:valid,
+#contactForm textarea:valid {
+  border-color: #0016f9; /* blue */
 }
 .Submit {
   content: "";
   padding: 15px;
   height: 36px;
-  width: 100px;
+  width: auto;
   border-radius: 0px;
   display: flex;
   justify-content: center;
@@ -168,6 +231,7 @@ label {
   transition: box-shadow 0.3s;
   font-family: Roliderounded;
   font-size: 17px;
+  letter-spacing: 2px;
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out,
     background -color 0.3s ease-in-out;
 }
@@ -184,4 +248,255 @@ label {
   transition: transform 0.3s ease-in-out;
   transform: scale(1.05);
   opacity: 80%;
+}
+
+@media (max-width: 480px) {
+  .menupage {
+    display: flex;
+    flex-direction: column-reverse; /* Keeps your reverse order */
+    align-items: center;
+    justify-content: flex-start; /* Let content stack from top */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height of viewport */
+    overflow-y: auto; /* Enables scrolling */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    z-index: 999;
+    transition: opacity 0.3s ease-in-out;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+  }
+
+  .aboutmenu {
+    height: auto;
+    width: auto;
+    position: relative;
+    left: 0px;
+    z-index: 999;
+    background-color: var(--secondary-color);
+    box-shadow: 0px 0px 30px #1b1b23;
+    flex-direction: column;
+    list-style-type: none;
+  }
+  .aboutmetext {
+    padding-top: 10px;
+    padding-left: 20px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 30px;
+    font-family: aquafont;
+    font-weight: 400;
+    font-style: normal;
+    margin-right: 20px;
+    opacity: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+  .aboutmetext-bg {
+    position: absolute;
+    top: -180px;
+    left: 0px;
+    z-index: -1;
+    color: rgba(48, 48, 48, 0.104); /* Light color for background text */
+    font-size: 180px;
+    font-family: aquafont;
+    font-weight: 400;
+    font-style: normal;
+    user-select: none; /* Prevent text selection */
+  }
+  .aboutmerole {
+    padding-left: 20px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    margin-right: 20px;
+    opacity: 100%;
+    transition: transform 0.3s ease-in-out;
+    font-family: aquafont;
+  }
+  .aboutcontent {
+    padding: 20px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 15px;
+    font-family: comfortaa-regular;
+    font-weight: 400;
+    font-style: normal;
+    margin-right: 13px;
+    opacity: 100%;
+    transition: transform 0.3s ease-in-out;
+    line-height: 1.6;
+  }
+  .highlightwords {
+    color: var(--highlight-text);
+  }
+  .closeicon {
+    width: 26px;
+    position: relative;
+    top: 10px;
+    left: 330px;
+  }
+
+  .closeicon:hover {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.05);
+    opacity: 80%;
+  }
+  .contactmenu {
+    min-height:80vh;
+    width: auto;
+    position: relative;
+    z-index: 999;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    box-shadow: 0px 0px 30px #1b1b23;
+    flex-direction: column;
+    list-style-type: none;
+  }
+  #contactForm {
+    text-align: left;
+  }
+  .contactmenutitle {
+    padding-top: 0px;
+    padding-left: 40px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 30px;
+    font-family: aquafont;
+    font-weight: 400;
+    font-style: normal;
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .contactmenutitle-bg {
+    position: absolute;
+    top: -180px;
+    left: 0px;
+    z-index: -1;
+    color: rgba(223, 223, 227, 0.1); /* Light color for background text */
+    font-size: 180px;
+    font-family: aquafont;
+    font-weight: 400;
+    font-style: normal;
+    user-select: none; /* Prevent text selection */
+  }
+  .contactmenusubtitle {
+    padding-left: 40px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-family: aquafont;
+    font-style: normal;
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  /* Contact Form Container */
+  #contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  /* Form groups */
+  .form-group {
+    position: relative;
+  }
+
+  /* Inputs + Textarea */
+  #contactForm input,
+  #contactForm textarea {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    font-family: louisgeorgecafe, sans-serif;
+    font-size: 16px;
+    outline: none;
+    padding: 8px 4px;
+    transition: border-color 0.3s ease;
+  }
+
+  /* Placeholder style */
+  #contactForm input::placeholder,
+  #contactForm textarea::placeholder {
+    color: rgba(234, 234, 234, 0.5);
+  }
+
+  /* Floating Labels */
+  .form-group label {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    font-family: louisgeorgecafe, sans-serif;
+    color: var(--secondary-color);
+    font-size: 16px;
+    letter-spacing: 1px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    opacity: 1;
+  }
+
+  /* Floating effect */
+  #contactForm input:focus + label,
+  #contactForm input:not(:placeholder-shown) + label,
+  #contactForm textarea:focus + label,
+  #contactForm textarea:not(:placeholder-shown) + label {
+    top: -12px;
+    font-size: 14px;
+    opacity: 0.7;
+  }
+
+  /* Textarea tweaks */
+  #contactForm textarea {
+    min-height: 200px;
+    resize: vertical;
+  }
+
+  /* Validation feedback */
+  #contactForm input:invalid,
+  #contactForm textarea:invalid {
+    border-color: #d10d04; /* red */
+  }
+
+  #contactForm input:valid,
+  #contactForm textarea:valid {
+    border-color: #0016f9; /* blue */
+  }
+
+  .Submit {
+    content: "";
+    padding: 15px;
+    height: 36px;
+    width: auto;
+    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f7f7f7;
+    background: linear-gradient(to right, #0016f9, #d10d04);
+    border: none;
+    transition: box-shadow 0.3s;
+    font-family: Roliderounded;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out,
+      background -color 0.3s ease-in-out;
+  }
 }

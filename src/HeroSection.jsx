@@ -11,41 +11,100 @@ import downarrowdark from "./assets/images/down-arrow-dark.png";
 import downarrowlight from "./assets/images/down-arrow-light.png";
 import Navbar from "./Navbar.jsx";
 import Bglogo from "./assets/images/my-logo-icon.png";
-function HeroSection() {
-  const { isDarkTheme } = useTheme(); // get from context
-  const [isMenuVisible, setIsMenuVisible] = useState(false);
+import Mylogoicon from "./assets/images/my-logo-icon.png";
 
+// {/* ✅ Hamburger for mobile */}
+function HeroSection() {
+  const { isDarkTheme } = useTheme();
+  const [isMenuVisible, setIsMenuVisible] = useState(false); // Mainmenu
+  const [isMobileOpen, setIsMobileOpen] = useState(false); // Mobile nav
   const [mouseX, setMouseX] = useState(0);
-    const [mouseY, setMouseY] = useState(0);
-  
-    // Mouse move event handler
-    const handleMouseMove = (e) => {
-      setMouseX(e.clientX);
-      setMouseY(e.clientY);
+  const [mouseY, setMouseY] = useState(0);
+
+  const handleMouseMove = (e) => {
+    setMouseX(e.clientX);
+    setMouseY(e.clientY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
     };
-  
-    useEffect(() => {
-      // Add event listener
-      window.addEventListener("mousemove", handleMouseMove);
-      return () => {
-        window.removeEventListener("mousemove", handleMouseMove);
-      };
-    }, []);
-  const toggleMenu = () => {
-    setIsMenuVisible((prev) => !prev);
+  }, []);
+
+  const toggleMenu = () => setIsMenuVisible((prev) => !prev); // Mainmenu
+  const toggleMobileNav = () => setIsMobileOpen((prev) => !prev); // Mobile nav
+
+  const handleScrollToProjects = () => {
+    const element = document.getElementById("projects");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleImageClick = () => {
+    window.location.reload();
   };
 
   return (
     <div className="herosection" onMouseMove={handleMouseMove}>
-      <Navbar toggleMenu={toggleMenu} />
+      <Navbar
+        toggleMenu={toggleMenu}
+        isMobileOpen={isMobileOpen}
+        closeMobileNav={() => setIsMobileOpen(false)}
+      />
+
+      {/*  Hamburger for mobile */}
+      <button className="hamburger-btn" onClick={toggleMobileNav}>
+        <span className="line line-1"></span>
+        <span className="line line-2"></span>
+        <span className="line line-3"></span>
+      </button>
+      {/* Background logo */}
       <img
-          src={Bglogo}
-          className="background-logo"
+        src={Bglogo}
+        className="background-logo"
+        alt="Logo"
+        style={{
+          transform: `translate(${mouseX / 80}px, ${mouseY / 80}px)`,
+        }}
+      />
+
+      {/* Top logo + navbar */}
+      <div className="top-logo">
+        <img
+          onClick={handleImageClick}
+          className="logo"
+          src={Mylogoicon}
           alt="Logo"
-          style={{
-            transform: `translate(${mouseX / 80}px, ${mouseY / 80}px)`,
-          }}
         />
+      </div>
+
+      {/* Info left */}
+      <div className="info">
+        <p className="myname">THANISH</p>
+        <p className="myrole">Interactive Front-end Developer</p>
+        <button onClick={toggleMenu} className="aboutme" type="button">
+          About Me!
+        </button>
+      </div>
+
+      {/* Works bottom center */}
+      <div className="works">
+        <button onClick={handleScrollToProjects} className="works-button">
+          Works
+        </button>
+        <button onClick={handleScrollToProjects} className="arrow-button">
+          <img
+            className="arrow"
+            src={isDarkTheme ? downarrowdark : downarrowlight}
+            alt="Arrow"
+          />
+        </button>
+      </div>
+
+      {/* Social icons right */}
       <div className="icon">
         <a
           href="https://www.linkedin.com/in/thanish-p-421204200"
@@ -70,27 +129,8 @@ function HeroSection() {
           />
         </a>
       </div>
-      <div id="info">
-        <div className="user-info">
-          <p className="myname">THANISH</p>
-          <p className="myrole">Interactive Front-end Developer</p>
-          <button onClick={toggleMenu} className="aboutme" type="button">
-            About Me!
-          </button>
-        </div>
-        
-        <div className="works">
-          <a href="#projects">works</a>
-          <a href="#projects">
-            <img
-              className="arrow"
-              src={isDarkTheme ? downarrowdark : downarrowlight}
-              alt="Arrow"
-            />
-          </a>
-        </div>
-      </div>
-      
+
+      {/* Main Menu */}
       {isMenuVisible && (
         <Mainmenu isVisible={isMenuVisible} onClose={toggleMenu} />
       )}

@@ -26,12 +26,16 @@
   --primary-color: #0d0d0d;
   --secondary-color: #eaeaea;
   --highlight-text: #ff4500;
+  
 }
 .dark-theme {
   --primary-color: #eaeaea;
   --secondary-color: #0d0d0d;
 }
-body {
+html {
+  scroll-behavior: smooth;
+}
+body{
   background-color: var(--primary-color);
   background-size: cover;
   background-repeat: no-repeat;
@@ -42,4 +46,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   transition: background-color 0.5s ease, color 0.5s ease;
+}
+a{
+  margin: 0;
 }

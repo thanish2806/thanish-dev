@@ -1,39 +1,31 @@
 // Navbar.jsx
+
 import { useTheme } from "./ThemeContext";
-import Mylogoicon from "./assets/images/my-logo-icon.png";
 import LightMode from "./assets/images/light-mode.png";
 import DarkMode from "./assets/images/night-mode.png";
+import closeicondark from "./assets/images/close-icon-dark.png";
+import closeiconlight from "./assets/images/close-icon-light.png";
+import "./Navbar.css";
 
-const Navbar = ({ toggleMenu }) => {
+const Navbar = ({ toggleMenu, isMobileOpen, closeMobileNav }) => {
   const { isDarkTheme, toggleTheme } = useTheme();
 
   return (
-    <div className="content" id="head">
-      <a href="/">
-        <img className="logo" src={Mylogoicon} alt="Logo" />
-      </a>
-
-      {/* Mobile Menu */}
-      <nav className="menu">
-        <li>
-          <a href="#">
-            <img src="/images/menu-24.png" alt="Menu Icon" />
-          </a>
-        </li>
-        <li>
-          <a href="#" onClick={toggleTheme}>
-            <img
-              id="theme-mobile"
-              src={isDarkTheme ? LightMode : DarkMode}
-              alt="Toggle Theme"
-            />
-          </a>
-        </li>
-      </nav>
-
+    <div className="content">
       {/* Desktop Navigation */}
-      <nav className="navigation">
+      <div className="navigation">
         <ul>
+          <li className="navigationpc">
+            <a href="#projects">Case Studies</a>
+          </li>
+          {/* <li className="navigationpc">
+            <a href="#">Experiments</a>
+          </li> */}
+          <li className="navigationpc" id="contactpc">
+            <a onClick={toggleMenu} href="#">
+              Contact
+            </a>
+          </li>
           <li className="navigationpc">
             <a href="#" onClick={toggleTheme}>
               <img
@@ -43,19 +35,46 @@ const Navbar = ({ toggleMenu }) => {
               />
             </a>
           </li>
-          <li className="navigationpc" id="contactpc">
-            <a onClick={toggleMenu} href="#">
-              Contact
-            </a>
-          </li>
-          <li className="navigationpc">
-            <a href="#">Experiments</a>
-          </li>
-          <li className="navigationpc">
-            <a href="#projects">Case Studies</a>
-          </li>
         </ul>
-      </nav>
+      </div>
+
+      {/* ✅ Mobile Navigation (controlled by HeroSection) */}
+      {isMobileOpen && (
+        <div className="navigation-mobile">
+          <img
+            className="closeicon-mob-menu"
+            onClick={closeMobileNav}
+            src={isDarkTheme ? closeicondark : closeiconlight}
+            alt="Close"
+          />
+          <ul>
+            <li className="options-mobile">
+              <a onClick={closeMobileNav}> Home</a>
+            </li>
+            <li className="options-mobile">
+              <a href="#projects" onClick={closeMobileNav}>
+                Case Studies
+              </a>
+            </li>
+            {/* <li className="options-mobile">
+              <a href="#" onClick={closeMobileNav}>
+                Experiments
+              </a>
+            </li> */}
+            <li className="options-mobile" id="contactpc">
+              <a
+                onClick={() => {
+                  closeMobileNav(); // close mobile nav
+                  toggleMenu(); // then open Mainmenu
+                }}
+                href="#"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 };

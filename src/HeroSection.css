@@ -1,179 +1,62 @@
 .herosection {
-  min-width: 1400px;
-  max-width: 100%;
-  max-height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   position: relative;
 }
-.logo {
-  height: 75px;
-  width: 75px;
-  position: relative;
-  margin-top: 50px;
-  margin-left: 135px;
-}
-.menu li {
-  float: right;
-  list-style-type: none;
-}
-.menu ul {
-  overflow: hidden;
-  padding: 0px;
-  margin: 0px;
-  list-style-type: none;
-  background-color: none;
-}
-.menu a {
-  padding: 7px;
-  opacity: 100%;
-  transition: transform 0.3s ease-in-out;
-}
-.menu {
-  position: relative;
-  bottom: 50px;
-  right: 10px;
-  display: flex;
-  flex-direction: column;
-}
-.menu li {
-  float: right;
-  list-style-type: none;
-}
-.menu ul {
-  overflow: hidden;
-  padding: 0px;
-  margin: 0px;
-  list-style-type: none;
-  background-color: none;
-}
-.menu a {
-  padding: 7px;
-  opacity: 100%;
-  transition: transform 0.3s ease-in-out;
-}
-.menu {
-  position: relative;
-  bottom: 50px;
-  right: 10px;
-  display: flex;
-  flex-direction: column;
-}
-.navigation {
-  text-align: left;
-  vertical-align: top;
-  position: relative;
-  right: 100px;
-  bottom: 100px;
-}
-.menu {
-  display: none;
-}
-.navigation ul {
-  overflow: hidden;
-  padding: 0px;
-  margin: 0px;
-  list-style-type: none;
-  background-color: none;
-}
-.navigation a {
-  padding: 15px;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: var(--secondary-color);
-  font-size: 20px;
-  font-family: Roliderounded;
-  font-style: normal;
-  margin-right: 20px;
-  opacity: 100%;
-  transition: transform 0.3s ease-in-out;
-}
-.navigationmobile a {
-  padding: 15px;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: var(--secondary-color);
-  font-size: 22px;
-  font-family: Roliderounded;
-  font-weight: 400;
-  font-style: normal;
-  margin-right: 20px;
-  opacity: 100%;
-  transition: transform 0.3s ease-in-out;
-}
-.navigation li {
-  float: right;
-}
-nav a:hover {
-  transform: scale(1.05);
-  opacity: 80%;
-}
-#theme-pc {
-  bottom: 133px;
-  height: 30px;
-  width: 30px;
-  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out,
-    opacity 0.3s;
-}
+
 ul {
   list-style-type: none;
 }
 
-.icon a {
-  display: inline-block; /* Ensures the whole link is clickable */
-}
-
-.icon {
-  position: absolute; /* Positions relative to the page */
-  right: 30px; /* Moves it to the right side */
-  top: 300px; /* Adjust this for positioning */
-  display: flex;
-  flex-direction: column; /* Stack icons vertically */
-  align-items: center; /* Keep them centered */
-  gap: 20px; /* Adds space between icons */
-  z-index: 10;
-}
-
-.icon img {
-  cursor: pointer;
-  width: 35px; /* Adjust size */
+/* Background logo */
+.background-logo {
+  position: absolute;
+  opacity: 0.7;
+  transform: translate(-50%, -50%);
   height: auto;
-  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out,
-    opacity 0.3s;
+  max-width: 2200px; /* prevent it from being too big */
+  z-index: 0; /* stays behind content */
+  pointer-events: none; /* don’t block clicks */
 }
 
-.icon img:hover {
+/* Top logo */
+.top-logo {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  z-index: 0;
+}
+.top-logo img.logo {
+  height: 50px;
+  width: auto;
   cursor: pointer;
-  transform: scale(1.1);
-  opacity: 100%;
 }
 
+/* Info section */
+.info {
+  color: var(--secondary-color);
+  width: 570px;
+  margin-left: 195px;
+  margin-top: 180px;
+  z-index: 0;
+  position: relative;
+}
 .myname {
   font-family: aquafont;
   font-size: 75px;
-  margin-left: 250px;
   position: relative;
 }
 .myrole {
   font-family: louisgeorgecafe;
-  font-optical-sizing: auto;
   font-weight: 500;
-  margin-left: 250px;
-  bottom: 40px;
-  position: relative;
   font-size: 20px;
   margin-top: 30px;
+  position: relative;
 }
 
-span.about {
-  font-family: Roliderounded;
-}
+/* About Me button */
 .aboutme {
-  content: "";
-  position: relative;
-  margin-left: 270px;
   margin-top: 30px;
-  bottom: 50px;
   height: 40px;
   width: 140px;
   border-radius: 0px;
@@ -183,80 +66,237 @@ span.about {
   color: #f7f7f7;
   background: linear-gradient(to right, #0016f9, #d10d04);
   border: none;
-  transition: box-shadow 0.3s;
   font-family: Roliderounded;
   font-size: 17px;
-  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out,
-    background -color 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
-
 .aboutme:hover {
   cursor: pointer;
-  transition-duration: 0.3s;
   box-shadow: 3px 3px 10px var(--secondary-color);
-  display: flex;
   transform: scale(1.01);
 }
 
-.aboutme-forward-icon {
-  position: relative;
-  margin-left: 0px;
-  bottom: 81px;
-}
-
+/* Works section */
 .works {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  position: relative;
-  top: 70px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-
-.works a {
-  font-size: 25px;
+.works-button,
+.arrow-button {
+  border: none;
+  background-color: transparent;
+  color: var(--secondary-color);
+  font-size: 22px;
   font-family: Roliderounded;
   text-align: center;
-  color: var(--secondary-color);
-  position: relative;
-  display: block;
-  text-decoration: none;
+  transition: opacity 0.3s ease-in-out;
+}
+.works-button:hover,
+.arrow-button:hover {
+  cursor: pointer;
+  opacity: 80%;
 }
 .arrow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
   width: 20px;
+  height: auto;
 }
 
-#info {
-  color: var(--secondary-color);
+/* Social icons */
+.icon {
+  position: absolute;
+  right: 20px;
+  top: 300px;
   display: flex;
   flex-direction: column;
-  align-items: left;
-  position: relative;
-  gap: 30px;
-  bottom: 350px;
-}
-.info-bglogo{
-  display: flex;
-  flex-direction: row;
-}
-.background-logo {
-  display: block;
-  position: relative;
   align-items: center;
-  bottom: 0px;
-  height: 356px;
-  width: 356px;
-  margin: 0 auto;
-  z-index: 0;
+  gap: 20px;
+  z-index: 1;
 }
-.bg-logo-main{
-  position: relative;
+.icon img {
+  cursor: pointer;
+  width: 35px;
+  height: auto;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
+.icon img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Footer credit */
 .credit {
   position: relative;
   text-align: right;
+}
+.hamburger-btn{
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .herosection {
+    width: 480px;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  /* Background logo */
+  .background-logo {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: auto;
+    top: 100px;
+    margin-left: 70px;
+    height: 500px;
+    width: 500px; /* prevent it from being too big */
+    pointer-events: none; /* don’t block clicks */
+  }
+
+  /* Top logo */
+  .top-logo {
+    display: block;
+    margin: 20px;
+  }
+  /* Show only on mobile */
+  .hamburger-btn {
+    display: flex;
+    position: absolute; /* ✅ stick it to the corner */
+    top: 40px;
+    right: 60px;
+  }
+
+  /* Hamburger button container */
+  .hamburger-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex; /* hidden on desktop */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 22px;
+    margin-left: auto;
+    padding: 0;
+  }
+
+  /* Lines */
+  .hamburger-btn .line {
+    height: 3px;
+    background-color: var(--secondary-color); /* adapts with theme */
+    border-radius: 2px;
+    align-self: flex-end;
+    transition: all 0.3s ease-in-out;
+  }
+  .line-1 {
+    width: 40px;
+  }
+  .line-2 {
+    width: 30px;
+  }
+  .line-3 {
+    width: 20px;
+  }
+
+  /* Info section */
+  .info {
+    color: var(--secondary-color);
+    width: 570px;
+    margin-left: 95px;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+  }
+  .myname {
+    font-family: aquafont;
+    font-size: 25px;
+    position: relative;
+  }
+  .myrole {
+    font-family: louisgeorgecafe;
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 30px;
+    position: relative;
+  }
+
+  /* About Me button */
+  .aboutme {
+    margin-top: 30px;
+    height: 30px;
+    width: 90px;
+    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f7f7f7;
+    background: linear-gradient(to right, #0016f9, #d10d04);
+    border: none;
+    font-family: Roliderounded;
+    font-size: 12px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  .aboutme:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 10px var(--secondary-color);
+    transform: scale(1.01);
+  }
+
+  /* Works section */
+  .works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .works-button,
+  .arrow-button {
+    border: none;
+    background-color: transparent;
+    color: var(--secondary-color);
+    font-size: 22px;
+    font-family: Roliderounded;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .works-button:hover,
+  .arrow-button:hover {
+    cursor: pointer;
+    opacity: 80%;
+  }
+  .arrow {
+    width: 20px;
+    height: auto;
+  }
+
+  /* Social icons */
+  .icon {
+    display: none;
+  }
+  .icon img {
+    cursor: pointer;
+    width: 35px;
+    height: auto;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  .icon img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  /* Footer credit */
+  .credit {
+    position: relative;
+    text-align: right;
+  }
 }
