@@ -1,0 +1,487 @@
+.projects {
+  background-color: #eaeaea;
+  min-width: 100%;
+  position: relative;
+  padding-top: 50px;
+}
+.projects a {
+  z-index: 2;
+}
+.heading-1 {
+  font-size: 17px;
+  font-family: kionaregular;
+  color: #6a5555;
+  align-items: center;
+  text-align: center;
+}
+.heading-2 {
+  font-size: 38px;
+  font-family: louisgeorgecafebold;
+  color: #425c64;
+  align-items: center;
+  text-align: center;
+}
+
+/*project 1 styles */
+.project1 {
+  position: relative; /* Allows absolute positioning inside */
+  width: 950px; /* Keep all images the same width */
+  margin: 100px auto; /* Keep images aligned */
+  left: 30px;
+  background: #000000;
+
+  box-shadow: 3px 3px 50px #0d0d0dca;
+}
+.image-cover1 {
+  position: relative;
+  overflow: hidden;
+}
+.project-cover1 {
+  color: var(--secondary-color);
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 80%;
+  padding: 80px;
+  text-align: left;
+  transition: transform 0.5s;
+  background: transparent;
+  z-index: 1;
+  pointer-events: auto;
+}
+.project-cover1:hover {
+  cursor: pointer;
+  transform: scale(1.06);
+}
+.projectcover {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(13, 74, 102, 1) 0%,
+    rgba(6, 18, 71, 1) 0%,
+    rgba(10, 47, 92, 1) 100%
+  );
+  opacity: 75%;
+  transition: left 0.5s ease-in-out;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+/* When hovering on the parent, slide in projectcover */
+.project1:hover .projectcover,
+.project2:hover .projectcover {
+  left: 0; /* Slide in to cover the project area */
+}
+.projectno1 {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  z-index: 2;
+  opacity: 0%;
+  transition: top 0.5s ease-in-out;
+}
+.projectno1 h1 {
+  position: relative;
+  bottom: 50px;
+  margin: 0;
+  font-size: 11.5625rem;
+  color: rgb(255, 244, 244);
+}
+.project1:hover .projectno1 {
+  top: 0;
+  opacity: 100%;
+}
+.casestudy1 {
+  height: 40px;
+  width: 140px;
+  border-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f7f7f7;
+  background: linear-gradient(to right, #0016f9, #d10d04);
+  border: none;
+  font-family: Roliderounded;
+  font-size: 17px;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out,
+    background -color 0.3s ease-in-out;
+}
+.casestudy1:hover {
+  cursor: pointer;
+  transition-duration: 0.3s;
+  box-shadow: 3px 3px 10px var(--secondary-color);
+  display: flex;
+  transform: scale(1.01);
+}
+.p-name1 {
+  font-family: aquafont;
+  font-size: 45px;
+  font-weight: 600;
+}
+.p-title1 {
+  font-family: kionaregular;
+  font-size: 24px;
+}
+.project1 img {
+  height: 510px;
+  width: 950px;
+
+  margin: 0px auto; /* Centers the image */
+  position: relative;
+  display: block;
+  transition: box-shadow 0.3s ease-in-out;
+  object-fit: cover;
+  opacity: 60%;
+}
+
+.project1 img:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 35px #0d0d0d;
+}
+/*Project 1 Styles ends*/
+
+/*Project 2 styles*/
+.project2 {
+  position: relative; /* Allows absolute positioning inside */
+  width: 950px; /* Keep all images the same width */
+  margin: 100px auto; /* Keep images aligned */
+  right: 30px;
+  background: #000000;
+  box-shadow: 3px 3px 50px #0d0d0dca;
+}
+.project-cover2 {
+  color: var(--secondary-color);
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 80%;
+  padding: 80px;
+  z-index: 2;
+  text-align: right;
+  transition: transform 0.5s;
+  background: transparent;
+  pointer-events: auto;
+}
+.project-cover2:hover {
+  cursor: pointer;
+  transform: scale(1.06);
+}
+.image-cover2 {
+  position: relative;
+  overflow: hidden;
+}
+.projectno2 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  opacity: 0%;
+  transition: top 0.5s ease-in-out;
+}
+.projectno2 h1 {
+  position: relative;
+  bottom: 50px;
+  margin: 0;
+  font-size: 11.5625rem;
+  color: rgb(255, 244, 244);
+}
+.project2:hover .projectno2 {
+  top: 0;
+  opacity: 100%;
+}
+.casestudy2 {
+  right: 0;
+  height: 40px;
+  width: 140px;
+  border-radius: 0px;
+  justify-content: center;
+  align-items: center;
+  color: #f7f7f7;
+  background: linear-gradient(to right, #0016f9, #d10d04);
+  border: none;
+  transition: box-shadow 0.3s;
+  font-family: Roliderounded;
+  font-size: 17px;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out,
+    background -color 0.3s ease-in-out;
+}
+.casestudy2:hover {
+  cursor: pointer;
+  transition-duration: 0.3s;
+  box-shadow: 3px 3px 10px var(--secondary-color);
+  transform: scale(1.01);
+}
+.p-name2 {
+  font-family: aquafont;
+  font-size: 45px;
+  font-weight: 600;
+}
+.p-title2 {
+  font-family: kionaregular;
+  font-size: 24px;
+}
+.project2 img {
+  height: 510px;
+  width: 950px;
+  box-shadow: 3px 3px 20px #0d0d0d;
+  margin: 0px auto; /* Centers the image */
+  position: relative;
+  display: block;
+  transition: box-shadow 0.3s ease-in-out;
+  object-fit: cover;
+  opacity: 60%;
+}
+
+.project2 img:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 35px #0d0d0d;
+}
+/*Project 2 Styles ends*/
+
+/*Common Styles For both Projects*/
+.project-image2 {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 780px) {
+  .projects {
+    background-color: #eaeaea;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-top: 50px;
+  }
+  .heading-1 {
+    font-size: 12px;
+    font-family: kionaregular;
+    color: #6a5555;
+    align-items: center;
+    text-align: center;
+  }
+  .heading-2 {
+    font-size: 27px;
+    font-family: louisgeorgecafebold;
+    color: #425c64;
+    align-items: center;
+    text-align: center;
+  }
+  /*project 1 styles */
+  .project1 {
+    position: relative; /* Allows absolute positioning inside */
+    width: 95%; /* Keep all images the same width */
+    height: 296px;
+    margin: 0px auto; /* Keep images aligned */
+    left: 0px;
+    background: #000000;
+    box-shadow: 3px 3px 50px #0d0d0dca;
+  }
+  .image-cover1 {
+    position: relative;
+    overflow: hidden;
+  }
+  .project-cover1 {
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 95%;
+    height: auto;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.5s;
+    background: transparent;
+    z-index: 1;
+    pointer-events: auto;
+  }
+  .project-cover1:hover {
+    cursor: pointer;
+    transform: scale(1.06);
+  }
+  .projectcover {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 296px;
+    background: linear-gradient(
+      90deg,
+      rgba(13, 74, 102, 1) 0%,
+      rgba(6, 18, 71, 1) 0%,
+      rgba(10, 47, 92, 1) 100%
+    );
+    opacity: 75%;
+    transition: left 0.5s ease-in-out;
+    z-index: 1;
+    pointer-events: auto;
+  }
+
+  /* When hovering on the parent, slide in projectcover */
+  .project1:hover .projectcover,
+  .project2:hover .projectcover {
+    left: 0; /* Slide in to cover the project area */
+  }
+  .projectno1 {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    z-index: 2;
+    opacity: 0%;
+    transition: top 0.5s ease-in-out;
+  }
+  .projectno1 h1 {
+    display: none;
+  }
+  .project1:hover .projectno1 {
+    top: 0;
+    opacity: 100%;
+  }
+  .casestudy1 {
+    height: 40px;
+    width: 140px;
+    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f7f7f7;
+    background: linear-gradient(to right, #0016f9, #d10d04);
+    border: none;
+    font-family: Roliderounded;
+    font-size: 17px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out,
+      background -color 0.3s ease-in-out;
+  }
+  .casestudy1:hover {
+    cursor: pointer;
+    transition-duration: 0.3s;
+    box-shadow: 3px 3px 10px var(--secondary-color);
+    display: flex;
+    transform: scale(1.01);
+  }
+  .p-name1 {
+    font-family: aquafont;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .p-title1 {
+    font-family: kionaregular;
+    font-size: 12px;
+  }
+  .project1 img {
+    width: 100%;
+    height: 296px;
+    margin: 0px auto; /* Centers the image */
+    position: relative;
+    display: block;
+    transition: box-shadow 0.3s ease-in-out;
+    object-fit: cover;
+    opacity: 60%;
+  }
+
+  .project1 img:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 35px #0d0d0d;
+  }
+  /*Project 1 Styles ends*/
+
+  /*Project 2 styles*/
+  .project2 {
+    position: relative; /* Allows absolute positioning inside */
+    width: 95%; /* Keep all images the same width */
+    height: 296px;
+    right: 0px;
+    background: #000000;
+    box-shadow: 3px 3px 50px #0d0d0dca;
+  }
+  .project-cover2 {
+    color: var(--secondary-color);
+    position: absolute;
+    left: -20px;
+    bottom: 0px;
+    width: 95%; /* Keep all images the same width */
+    height: auto;
+    padding: 20px;
+    z-index: 2;
+    text-align: right;
+    transition: transform 0.5s;
+    background: transparent;
+    pointer-events: auto;
+  }
+  .project-cover2:hover {
+    cursor: pointer;
+    transform: scale(1.06);
+  }
+  .image-cover2 {
+    position: relative;
+    overflow: hidden;
+  }
+  .projectno2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    opacity: 0%;
+    transition: top 0.5s ease-in-out;
+  }
+  .projectno2 h1 {
+    display: none;
+  }
+  .project2:hover .projectno2 {
+    top: 0;
+    opacity: 100%;
+  }
+  .casestudy2 {
+    right: 0;
+    height: 40px;
+    width: 140px;
+    border-radius: 0px;
+    justify-content: center;
+    align-items: center;
+    color: #f7f7f7;
+    background: linear-gradient(to right, #0016f9, #d10d04);
+    border: none;
+    transition: box-shadow 0.3s;
+    font-family: Roliderounded;
+    font-size: 17px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out,
+      background -color 0.3s ease-in-out;
+  }
+  .casestudy2:hover {
+    cursor: pointer;
+    transition-duration: 0.3s;
+    box-shadow: 3px 3px 10px var(--secondary-color);
+    transform: scale(1.01);
+  }
+  .p-name2 {
+    font-family: aquafont;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .p-title2 {
+    font-family: kionaregular;
+    font-size: 12px;
+  }
+  .project2 img {
+    width: 100%;
+    height: 296px;
+    box-shadow: 3px 3px 20px #0d0d0d;
+    margin: 0px auto; /* Centers the image */
+    position: relative;
+    display: block;
+    transition: box-shadow 0.3s ease-in-out;
+    object-fit: cover;
+    opacity: 60%;
+  }
+
+  .project2 img:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 35px #0d0d0d;
+  }
+  /*Project 2 Styles ends*/
+}

@@ -1,0 +1,321 @@
+.herosection {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Background logo */
+.background-logo {
+  position: absolute;
+  opacity: 0.7;
+  transform: translate(-50%, -50%);
+  height: auto;
+  max-width: 2200px; /* prevent it from being too big */
+  z-index: 0; /* stays behind content */
+  pointer-events: none; /* don’t block clicks */
+}
+
+/* Top logo */
+.top-logo {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  z-index: 0;
+}
+.top-logo img.logo {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* Info section */
+.info {
+  color: var(--secondary-color);
+  width: 570px;
+  margin-left: 195px;
+  margin-top: 180px;
+  z-index: 0;
+  position: relative;
+}
+.myname {
+  font-family: aquafont;
+  font-size: 75px;
+  position: relative;
+}
+.myrole {
+  font-family: louisgeorgecafe;
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 30px;
+  position: relative;
+}
+
+/* About Me button */
+.aboutme {
+  margin-top: 30px;
+  height: 40px;
+  width: 140px;
+  border-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f7f7f7;
+  background: linear-gradient(to right, #0016f9, #d10d04);
+  border: none;
+  font-family: Roliderounded;
+  font-size: 17px;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.aboutme:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 10px var(--secondary-color);
+  transform: scale(1.01);
+}
+
+/* Works section */
+.works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.works-button,
+.arrow-button {
+  border: none;
+  background-color: transparent;
+  color: var(--secondary-color);
+  font-size: 22px;
+  font-family: Roliderounded;
+  text-align: center;
+  transition: opacity 0.3s ease-in-out;
+}
+.works-button:hover,
+.arrow-button:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
+.arrow {
+  width: 20px;
+  height: auto;
+}
+
+/* Social icons */
+.icon {
+  position: absolute;
+  right: 20px;
+  top: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  z-index: 1;
+}
+.icon img {
+  cursor: pointer;
+  width: 35px;
+  height: auto;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.icon img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Footer credit */
+.credit {
+  position: relative;
+  text-align: right;
+}
+.hamburger-btn {
+  display: none;
+}
+
+@media (max-width: 780px) {
+  .herosection {
+    width: 100%;
+    min-height: 83vh;
+    position: relative;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  /* Background logo */
+  .background-logo {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: auto;
+    top: 100px;
+    margin-left: 70px;
+    height: 500px;
+    width: 500px; /* prevent it from being too big */
+    pointer-events: none; /* don’t block clicks */
+  }
+  .top-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box; /* ensures padding doesn’t push outside */
+  }
+
+  /* Top logo */
+  .top-logo {
+    display: flex;
+    position: relative;
+    height: 80px;
+    width: auto;
+  }
+
+  .top-logo img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 50px;
+  }
+  .hamburger-cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: auto;
+  }
+  /* Hamburger button container */
+  .hamburger-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 22px;
+    padding: 0;
+    z-index: 99;
+  }
+
+  /* Lines */
+  .hamburger-btn .line {
+    height: 3px;
+    background-color: var(--secondary-color); /* adapts with theme */
+    border-radius: 2px;
+    align-self: flex-end;
+    transition: all 0.3s ease-in-out;
+    
+  }
+  .line-1 {
+    width: 40px;
+  }
+  .line-2 {
+    width: 30px;
+  }
+  .line-3 {
+    width: 20px;
+  }
+
+  /* Info section */
+  .info {
+    color: var(--secondary-color);
+    width: 570px;
+    justify-content: center;
+    margin-left: 50px;
+    z-index: 1;
+    position: relative;
+  }
+  .myname {
+    font-family: aquafont;
+    font-size: 25px;
+    position: relative;
+  }
+  .myrole {
+    font-family: louisgeorgecafe;
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 30px;
+    position: relative;
+  }
+
+  /* About Me button */
+  .aboutme {
+    margin-top: 30px;
+    height: 30px;
+    width: 90px;
+    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f7f7f7;
+    background: linear-gradient(to right, #0016f9, #d10d04);
+    border: none;
+    font-family: Roliderounded;
+    font-size: 12px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  .aboutme:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 10px var(--secondary-color);
+    transform: scale(1.01);
+  }
+
+  /* Works section */
+  .works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .works-button,
+  .arrow-button {
+    border: none;
+    background-color: transparent;
+    color: var(--secondary-color);
+    font-size: 22px;
+    font-family: Roliderounded;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .works-button:hover,
+  .arrow-button:hover {
+    cursor: pointer;
+    opacity: 80%;
+  }
+  .arrow {
+    width: 20px;
+    height: auto;
+  }
+
+  /* Social icons */
+  .icon {
+    display: none;
+  }
+  .icon img {
+    cursor: pointer;
+    width: 35px;
+    height: auto;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  .icon img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  /* Footer credit */
+  .credit {
+    position: relative;
+    text-align: right;
+  }
+}

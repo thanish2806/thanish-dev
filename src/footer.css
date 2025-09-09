@@ -1,0 +1,51 @@
+.footer {
+  color: var(--secondary-color);
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  min-width: 100%;
+}
+
+.logo-bottom {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  height: 80px;
+  width: 80px;
+}
+.logo-bottom:hover {
+  cursor: pointer;
+}
+
+.navigation-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  gap: 20px; /* Space between nav items */
+  justify-content: center;
+}
+
+.navigation-footer li {
+  display: inline;
+}
+
+.navigation-footer a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 22px;
+  font-family: Roliderounded;
+  transition: transform 0.3s ease-in-out, opacity 0.3s;
+  display: inline-block; /* Ensures proper transform effects */
+}
+
+.navigation-footer a:hover {
+  transform: scale(1.1); /* Increase slightly */
+  opacity: 0.8; /* Fix incorrect opacity */
+}
