@@ -2,6 +2,7 @@
   float: right;
   position: relative;
   top: 25px;
+  right: 190px;
 }
 .navigation ul {
   display: flex;

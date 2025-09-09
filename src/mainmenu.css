@@ -48,7 +48,7 @@
   top: -180px;
   left: 0px;
   z-index: -1;
-  color: rgba(48, 48, 48, 0.104); /* Light color for background text */
+  color: var(--secondary-text-low-opacity);
   font-size: 180px;
   font-family: aquafont;
   font-weight: 400;
@@ -128,7 +128,7 @@
   top: 10px;
   left: 0px;
   z-index: -1;
-  color: rgba(223, 223, 227, 0.1); /* Light color for background text */
+  color: var(--primary-text-low-opacity);
   font-size: 180px;
   font-family: aquafont;
   font-weight: 400;
@@ -299,7 +299,9 @@
     top: -180px;
     left: 0px;
     z-index: -1;
-    color: rgba(48, 48, 48, 0.104); /* Light color for background text */
+    color: var(
+      --secondary-text-low-opacity
+    ); /* Light color for background text */
     font-size: 180px;
     font-family: aquafont;
     font-weight: 400;
@@ -394,7 +396,9 @@
     top: -180px;
     left: 0px;
     z-index: -1;
-    color: rgba(223, 223, 227, 0.1); /* Light color for background text */
+    color: var(
+      --primary-text-low-opacity
+    ); /* Light color for background text */
     font-size: 180px;
     font-family: aquafont;
     font-weight: 400;
