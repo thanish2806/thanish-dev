@@ -140,7 +140,7 @@ ul {
 @media (max-width: 780px) {
   .herosection {
     width: 100%;
-    min-height: 83vh;
+    min-height: 100vh;
     position: relative;
   }
 
@@ -235,13 +235,13 @@ ul {
   }
   .myname {
     font-family: aquafont;
-    font-size: 25px;
+    font-size: 27px;
     position: relative;
   }
   .myrole {
     font-family: louisgeorgecafe;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 30px;
     position: relative;
   }
