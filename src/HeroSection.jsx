@@ -46,7 +46,6 @@ function HeroSection() {
   const handleImageClick = () => {
     window.location.reload();
   };
-  console.log("isMobileOpen:", isMobileOpen);
 
   return (
     <div className="herosection" onMouseMove={handleMouseMove}>
@@ -74,7 +73,7 @@ function HeroSection() {
           </button>
         </div>
       </div>
-
+      
       {/* Background logo */}
       <img
         src={Bglogo}
