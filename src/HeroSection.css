@@ -4,6 +4,7 @@
   position: relative;
   box-shadow: 1px 1px 20px var(--secondary-color);
   z-index: 1;
+  overflow: hidden;
 }
 
 ul {
@@ -146,6 +147,7 @@ ul {
     position: relative;
     border-color: black;
     box-shadow: 1px 1px 20px var(--secondary-color);
+    overflow: hidden;
     z-index: 1;
   }
 
