@@ -234,7 +234,9 @@
   letter-spacing: 2px;
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out,
     background -color 0.3s ease-in-out;
+    cursor: pointer;
 }
+
 .closeicon {
   width: 26px;
   display: flex;
@@ -500,5 +502,6 @@
     letter-spacing: 2px;
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out,
       background -color 0.3s ease-in-out;
+      cursor: pointer;
   }
 }
