@@ -329,7 +329,7 @@
     text-decoration: none;
     color: var(--primary-color);
     font-size: 15px;
-    font-family: comfortaa-regular;
+    font-family: Roliderounded;
     font-weight: 400;
     font-style: normal;
     margin-right: 13px;
@@ -355,12 +355,12 @@
   }
   .closeicon {
     position: absolute;
-    top: 1rem; /* use relative units for responsiveness */
-    right: 1rem; /* consistent spacing on all devices */
+    margin-top: 1rem;
+    margin-right: 1rem;
     width: 24px;
     height: 24px;
     cursor: pointer;
-    z-index: 2;
+    z-index: 99999;
   }
   .closeicon {
     width: clamp(20px, 5vw, 32px);

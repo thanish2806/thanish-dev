@@ -28,7 +28,7 @@ ul {
 }
 .top-logo img.logo {
   height: 50px;
-  width: auto;
+  width: 50px;
   cursor: pointer;
 }
 
@@ -140,8 +140,10 @@ ul {
 @media (max-width: 780px) {
   .herosection {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     position: relative;
+    border-color: black;
+    box-shadow: 3px 3px 10px var(--secondary-color);
   }
 
   ul {
@@ -175,13 +177,14 @@ ul {
     display: flex;
     position: relative;
     height: 80px;
-    width: auto;
+    width: 80px;
   }
 
   .top-logo img {
     position: relative;
     top: 0;
     left: 0;
+    height: 50px;
     width: 50px;
   }
   .hamburger-cover {
@@ -212,7 +215,6 @@ ul {
     border-radius: 2px;
     align-self: flex-end;
     transition: all 0.3s ease-in-out;
-    
   }
   .line-1 {
     width: 40px;
