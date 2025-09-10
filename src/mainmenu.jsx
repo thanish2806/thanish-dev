@@ -17,10 +17,10 @@ function Mainmenu({ isVisible, onClose }) {
 
     emailjs
       .sendForm(
-        "service_rdx1ar9",   // replace with your EmailJS service ID
-        "template_azflrgv",  // replace with your EmailJS template ID
+        "service_rdx1ar9", // replace with your EmailJS service ID
+        "template_azflrgv", // replace with your EmailJS template ID
         form.current,
-        "LxdIsE7-MlpRc98rP"    // replace with your EmailJS public key
+        "LxdIsE7-MlpRc98rP" // replace with your EmailJS public key
       )
       .then(
         (result) => {
@@ -43,11 +43,17 @@ function Mainmenu({ isVisible, onClose }) {
         <p className="aboutmerole">Interactive Front-end Developer</p>
         <p className="aboutcontent">
           I'm Thanish, a 20-year-old Indian
-          <span className="highlightwords"> Freelance Front-end developer.</span> I
-          like to <span className="highlightwords">resolve</span> design problems,
-          <span className="highlightwords"> create</span> smart user interfaces, and
+          <span className="highlightwords">
+            {" "}
+            Freelance Front-end developer.
+          </span>{" "}
+          I like to <span className="highlightwords">resolve</span> design
+          problems,
+          <span className="highlightwords"> create</span> smart user interfaces,
+          and
           <span className="highlightwords"> imagine</span> useful interactions,
-          developing rich web experiences & <span className="highlightwords">web applications.</span>
+          developing rich web experiences &{" "}
+          <span className="highlightwords">web applications.</span>
         </p>
       </div>
 
@@ -71,21 +77,35 @@ function Mainmenu({ isVisible, onClose }) {
           </div>
 
           <div className="form-group">
-            <input type="email" id="email" name="email" placeholder=" " required />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder=" "
+              required
+            />
             <label htmlFor="email">Email*</label>
           </div>
 
           <div className="form-group">
-            <textarea id="message" name="message" placeholder=" " required></textarea>
+            <textarea
+              id="message"
+              name="message"
+              placeholder=" "
+              required
+            ></textarea>
             <label htmlFor="message">Message*</label>
           </div>
 
-          <button type="submit" className="Submit">
-            Send Message
+          <button
+            type="submit"
+            className="Submit"
+            disabled={statusMessage === "Sending..."}
+          >
+            {statusMessage ? statusMessage : "Send Message"}
           </button>
         </form>
 
-        {statusMessage && <p className="status">{statusMessage}</p>}
       </div>
     </div>
   );

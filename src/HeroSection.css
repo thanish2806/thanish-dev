@@ -143,7 +143,8 @@ ul {
     height: 100vh;
     position: relative;
     border-color: black;
-    box-shadow: 3px 3px 10px var(--secondary-color);
+    box-shadow: 1px 1px 20px var(--secondary-color);
+    z-index: 1;
   }
 
   ul {
