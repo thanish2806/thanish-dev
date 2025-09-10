@@ -2,6 +2,8 @@
   width: 100%;
   min-height: 100vh;
   position: relative;
+  box-shadow: 1px 1px 20px var(--secondary-color);
+  z-index: 1;
 }
 
 ul {
