@@ -189,7 +189,6 @@ ul {
   }
 
   .top-logo img {
-    
     height: 50px;
     width: 50px;
   }
@@ -229,12 +228,14 @@ ul {
   /* Info section */
   .info {
     color: var(--secondary-color);
-    width: 570px;
-    justify-content: center;
-    margin-left: 50px;
+    width: 90%; /* shrink to fit screen */
+    max-width: 570px; /* but don’t grow too large */
+    margin: 100px auto 0 auto; /* center horizontally */
+    text-align: center; /* center text and button */
     z-index: 1;
     position: relative;
   }
+
   .myname {
     font-family: aquafont;
     font-size: 27px;
@@ -275,7 +276,7 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-self: self-end;
+    margin: 2rem auto 1rem auto; /* center bottom with some spacing */
   }
 
   .works-button,

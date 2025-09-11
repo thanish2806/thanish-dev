@@ -38,7 +38,7 @@ const Navbar = ({ toggleMenu, isMobileOpen, closeMobileNav }) => {
         </ul>
       </div>
 
-      {/* ✅ Mobile Navigation (controlled by HeroSection) */}
+      {/* Mobile Navigation (controlled by HeroSection) */}
 
       <div className={`navigation-mobile ${isMobileOpen ? "open" : ""}`}>
         <img
