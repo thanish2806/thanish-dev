@@ -2,7 +2,7 @@
   width: 100%;
   min-height: 100vh;
   position: relative;
-  box-shadow: 1px 1px 20px var(--secondary-color);
+  box-shadow: 1px 1px 35px #0d0d0d;
   z-index: 1;
   overflow: hidden;
 }
@@ -143,10 +143,10 @@ ul {
 @media (max-width: 780px) {
   .herosection {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: relative;
     border-color: black;
-    box-shadow: 1px 1px 20px var(--secondary-color);
+    box-shadow: 1px 1px 35px #0d0d0d;
     overflow: hidden;
     z-index: 1;
   }
