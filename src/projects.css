@@ -254,7 +254,7 @@
   .projects {
     background-color: #eaeaea;
     width: 100%;
-    height: 100%;
+    height: 95%;
     position: relative;
     padding-top: 50px;
   }
@@ -336,7 +336,7 @@
     transition: top 0.5s ease-in-out;
   }
   .projectno1 h1 {
-    display: none;
+    display: flex;
   }
   .project1:hover .projectno1 {
     top: 0;
