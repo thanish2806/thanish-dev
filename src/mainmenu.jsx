@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./mainmenu.css";
 import { useTheme } from "./ThemeContext.jsx";
 import closeicondark from "./assets/images/close-icon-dark.png";
@@ -9,6 +9,16 @@ function Mainmenu({ isVisible, onClose }) {
   const { isDarkTheme } = useTheme();
   const form = useRef();
   const [statusMessage, setStatusMessage] = useState("");
+
+  useEffect(() => {
+    if (isVisible) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
+    return () => document.body.classList.remove("menu-open");
+  }, [isVisible]);
+
 
   if (!isVisible) return null;
 
@@ -105,7 +115,6 @@ function Mainmenu({ isVisible, onClose }) {
             {statusMessage ? statusMessage : "Send Message"}
           </button>
         </form>
-
       </div>
     </div>
   );
