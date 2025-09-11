@@ -64,16 +64,15 @@ function HeroSection() {
             alt="Logo"
           />
         </div>
-        <div className="hamburger-cover">
-          {/*  Hamburger for mobile */}
-          <button className="hamburger-btn" onClick={toggleMobileNav}>
-            <span className="line line-1"></span>
-            <span className="line line-2"></span>
-            <span className="line line-3"></span>
-          </button>
-        </div>
+
+        {/*  Hamburger for mobile */}
+        <button className="hamburger-btn" onClick={toggleMobileNav}>
+          <span className="line line-1"></span>
+          <span className="line line-2"></span>
+          <span className="line line-3"></span>
+        </button>
       </div>
-      
+
       {/* Background logo */}
       <img
         src={Bglogo}
