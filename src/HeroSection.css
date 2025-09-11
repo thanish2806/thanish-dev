@@ -138,7 +138,6 @@ ul {
   display: none;
 }
 
-
 @media (max-width: 600px) {
   .herosection {
     display: flex;
@@ -153,17 +152,24 @@ ul {
     list-style-type: none;
   }
 
-  /* Background logo */
-  .background-logo {
+  /* Wrapper to crop the logo */
+  .background-logo-wrapper {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%; /* show only 75% horizontally */
+    height: 600px;
     transform: translate(-50%, -50%);
-    height: auto;
-    top: 100px;
-    margin-left: 120px;
-    height: 500px;
-    width: 500px; /* prevent it from being too big */
-    pointer-events: none; /* don’t block clicks */
+    pointer-events: none;
+    z-index: 0;
   }
+
+  /* Actual logo image */
+  .background-logo {
+    width: 600px; /* scale back so full image fits inside wrapper */
+    height: 600px;
+  }
+
   .top-content {
     width: 95%;
     display: flex;
@@ -272,16 +278,16 @@ ul {
     transform: scale(1.01);
   }
 
- /* Works section */
-.works {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;   /* centers buttons horizontally */
-  justify-content: center;
-  width: 100%;           /* allow flex centering */
-  margin-bottom: 55px;   /* small spacing from bottom */
-}
+  /* Works section */
+  .works {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers buttons horizontally */
+    justify-content: center;
+    width: 100%; /* allow flex centering */
+    margin-bottom: 55px; /* small spacing from bottom */
+  }
 
   .works-button,
   .arrow-button {
