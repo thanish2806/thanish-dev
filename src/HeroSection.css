@@ -159,7 +159,7 @@ ul {
     transform: translate(-50%, -50%);
     height: auto;
     top: 100px;
-    margin-left: 70px;
+    margin-left: 120px;
     height: 500px;
     width: 500px; /* prevent it from being too big */
     pointer-events: none; /* don’t block clicks */
@@ -238,14 +238,14 @@ ul {
   }
   .myname {
     font-family: aquafont;
-    font-size: 27px;
+    font-size: 32px;
     margin: 0;
   }
 
   .myrole {
     font-family: louisgeorgecafe;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 20px;
     margin: 10px 0 0;
   }
 
@@ -253,7 +253,7 @@ ul {
   .aboutme {
     position: relative;
     height: 30px;
-    width: 90px;
+    width: 120px;
     border-radius: 0px;
     display: flex;
     justify-content: center;
@@ -262,7 +262,8 @@ ul {
     background: linear-gradient(to right, #0016f9, #d10d04);
     border: none;
     font-family: Roliderounded;
-    font-size: 12px;
+    font-size: 16px;
+    letter-spacing: 1px;
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
   .aboutme:hover {
@@ -279,7 +280,7 @@ ul {
   align-items: center;   /* centers buttons horizontally */
   justify-content: center;
   width: 100%;           /* allow flex centering */
-  margin-bottom: 40px;   /* small spacing from bottom */
+  margin-bottom: 55px;   /* small spacing from bottom */
 }
 
   .works-button,
