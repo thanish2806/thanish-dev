@@ -139,11 +139,14 @@ ul {
 .hamburger-btn {
   display: none;
 }
+* {
+  outline: 1px solid red; /* just for debugging */
+}
 
-@media (max-width: 780px) {
+@media (max-width: 600px) {
   .herosection {
     width: 100%;
-    height: 90vh;
+    min-height: 100vh;
     border-color: black;
     box-shadow: 1px 1px 35px #0d0d0d;
     overflow: hidden;
@@ -279,11 +282,10 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 2rem; /* add some spacing */
+    position: relative; /* instead of absolute */
   }
+
   .works-button,
   .arrow-button {
     border: none;
