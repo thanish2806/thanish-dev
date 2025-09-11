@@ -137,9 +137,7 @@ ul {
 .hamburger-btn {
   display: none;
 }
-* {
-  outline: 1px solid red; /* just for debugging */
-}
+
 
 @media (max-width: 600px) {
   .herosection {
@@ -281,7 +279,7 @@ ul {
   align-items: center;   /* centers buttons horizontally */
   justify-content: center;
   width: 100%;           /* allow flex centering */
-  margin-bottom: 20px;   /* small spacing from bottom */
+  margin-bottom: 40px;   /* small spacing from bottom */
 }
 
   .works-button,
