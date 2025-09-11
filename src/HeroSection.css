@@ -2,6 +2,9 @@
   width: 100%;
   min-height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   box-shadow: 1px 1px 35px #0d0d0d;
   z-index: 1;
   overflow: hidden;
@@ -40,7 +43,7 @@ ul {
   color: var(--secondary-color);
   width: 570px;
   margin-left: 195px;
-  margin-top: 180px;
+
   z-index: 0;
   position: relative;
 }
@@ -81,13 +84,13 @@ ul {
 
 /* Works section */
 .works {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  transform: translateX(-50%);
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
 }
 .works-button,
 .arrow-button {
@@ -139,18 +142,14 @@ ul {
 .hamburger-btn {
   display: none;
 }
-* {
-  outline: 1px solid red; /* just for debugging */
-}
 
 @media (max-width: 600px) {
   .herosection {
+    position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     width: 100%;
     min-height: 100vh;
-    position: relative;
     box-shadow: 1px 1px 35px #0d0d0d;
     z-index: 1;
     overflow: hidden;
@@ -172,14 +171,17 @@ ul {
     pointer-events: none; /* don’t block clicks */
   }
   .top-content {
-    position: relative;
+    position: absolute; /* keep it stuck at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: self-start;
-    top: 0;
-    height: 50px;
+    align-items: center;
     padding: 10px;
+    z-index: 10; /* above background/logo */
   }
 
   /* Top logo */
