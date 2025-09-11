@@ -2,9 +2,6 @@
   width: 100%;
   min-height: 100vh;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   box-shadow: 1px 1px 35px #0d0d0d;
   z-index: 1;
   overflow: hidden;
@@ -43,7 +40,7 @@ ul {
   color: var(--secondary-color);
   width: 570px;
   margin-left: 195px;
-
+  margin-top: 180px;
   z-index: 0;
   position: relative;
 }
@@ -56,13 +53,11 @@ ul {
   font-family: louisgeorgecafe;
   font-weight: 500;
   font-size: 20px;
-  margin-top: 30px;
   position: relative;
 }
 
 /* About Me button */
 .aboutme {
-  margin-top: 30px;
   height: 40px;
   width: 140px;
   border-radius: 0px;
@@ -84,13 +79,13 @@ ul {
 
 /* Works section */
 .works {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: fit-content;
-  margin: 0 auto;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .works-button,
 .arrow-button {
@@ -142,17 +137,18 @@ ul {
 .hamburger-btn {
   display: none;
 }
+* {
+  outline: 1px solid red; /* just for debugging */
+}
 
 @media (max-width: 600px) {
   .herosection {
-    position: relative;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    min-height: 100vh;
-    box-shadow: 1px 1px 35px #0d0d0d;
-    z-index: 1;
-    overflow: hidden;
+    justify-content: space-between; /* pushes top to top, works to bottom */
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
   }
 
   ul {
@@ -171,17 +167,12 @@ ul {
     pointer-events: none; /* don’t block clicks */
   }
   .top-content {
-    position: absolute; /* keep it stuck at the top */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
+    width: 95%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    height: 60px;
     padding: 10px;
-    z-index: 10; /* above background/logo */
   }
 
   /* Top logo */
@@ -236,30 +227,33 @@ ul {
   /* Info section */
   .info {
     color: var(--secondary-color);
-    width: 90%; /* shrink to fit screen */
-    max-width: 570px; /* but don’t grow too large */
-    margin: 100px auto 0 auto; /* center horizontally */
-    text-align: center; /* center text and button */
-    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
+    height: 120px;
+    text-align: left;
+    width: 90%;
+    margin: auto 0; /* centers in middle space */
+    left: 70px;
+    z-index: 1;
   }
-
   .myname {
     font-family: aquafont;
     font-size: 27px;
-    position: relative;
+    margin: 0;
   }
+
   .myrole {
     font-family: louisgeorgecafe;
     font-weight: 500;
     font-size: 14px;
-    margin-top: 30px;
-    position: relative;
+    margin: 10px 0 0;
   }
 
   /* About Me button */
   .aboutme {
-    margin-top: 30px;
+    position: relative;
     height: 30px;
     width: 90px;
     border-radius: 0px;
@@ -279,12 +273,16 @@ ul {
     transform: scale(1.01);
   }
 
-  /* Works section */
-  .works {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+ /* Works section */
+.works {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers buttons horizontally */
+  justify-content: center;
+  width: 100%;           /* allow flex centering */
+  margin-bottom: 20px;   /* small spacing from bottom */
+}
 
   .works-button,
   .arrow-button {
