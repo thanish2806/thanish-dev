@@ -2,7 +2,13 @@ import React from "react";
 import "./projects.css";
 import cardgameimg from "./assets/images/cardgame.jpeg";
 import jobfinder from "./assets/images/Jobfider-thumbnail.jpeg";
+// import { useNavigate } from "react-router-dom";
 function Projects() {
+  // const navigate = useNavigate();
+
+  // const handleproject01casestudy = () => {
+  //   navigate("./project-01-casestudy");
+  // };
   return (
     <div className="projects" id="projects">
       <p className="heading-1">CASE STUDIES</p>
@@ -28,14 +34,17 @@ function Projects() {
             <div className="project-cover1">
               <p className="p-name1">Job Preparation Platform</p>
               <p className="p-title1">A Platfrom for upskilling</p>
-              <button className="casestudy1" type="button">
+              <button
+                className="casestudy1"
+                type="button"
+                // onClick={handleproject01casestudy}
+              >
                 Case Study
               </button>
             </div>
           </a>
         </div>
       </div>
-
 
       <div className="project2">
         <div className="projectno2">
@@ -60,8 +69,6 @@ function Projects() {
           </a>
         </div>
       </div>
-
-      
     </div>
   );
 }
