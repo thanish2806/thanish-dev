@@ -54,3 +54,13 @@
   opacity: 0.8;
   margin: 10px;
 }
+@media (max-width: 600px) {
+  .footer-credit {
+    font-size: 12px;
+    font-family: "louisgeorgecafe", sans-serif;
+    color: var(--secondary-color);
+    text-align: center;
+    opacity: 0.8;
+    margin: 10px;
+  }
+}
