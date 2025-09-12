@@ -1,9 +1,18 @@
 import React from "react";
 import "./footer.css";
 import Bglogo from "./assets/images/my-logo-icon.png";
+import linkedindark from "./assets/images/linkedin-dark.png";
+import linkedinlight from "./assets/images/linkedin-light.png";
+import githubdark from "./assets/images/github-dark.png";
+import githublight from "./assets/images/github-light.png";
+import { useTheme } from "./ThemeContext.jsx";
+
 function Footer() {
+  const { isDarkTheme } = useTheme();
+
   return (
-    <div className="footer">
+    <footer className="footer">
+      {/* Logo left */}
       <img
         className="logo-bottom"
         src={Bglogo}
@@ -11,25 +20,39 @@ function Footer() {
         onClick={() => (window.location.href = "#head")}
       />
 
-      <nav className="navigation-footer">
-        <ul>
-          <li className="navigationpc" id="contactpc">
-            <a
-              href="https://www.linkedin.com/in/thanish-p-421204200"
-              target="-blank"
-            >
-              Linkedin
-            </a>
-          </li>
-          <li className="navigationpc">
-            <a href="https://github.com/thanish2806" target="-blank">
-              Github
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <p>© 2025 Techshark Digital. All Rights Reserved.</p>
-    </div>
+      {/* Social icons center */}
+      <div className="footer-icon">
+        <a
+          href="https://www.linkedin.com/in/thanish-p-421204200"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="linkedin"
+            src={isDarkTheme ? linkedindark : linkedinlight}
+            alt="LinkedIn"
+          />
+        </a>
+        <a
+          href="https://github.com/thanish2806"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="github"
+            src={isDarkTheme ? githubdark : githublight}
+            alt="GitHub"
+          />
+        </a>
+      </div>
+
+      {/* Copyright bottom */}
+      <p className="footer-credit">
+        <p className="footer-credit">
+          © {new Date().getFullYear()} Techshark Digital. All Rights Reserved.
+        </p>
+      </p>
+    </footer>
   );
 }
 

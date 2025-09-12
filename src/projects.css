@@ -37,7 +37,7 @@
   overflow: hidden;
 }
 .project-cover1 {
-  color: var(--secondary-color);
+  color: rgb(255, 244, 244);
   position: absolute;
   left: 0px;
   bottom: 0px;
@@ -88,8 +88,10 @@
   position: relative;
   bottom: 50px;
   margin: 0;
+  font-family: aquafont;
   font-size: 11.5625rem;
   color: rgb(255, 244, 244);
+  text-shadow: 1px 1px 20px #0000002e;
 }
 .project1:hover .projectno1 {
   top: 0;
@@ -154,7 +156,7 @@
   box-shadow: 3px 3px 50px #0d0d0dca;
 }
 .project-cover2 {
-  color: var(--secondary-color);
+  color: rgb(255, 244, 244);
   position: absolute;
   left: 0px;
   bottom: 0px;
@@ -186,8 +188,10 @@
   position: relative;
   bottom: 50px;
   margin: 0;
+  font-family: aquafont;
   font-size: 11.5625rem;
   color: rgb(255, 244, 244);
+  text-shadow: 1px 1px 20px #0000002e;
 }
 .project2:hover .projectno2 {
   top: 0;

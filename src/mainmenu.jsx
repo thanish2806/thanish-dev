@@ -19,7 +19,6 @@ function Mainmenu({ isVisible, onClose }) {
     return () => document.body.classList.remove("menu-open");
   }, [isVisible]);
 
-
   if (!isVisible) return null;
 
   const sendEmail = (e) => {
@@ -52,7 +51,20 @@ function Mainmenu({ isVisible, onClose }) {
         <p className="aboutmetext-bg">`About Me.</p>
         <p className="aboutmerole">Interactive Front-end Developer</p>
         <p className="aboutcontent">
-          I'm Thanish, a 20-year-old Indian
+          I'm Thanish,{" "}
+          {(() => {
+            const birthDate = new Date(2004, 6, 28);
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const m = today.getMonth() - birthDate.getMonth();
+
+            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+              age--;
+            }
+
+            return age;
+          })()}{" "}
+          year-old Indian
           <span className="highlightwords">
             {" "}
             Freelance Front-end developer.

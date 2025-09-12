@@ -23,29 +23,32 @@
   cursor: pointer;
 }
 
-.navigation-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0;
+/* Social icons */
+.footer-icon {
+  position: relative;
   display: flex;
-  gap: 20px; /* Space between nav items */
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
+  padding: 10px;
+  gap: 20px;
+  z-index: 1;
 }
-
-.navigation-footer li {
-  display: inline;
+.footer-icon img {
+  cursor: pointer;
+  width: 35px;
+  height: auto;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
-
-.navigation-footer a {
-  text-decoration: none;
+.footer-icon img:hover {
+  transform: scale(1.01);
+  opacity: 0.7;
+}
+.footer-credit {
+  font-size: 14px;
+  font-family: "louisgeorgecafe", sans-serif;
   color: var(--secondary-color);
-  font-size: 22px;
-  font-family: Roliderounded;
-  transition: transform 0.3s ease-in-out, opacity 0.3s;
-  display: inline-block; /* Ensures proper transform effects */
-}
-
-.navigation-footer a:hover {
-  transform: scale(1.1); /* Increase slightly */
-  opacity: 0.8; /* Fix incorrect opacity */
+  text-align: center;
+  opacity: 0.8;
+  margin-top: 30px;
 }
