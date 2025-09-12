@@ -47,13 +47,24 @@ function HeroSection() {
     window.location.reload();
   };
 
+  useEffect(() => {
+    if (isMobileOpen) {
+      document.body.style.overflow = "hidden"; // 🚫 lock background
+    } else {
+      document.body.style.overflow = "auto"; // ✅ restore scroll
+    }
+
+    return () => {
+      document.body.style.overflow = "auto"; // cleanup
+    };
+  }, [isMobileOpen]);
   return (
     <div className="herosection" onMouseMove={handleMouseMove}>
       {/* Top logo + navbar */}
       <Navbar
-        toggleMenu={toggleMenu}
         isMobileOpen={isMobileOpen}
         closeMobileNav={() => setIsMobileOpen(false)}
+        toggleMenu={() => {}}
       />
       <div className="top-content">
         <div className="top-logo">

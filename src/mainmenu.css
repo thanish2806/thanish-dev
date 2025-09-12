@@ -254,7 +254,7 @@
 
 @media (max-width: 600px) {
   body.menu-open {
-    overflow: hidden; /* disable background scroll */
+    overflow: hidden; 
   }
 
   .menupage {
