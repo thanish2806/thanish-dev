@@ -17,7 +17,7 @@ function Footer() {
         className="logo-bottom"
         src={Bglogo}
         alt="Logo"
-        onClick={() => (window.location.href = "#head")}
+        onClick={() => (window.location.href = "")}
       />
 
       {/* Social icons center */}
