@@ -253,7 +253,6 @@
   display: block;
   margin: 0 auto;
 }
-
 @media (max-width: 780px) {
   .projects {
     background-color: #eaeaea;
@@ -340,7 +339,7 @@
     transition: top 0.5s ease-in-out;
   }
   .projectno1 h1 {
-    display: flex;
+    display: none;
   }
   .project1:hover .projectno1 {
     top: 0;
