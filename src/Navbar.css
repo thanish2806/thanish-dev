@@ -63,12 +63,15 @@
   .navigation-mobile {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     height: 100vh;
     width: 100%;
     background: linear-gradient(270deg, rgb(35, 90, 166), rgb(16, 27, 59));
     z-index: 9999999999;
-    overflow-y: auto;
+    overflow: hidden;
+    overscroll-behavior: none;
+    transform: translateZ(0);
+    will-change: transform;
     display: flex;
     flex-direction: column;
     align-items: center;
