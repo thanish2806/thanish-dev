@@ -3,7 +3,7 @@ import "./project-01-casestudy.css";
 function Project01CaseStudy() {
   return (
     <div className="project-01-casestudy">
-      <h1 className="title">Project 01 Case Study</h1>
+      <h1 className="title-main">SkillNest</h1>
       
     </div>
   );

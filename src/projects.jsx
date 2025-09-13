@@ -2,13 +2,13 @@ import React from "react";
 import "./projects.css";
 import cardgameimg from "./assets/images/cardgame.jpeg";
 import jobfinder from "./assets/images/Jobfider-thumbnail.jpeg";
-// import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 function Projects() {
-  // const navigate = useNavigate();
+  //const navigate = useNavigate();
 
-  // const handleproject01casestudy = () => {
-  //   navigate("./project-01-casestudy");
-  // };
+  //const handleproject01casestudy = () => {
+  // navigate("./project-01-casestudy");
+  //};
   return (
     <div className="projects" id="projects">
       <p className="heading-1">CASE STUDIES</p>
@@ -30,19 +30,19 @@ function Projects() {
               src={jobfinder}
               alt="calculator-project"
             />
-
-            <div className="project-cover1">
-              <p className="p-name1">Job Preparation Platform</p>
-              <p className="p-title1">A Platfrom for upskilling</p>
-              <button
-                className="casestudy1"
-                type="button"
-                // onClick={handleproject01casestudy}
-              >
-                Case Study
-              </button>
-            </div>
           </a>
+          <div className="project-cover1">
+            <p className="p-name1">Job Preparation Platform</p>
+            <p className="p-title1">A Platfrom for upskilling</p>
+            <button
+              className="casestudy1"
+              type="button"
+              target="_blank"
+              //onClick={handleproject01casestudy}
+            >
+              Click here
+            </button>
+          </div>
         </div>
       </div>
 
@@ -63,7 +63,7 @@ function Projects() {
               <p className="p-name2">Puzzle Game</p>
               <p className="p-title2">A Mind tricky game</p>
               <button className="casestudy2" type="button">
-                Case Study
+                Click here
               </button>
             </div>
           </a>

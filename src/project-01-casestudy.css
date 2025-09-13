@@ -1,4 +1,16 @@
-.title{
+.project-01-casestudy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 0px;
+    background-color: var(--primary-color);
+
+}
+
+.title-main{
+    position: relative;
+    justify-self: center;
     color: var(--secondary-color);
     font-size: 100px;
 }
