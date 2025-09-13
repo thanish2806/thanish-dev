@@ -30,19 +30,20 @@ function Projects() {
               src={jobfinder}
               alt="calculator-project"
             />
+
+            <div className="project-cover1">
+              <p className="p-name1">Job Preparation Platform</p>
+              <p className="p-title1">A Platfrom for upskilling</p>
+              <button
+                className="casestudy1"
+                type="button"
+                target="_blank"
+                //onClick={handleproject01casestudy}
+              >
+                Click here
+              </button>
+            </div>
           </a>
-          <div className="project-cover1">
-            <p className="p-name1">Job Preparation Platform</p>
-            <p className="p-title1">A Platfrom for upskilling</p>
-            <button
-              className="casestudy1"
-              type="button"
-              target="_blank"
-              //onClick={handleproject01casestudy}
-            >
-              Click here
-            </button>
-          </div>
         </div>
       </div>
 
