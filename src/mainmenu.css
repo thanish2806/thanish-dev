@@ -1,3 +1,7 @@
+body.menu-open {
+  overflow: hidden;
+}
+
 .menupage {
   display: flex; /* Show when active */
   flex-direction: row;
@@ -10,7 +14,7 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
   z-index: 999;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out latency 0.3s;
 }
 
 .menupage.hidden {
@@ -216,7 +220,7 @@
 #contactForm textarea:valid {
   border-color: #0016f9; /* blue */
 }
-.Submit {
+.submit {
   content: "";
   padding: 15px;
   height: 36px;
@@ -236,7 +240,11 @@
     background -color 0.3s ease-in-out;
   cursor: pointer;
 }
-
+.submit:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 8px var(--secondary-color);
+  transform: scale(1.01);
+}
 .closeicon {
   width: 26px;
   display: flex;
@@ -254,7 +262,7 @@
 
 @media (max-width: 600px) {
   body.menu-open {
-    overflow: hidden; 
+    overflow: hidden;
   }
 
   .menupage {
@@ -489,7 +497,7 @@
     border-color: #0016f9; /* blue */
   }
 
-  .Submit {
+  .submit {
     content: "";
     padding: 15px;
     height: 36px;
@@ -509,4 +517,9 @@
       background -color 0.3s ease-in-out;
     cursor: pointer;
   }
+  .submit:active {
+  cursor: pointer;
+  box-shadow: 1px 1px 8px var(--secondary-color);
+  transform: scale(1.01);
+}
 }

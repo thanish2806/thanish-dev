@@ -20,6 +20,7 @@
   position: relative;
   height: 80px;
   width: 80px;
+  margin: 10px;
 }
 .logo-bottom:hover {
   cursor: pointer;
@@ -32,9 +33,15 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  margin: 10px;
   gap: 20px;
   z-index: 0;
+}
+.footer-icon a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .footer-icon img {
   cursor: pointer;
@@ -43,7 +50,7 @@
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 .footer-icon img:hover {
-  transform: scale(1.01);
+  transform: scale(1.05);
   opacity: 0.7;
 }
 .footer-credit {

@@ -121,7 +121,7 @@ function Mainmenu({ isVisible, onClose }) {
 
           <button
             type="submit"
-            className="Submit"
+            className="submit"
             disabled={statusMessage === "Sending..."}
           >
             {statusMessage ? statusMessage : "Send Message"}

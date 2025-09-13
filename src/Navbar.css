@@ -16,8 +16,9 @@
   right: 0;
 }
 .navigation a {
-  display: block;
+  display: flex;
   text-align: center;
+  justify-content:center ;
   text-decoration: none;
   color: var(--secondary-color);
   font-size: 20px;
