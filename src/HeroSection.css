@@ -5,6 +5,7 @@
   box-shadow: 1px 1px 35px #0d0d0d;
   z-index: 1;
   overflow: hidden;
+  animation: fadeIn 1s ease-in-out;
 }
 
 ul {
@@ -20,6 +21,7 @@ ul {
   max-width: 2200px; /* prevent it from being too big */
   z-index: 0; /* stays behind content */
   pointer-events: none; /* don’t block clicks */
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Top logo */
@@ -47,6 +49,7 @@ ul {
   z-index: 0;
   position: relative;
 }
+
 .myname {
   font-family: aquafont;
   font-size: 75px;
@@ -287,10 +290,10 @@ ul {
     letter-spacing: 1px;
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
-  .aboutme:hover{
+  .aboutme:hover {
     box-shadow: none;
   }
-  .aboutme:active{
+  .aboutme:active {
     cursor: pointer;
     box-shadow: 3px 3px 10px var(--secondary-color);
     transform: scale(1.01);

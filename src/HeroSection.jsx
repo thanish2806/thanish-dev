@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./HeroSection.css";
 import { useTheme } from "./ThemeContext.jsx";
 import "./App.css";
@@ -13,28 +13,22 @@ import Navbar from "./Navbar.jsx";
 import Bglogo from "./assets/images/my-logo-icon.png";
 import Mylogoicon from "./assets/images/my-logo-icon.png";
 
-// {/* ✅ Hamburger for mobile */}
+
 function HeroSection() {
   const { isDarkTheme } = useTheme();
-  const [isMenuVisible, setIsMenuVisible] = useState(false); // Mainmenu
-  const [isMobileOpen, setIsMobileOpen] = useState(false); // Mobile nav
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
+  
 
   const handleMouseMove = (e) => {
     setMouseX(e.clientX);
     setMouseY(e.clientY);
   };
 
-  useEffect(() => {
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
-
-  const toggleMenu = () => setIsMenuVisible((prev) => !prev); // Mainmenu
-  const toggleMobileNav = () => setIsMobileOpen((prev) => !prev); // Mobile nav
+  const toggleMenu = () => setIsMenuVisible((prev) => !prev);
+  const toggleMobileNav = () => setIsMobileOpen((prev) => !prev);
 
   const handleScrollToProjects = () => {
     const element = document.getElementById("projects");
@@ -46,6 +40,7 @@ function HeroSection() {
   const handleImageClick = () => {
     window.location.reload();
   };
+  
 
   return (
     <div className="herosection" onMouseMove={handleMouseMove}>
@@ -65,7 +60,7 @@ function HeroSection() {
           />
         </div>
 
-        {/*  Hamburger for mobile */}
+        {/* Hamburger for mobile */}
         <button className="hamburger-btn" onClick={toggleMobileNav}>
           <span className="line line-1"></span>
           <span className="line line-2"></span>

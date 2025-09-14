@@ -1,35 +1,45 @@
-
-import Header from "./HeroSection";
-import Mainmenu from "./mainmenu";
+import { useEffect, useState } from "react";
+import HeroSection from "./HeroSection";
 import Projects from "./projects";
 import Footer from "./footer";
+import Loader from "./loader.jsx"; // your loader component
 import "./home.css";
 
-
-import HeroSection from "./HeroSection";
-
 function Home() {
-  
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // simulate loading delay, e.g., fetching data or heavy components
+    const timer = setTimeout(() => {
+      setLoading(false); // hide loader after 2.5s
+    }, 1800);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <div className="home" >
-      <HeroSection />
+    <div className="home">
+      {loading && <Loader />} {/* show loader while loading */}
 
-      {/* Background logo with animation */}
-        
-        {/* Dynamic text movement 
-        
-        <div
-          className="animated-text"
-          style={{
-            transform: `translate(${mouseX / 100}px, ${mouseY / 100}px)`,
-          }}
-        ></div>
-        */}
-      
+      {!loading && (
+        <>
+          <HeroSection />
 
-      <Projects />
-      <Footer />
+          {/* Background logo with animation */}
+
+          {/* Dynamic text movement 
+          <div
+            className="animated-text"
+            style={{
+              transform: `translate(${mouseX / 100}px, ${mouseY / 100}px)`,
+            }}
+          ></div>
+          */}
+
+          <Projects />
+          <Footer />
+        </>
+      )}
     </div>
   );
 }

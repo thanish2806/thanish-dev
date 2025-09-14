@@ -17,3 +17,41 @@ const useTheme = () => {
 };
 
 export default useTheme;
+
+console.log(
+`%cTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+   TTTTTTTTTTTTTTTTTTTTTTT
+      TTTTTTTTTTTTTTTTT
+         TTTTTTTTTT
+           TTTTTT
+             TT`,
+"color: red; font-weight: bold; font-size: 14px;");
+
+console.log(
+`              V
+              VV
+               VV
+                VV
+                 VV
+                  VV
+                   VV
+                    VV
+                     VV
+                      VV
+                       VV
+                        VV
+                         VV
+                          VV
+                           VV
+                            VV
+                             VVV
+                              VVV
+                               VVV
+                                VVV
+                                 VVV
+                                  VVV
+                                   VVV
+                                    VVV
+                                     VV
+                                      V`,
+"color: blue; font-weight: bold; font-size: 14px;");

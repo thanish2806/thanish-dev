@@ -21,4 +21,5 @@ body {
   align-items: center;         /* Center child items horizontally */
   justify-content: center;     /* Optional: vertically center if needed */        /* Take full viewport height */
   overflow-x: hidden;          /* Prevent horizontal scroll on zoom-out */
+  animation: fadeIn 1s ease-in-out; /* Fade-in effect on load */
 }
