@@ -5,7 +5,7 @@
   box-shadow: 1px 1px 35px #0d0d0d;
   z-index: 1;
   overflow: hidden;
-  animation: fadeIn 1s ease-in-out;
+  animation: fadeIn .4s ease-in-out;
 }
 
 ul {
@@ -21,7 +21,6 @@ ul {
   max-width: 2200px; /* prevent it from being too big */
   z-index: 0; /* stays behind content */
   pointer-events: none; /* don’t block clicks */
-  animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Top logo */
