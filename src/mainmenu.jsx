@@ -9,17 +9,26 @@ function Mainmenu({ isVisible, onClose }) {
   const { isDarkTheme } = useTheme();
   const form = useRef();
   const [statusMessage, setStatusMessage] = useState("");
+  // New state to manage the component's render lifecycle
+  const [shouldRender, setShouldRender] = useState(isVisible);
 
   useEffect(() => {
     if (isVisible) {
+      // If menu is to be visible, set shouldRender to true immediately
+      setShouldRender(true);
       document.body.classList.add("menu-open");
     } else {
+      // If menu is to be closed, add a timeout to unmount after animation
+      const timeoutId = setTimeout(() => {
+        setShouldRender(false);
+      }, 800); // This delay should match your animation duration
       document.body.classList.remove("menu-open");
+      return () => clearTimeout(timeoutId);
     }
-    return () => document.body.classList.remove("menu-open");
   }, [isVisible]);
 
-  if (!isVisible) return null;
+  // Don't render anything if shouldRender is false
+  if (!shouldRender) return null;
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -45,7 +54,8 @@ function Mainmenu({ isVisible, onClose }) {
   };
 
   return (
-    <div className="menupage">
+    // Conditionally apply 'active' or 'closing' class for animation
+    <div className={`menupage ${isVisible ? "active" : "closing"}`}>
       <div className="aboutmenu">
         <p className="aboutmetext">About Me.</p>
         <p className="aboutmetext-bg">`About Me.</p>
