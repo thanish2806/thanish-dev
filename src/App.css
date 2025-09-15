@@ -23,8 +23,8 @@
   src: url("/fonts/Kiona-Regular.ttf") format("truetype");
 }
 :root {
-  --primary-color: #0d0d0d;
-  --secondary-color: #eaeaea;
+  --primary-color: #1c1d25;
+  --secondary-color: #f3f3f3;
   --highlight-text: #ff4500;
   --primary-text-low-opacity: rgba(223, 223, 227, 0.1);
   --secondary-text-low-opacity: rgba(48, 48, 48, 0.104);
@@ -50,4 +50,3 @@ body {
   overflow-x: hidden;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
-
