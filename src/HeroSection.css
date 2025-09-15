@@ -19,7 +19,7 @@ ul {
 /* Background logo */
 .background-logo {
   position: absolute;
-  opacity: 0.7;
+  opacity: 0.6;
   transform: translate(-50%, -50%);
   height: auto;
   max-width: 2200px; /* prevent it from being too big */
