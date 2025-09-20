@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import HeroSection from "./HeroSection";
 import Projects from "./projects";
 import Footer from "./footer";
-import Loader from "./loader.jsx"; // your loader component
+import Loader from "./loader.jsx";
 import "./home.css";
 
 function Home() {
