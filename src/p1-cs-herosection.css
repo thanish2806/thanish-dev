@@ -9,13 +9,7 @@
   overflow-x: hidden; /* Prevent horizontal scroll on zoom-out */
   -webkit-overflow-scrolling: touch; /* Fade-in effect on load */
 }
-.background-logo-p1-casestudy {
-  position: absolute;
-  height: 90vh;
-  width: 100%;
-  object-fit: cover;
-  opacity: 0.3;
-}
+
 .background-logo-p1-casestudy {
   position: absolute;
   height: 90vh;

@@ -16,7 +16,7 @@ function Project01CaseStudy() {
   }, []);
 
   return (
-    <div className="project-01-casestudy-container">
+    <div className="project-01-casestudy-main">
       {loading && <Loader />} {/* show loader while loading */}
       {!loading && (
         <>
