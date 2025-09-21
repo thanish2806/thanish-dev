@@ -23,7 +23,7 @@ function P1CsHeroSection() {
 
   return (
     <div className="project-01-casestudy-main">
-      <section className="casestudy-container background-logo-p1-casestudy">
+      <section className="background-logo-container">
         <img
           src={skillnest}
           className="background-logo-p1-casestudy"
