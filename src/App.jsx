@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./ThemeContext";
 import Home from "./Home";
 import Project01CaseStudy from "./project-01-casestudy.jsx";
+import "./App.css"
 
 function App() {
 
