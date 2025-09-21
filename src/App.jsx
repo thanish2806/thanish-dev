@@ -11,7 +11,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/skillnest" element={<Project01CaseStudy />} />
+          <Route path="/skillnest-casestudy" element={<Project01CaseStudy />} />
         </Routes>
       </Router>
     </ThemeProvider>

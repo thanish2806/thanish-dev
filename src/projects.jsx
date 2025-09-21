@@ -29,7 +29,7 @@ function Projects() {
           <div className="project-cover1">
             <p className="p-name1">Skill Nest</p>
             <p className="p-title1">A Platfrom for upskilling</p>
-            <Link className="casestudy1" to="/skillnest">
+            <Link className="casestudy1" to="/skillnest-casestudy">
               Case Study
             </Link>
           </div>
