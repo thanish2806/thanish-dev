@@ -1,9 +1,8 @@
 import React from "react";
 import "./projects.css";
 import cardgameimg from "./assets/images/cardgame.jpeg";
-import skillnest from "./assets/images/skillnest-thumbnail.png";
+import skillnest from "./assets/images/hero-illustration.png";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 function Projects() {
   const navigate = useNavigate();
 
@@ -43,14 +42,7 @@ function Projects() {
             >
               Click here
             </button>
-            <Link
-              className="casestudy1"
-              type="button"
-              target="_blank"
-              to="/project-01-casestud"
-            >
-              Case Study
-            </Link>
+            
           </div>
         </div>
       </div>
