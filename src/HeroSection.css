@@ -26,13 +26,43 @@ ul {
   z-index: 0; /* stays behind content */
   pointer-events: none; /* don’t block clicks */
 }
+.top-content {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 15px;
+  opacity: 0; /* hidden initially */
+  transform: translateY(-100px); /* start above */
+  z-index: 2;
+}
+
+.top-content.active {
+  animation: slideInFromTop 0.6s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100px); /* above */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); /* final place */
+    opacity: 1;
+  }
+}
 
 /* Top logo */
 .top-logo {
-  position: absolute;
-
-  top: 20px;
-  left: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: auto;
+  top: 0px;
+  left: 0px;
   z-index: 0;
 }
 .top-logo img.logo {
@@ -144,12 +174,13 @@ ul {
 }
 .icon img {
   cursor: pointer;
-  width: 35px;
+  width: 32px;
   height: auto;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0.7;
 }
 .icon img:hover {
-  transform: scale(1.1);
+  transform: scale(1.01);
   opacity: 1;
 }
 
@@ -161,9 +192,6 @@ ul {
 .hamburger-btn {
   display: none;
 }
-/* * {
-  outline: 1px solid red;
-} */
 
 @media (max-width: 600px) {
   .herosection {

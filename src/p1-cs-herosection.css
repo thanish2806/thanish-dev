@@ -1,0 +1,443 @@
+.project-01-casestudy-container {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll on zoom-out */
+  -webkit-overflow-scrolling: touch; /* Fade-in effect on load */
+}
+.background-logo-p1-casestudy {
+  position: absolute;
+  height: 90vh;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+.casestudy-navigation {
+  float: right;
+  position: relative;
+  align-self: flex-end;
+  transition: transform 0.3s ease-in-out scale ease-in-out 0.3s opacity
+    ease-in-out 0.3s;
+}
+.casestudy-navigation ul {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+  background-color: none;
+  position: relative;
+  right: 0;
+}
+.casestudy-navigation a {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 20px;
+  font-family: Roliderounded;
+  font-style: normal;
+  margin-left: 20px;
+  opacity: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+.casestudy-navigation a:hover {
+  transform: scale(1.01);
+  opacity: 80%;
+  cursor: pointer;
+}
+.casestudy-navigation li {
+  float: right;
+  justify-content: center;
+}
+.p1-casestudy-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0px 0px;
+  height: 75%;
+}
+
+.p1-cs-title-main {
+  position: relative;
+  justify-self: center;
+  color: var(--secondary-color);
+  font-family: leaguespartan;
+  font-size: 63.9614px;
+}
+.p1-cs-title1 {
+  position: relative;
+  justify-self: center;
+  color: var(--secondary-color);
+  font-family: playwritedku;
+  font-size: 18.985px;
+}
+.p1-cs-context-stripe {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.context-stripe-focus-area {
+  display: flex;
+  justify-content: space-around; /* evenly space items */
+  align-items: center;
+  gap: 0px; /* consistent spacing */
+  width: 80%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #fff;
+  font-family: "louisgeorgecafe", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.context-stripe-focus-area li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 7px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.context-stripe-focus-area strong {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.stripe-baffle {
+  font-size: 15px;
+  opacity: 0.9;
+  font-style: italic;
+  transition: opacity 0.3s ease;
+}
+
+li:hover .stripe-baffle {
+  opacity: 1;
+}
+
+.p1-cs-intro-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  justify-content: space-around;
+  justify-self: center;
+  position: relative;
+  margin: auto 0;
+  width: 40%;
+  height: 55vh;
+  padding: 60px 0px;
+}
+.p1-cs-intro-title {
+  position: relative;
+  justify-self: center;
+  color: var(--secondary-color);
+  font-family: leaguespartan;
+  font-size: 63.9614px;
+}
+.p1-cs-intro-subtitle {
+  position: relative;
+  justify-self: center;
+  color: var(--secondary-color);
+  font-family: Roliderounded;
+  font-size: 18.985px;
+  text-align: justify;
+}
+
+/* site-link Container */
+.site-link-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Button */
+.site-link-button {
+  display: inline-flex; /* aligns text + arrow */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: transparent;
+  color: var(--secondary-color);
+  background: transparent;
+  font-size: 18px;
+  font-family: Roliderounded, sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-width: 2px;
+  text-decoration: none; /* remove underline for <a> */
+  opacity: 0.7;
+}
+
+/* Hover */
+.site-link-button:hover {
+  color: rgb(255, 255, 255);
+  opacity: 1;
+}
+
+/* Arrow container */
+.forward-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Arrow icon */
+.forward-icon svg {
+  width: 25px;
+  position: relative;
+  transition: transform 0.3s ease-in-out, fill 0.3s ease;
+}
+
+/* Animate arrow on hover */
+.site-link-button:hover .forward-icon svg {
+  fill: #fff;
+  transform: translateX(4px); /* optional movement */
+}
+
+.project-details-section {
+  width: 100%;
+  background-color: #f3f3f3;
+  padding: 40px 0;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  position: relative;
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+.casestudy-section-subtitle {
+  font-size: 15.354px;
+  margin: 8px;
+  font-family: kionaregular;
+  color: #6a5555;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+.casestudy-section-title {
+  font-size: 38px;
+  margin: 20px;
+  font-family: louisgeorgecafebold;
+  color: #425c64;
+}
+
+.inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  justify-content: left;
+  width: 80%;
+  margin: 0;
+  left: 0;
+  padding: 20px 0;
+}
+.casestudy-section-content-title {
+  font-size: 36.245px;
+  margin-top: 20px;
+  font-family: leaguespartan;
+}
+.casestudy-section-content-separator {
+  height: 4px;
+  width: 120px;
+  background-color: #4f46e5;
+}
+.casestudy-section-content-desc {
+  display: flex;
+  flex-direction: column;
+  font-size: 20.245px;
+  margin-top: 20px;
+  font-family: kionaregular;
+  color: #3a3a3a;
+  line-height: 1.6;
+  width: 423px;
+  text-align: justify;
+}
+.casestudy-section-inner-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75%;
+  margin: 0;
+  left: 0;
+  padding: 20px 0;
+}
+.casestudy-section-ui-image-container {
+  height: 500px;
+  width: 500px;
+}
+.casestudy-section-ui-image-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  scale: 1.5;
+}
+.casestudy-section-color-palette-section {
+  margin: 30px;
+}
+.casestudy-section-color-palette-section {
+  display: flex;
+  flex-direction: row;
+  align-items: self-start;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0;
+  left: 0;
+  padding: 70px 0;
+}
+.color-palette-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.color-palette {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  box-shadow: 3px 3px 10px #3a3a3a34;
+}
+.color-palette-name {
+  font-size: 18px;
+}
+.casestudy-section-fonts-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  width: 80%;
+  margin: 70px 0;
+}
+.title-font-style-1 {
+  font-size: 38px;
+  margin: 20px;
+  color: #425c64;
+  font-family: "Ubuntu", sans-serif;
+}
+.casestudy-section-font-style-1 {
+  display: flex;
+  flex-direction: column;
+  font-size: 25.245px;
+  margin-top: 20px;
+  font-family: "Ubuntu", sans-serif;
+  color: #3a3a3a;
+  line-height: 0.6;
+  letter-spacing: 0.8px;
+  width: 423px;
+  text-align: justify;
+}
+
+.title-font-style-2 {
+  font-size: 38px;
+  margin: 20px;
+  color: #425c64;
+  text-decoration: none;
+  font-family: Be Vietnam Pro, sans-serif;
+}
+.casestudy-section-font-style-2 {
+  display: flex;
+  flex-direction: column;
+  font-size: 25.245px;
+  margin-top: 20px;
+  font-family: Be Vietnam Pro, sans-serif;
+  color: #3a3a3a;
+  line-height: 0.6;
+  letter-spacing: 0.8px;
+  width: 423px;
+  text-align: justify;
+}
+.next-work {
+  display: block;
+  width: 100%;
+  padding: 25px 0;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.next-work-lead {
+  font-family: LibreBaskerville-Regular, Palatino Linotype, Times New Roman,
+    serif;
+  text-transform: uppercase;
+  position: relative;
+  align-self: flex-start;
+  text-decoration: none;
+  color: #636ae8;
+  font-size: 20.234;
+  font-weight: 400;
+}
+.next-work-title {
+  font-family: leaguespartan;
+  position: relative;
+  align-self: flex-start;
+  font-size: 2.5em;
+  line-height: 1.2;
+  margin: 30px;
+  color: #425c64;
+  max-width: 600px;
+}
+.next-work-arrow svg {
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  top: 50%;
+  right: 100px;
+  top: 65%;
+  width: 100px;
+  height: 70px;
+  opacity: 0.7;
+  z-index: 2;
+  transition: transform 0.3s ease-in, fill 0.3s ease;
+}
+.next-work:hover .next-work-arrow svg {
+  transform: translateX(12px); /* optional movement */
+  opacity: 1;
+}
+.casestudy-section-ui-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 80%;
+  margin: 0;
+  left: 0;
+  padding: 20px 0;
+}
+.single-work-ui-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+  width: 800px;
+  overflow: hidden;
+}
+.single-work-ui-image img {
+  height: 50%;
+  width: 50%;
+  object-fit: contain;
+  scale: 2.5;
+}

@@ -1,8 +1,10 @@
+
 .navigation {
   float: right;
   position: relative;
-  top: 25px;
-  right: 190px;
+  align-self: flex-end;
+  top: 0px;
+  right: 0px;
 }
 .navigation ul {
   display: flex;
@@ -18,7 +20,7 @@
 .navigation a {
   display: flex;
   text-align: center;
-  justify-content:center ;
+  justify-content: center;
   text-decoration: none;
   color: var(--secondary-color);
   font-size: 20px;
@@ -26,16 +28,11 @@
   font-style: normal;
   margin-left: 20px;
   opacity: 100%;
-  transition: transform 0.3s ease-in-out;
 }
 
 .navigation li {
   float: right;
   justify-content: center;
-}
-.navigation {
-  transition: transform 0.3s ease-in-out scale ease-in-out 0.3s opacity
-    ease-in-out 0.3s;
 }
 .navigation a:hover {
   transform: scale(1.01);
@@ -82,8 +79,6 @@
   .navigation-mobile.open {
     transform: translateX(0); /* ✅ slide in */
   }
-
-
 
   .navigation-mobile ul {
     list-style: none;

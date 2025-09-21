@@ -22,6 +22,14 @@
   font-family: "kionaregular";
   src: url("/fonts/Kiona-Regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: "leaguespartan";
+  src: url("/fonts/LeagueSpartan-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "playwritedku";
+  src: url("/fonts/PlaywriteDKUloopet-VariableFont_wght.ttf") format("truetype");
+}
 :root {
   --primary-color: #1c1d25;
   --secondary-color: #f3f3f3;

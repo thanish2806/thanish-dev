@@ -2,13 +2,20 @@
   background-color: #eaeaea;
   min-width: 100%;
   position: relative;
-  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px;
+
+  padding-top: 45px;
 }
 .projects a {
   z-index: 2;
 }
 .heading-1 {
   font-size: 17px;
+  margin: 8px;
   font-family: kionaregular;
   color: #6a5555;
   align-items: center;
@@ -16,6 +23,7 @@
 }
 .heading-2 {
   font-size: 38px;
+  margin: 20px;
   font-family: louisgeorgecafebold;
   color: #425c64;
   align-items: center;
@@ -26,7 +34,7 @@
 .project1 {
   position: relative; /* Allows absolute positioning inside */
   width: 950px; /* Keep all images the same width */
-  margin: 100px auto; /* Keep images aligned */
+  margin: 54px;
   left: 30px;
   background: #000000;
 
@@ -104,6 +112,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
   color: #f7f7f7;
   background: linear-gradient(to right, #0016f9, #d10d04);
   border: none;
@@ -131,13 +140,13 @@
 .project1 img {
   height: 510px;
   width: 950px;
-
   margin: 0px auto; /* Centers the image */
   position: relative;
   display: block;
   transition: box-shadow 0.3s ease-in-out;
   object-fit: cover;
   opacity: 60%;
+   transform: scale(1.5);
 }
 
 .project1 img:hover {
@@ -150,7 +159,7 @@
 .project2 {
   position: relative; /* Allows absolute positioning inside */
   width: 950px; /* Keep all images the same width */
-  margin: 100px auto; /* Keep images aligned */
+  margin: 54px;
   right: 30px;
   background: #000000;
   box-shadow: 3px 3px 50px #0d0d0dca;
@@ -320,6 +329,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
     color: #f7f7f7;
     background: linear-gradient(to right, #0016f9, #d10d04);
     border: none;

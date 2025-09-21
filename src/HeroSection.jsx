@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./HeroSection.css";
 import { useTheme } from "./ThemeContext.jsx";
 import "./App.css";
-import Mainmenu from "./mainmenu";
+import Mainmenu from "./mainmenu.jsx";
 import linkedindark from "./assets/images/linkedin-dark.png";
 import linkedinlight from "./assets/images/linkedin-light.png";
 import githubdark from "./assets/images/github-dark.png";
@@ -12,15 +12,15 @@ import downarrowlight from "./assets/images/down-arrow-light.png";
 import Navbar from "./Navbar.jsx";
 import Bglogo from "./assets/images/my-logo-icon.png";
 import Mylogoicon from "./assets/images/my-logo-icon.png";
-
+import { scrollToProjects } from "./scripts/scrollToProjects.js";
 
 function HeroSection() {
+  const [isActive, setIsActive] = useState(false);
   const { isDarkTheme } = useTheme();
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
-  
 
   const handleMouseMove = (e) => {
     setMouseX(e.clientX);
@@ -30,27 +30,18 @@ function HeroSection() {
   const toggleMenu = () => setIsMenuVisible((prev) => !prev);
   const toggleMobileNav = () => setIsMobileOpen((prev) => !prev);
 
-  const handleScrollToProjects = () => {
-    const element = document.getElementById("projects");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   const handleImageClick = () => {
     window.location.reload();
   };
-  
 
+  useEffect(() => {
+    setIsActive(true); // triggers animation once after mount
+  }, []);
   return (
     <div className="herosection" onMouseMove={handleMouseMove}>
       {/* Top logo + navbar */}
-      <Navbar
-        toggleMenu={toggleMenu}
-        isMobileOpen={isMobileOpen}
-        closeMobileNav={() => setIsMobileOpen(false)}
-      />
-      <div className="top-content">
+
+      <div className={`top-content ${isActive ? "active" : ""}`}>
         <div className="top-logo">
           <img
             onClick={handleImageClick}
@@ -59,7 +50,11 @@ function HeroSection() {
             alt="Logo"
           />
         </div>
-
+        <Navbar
+          toggleMenu={toggleMenu}
+          isMobileOpen={isMobileOpen}
+          closeMobileNav={() => setIsMobileOpen(false)}
+        />
         {/* Hamburger for mobile */}
         <button className="hamburger-btn" onClick={toggleMobileNav}>
           <span className="line line-1"></span>
@@ -91,10 +86,10 @@ function HeroSection() {
 
       {/* Works bottom center */}
       <div className="works">
-        <button onClick={handleScrollToProjects} className="works-button">
+        <button onClick={scrollToProjects} className="works-button">
           Works
         </button>
-        <button onClick={handleScrollToProjects} className="arrow-button">
+        <button onClick={scrollToProjects} className="arrow-button">
           <img
             className="arrow"
             src={isDarkTheme ? downarrowdark : downarrowlight}
