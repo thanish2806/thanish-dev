@@ -11,7 +11,7 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.casestudy-container {
+.casestudy-container,.background-logo-p1-casestudy  {
   display: flex;
   flex-direction: column;
   height: 90vh; /* take full viewport height */
