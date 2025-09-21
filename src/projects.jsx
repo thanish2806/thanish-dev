@@ -1,7 +1,7 @@
 import React from "react";
 import "./projects.css";
 import cardgameimg from "./assets/images/cardgame.jpeg";
-import skillnest from "./assets/images/skillnest-thumbnail.png";
+import skillnest from "./assets/images/hero-illustration.png";
 import { Link } from "react-router-dom";
 function Projects() {
   return (

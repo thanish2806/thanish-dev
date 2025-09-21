@@ -1,4 +1,3 @@
-
 .navigation {
   float: right;
   position: relative;
@@ -91,7 +90,7 @@
     padding: 15px;
     display: block;
     text-decoration: none;
-    color: var(--secondary-color);
+    color: #f3f3f3;
     font-size: 28px;
     font-family: Roliderounded;
     font-weight: 400;

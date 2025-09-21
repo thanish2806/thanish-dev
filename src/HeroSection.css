@@ -177,7 +177,7 @@ ul {
   width: 32px;
   height: auto;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 .icon img:hover {
   transform: scale(1.01);
@@ -269,7 +269,7 @@ ul {
   /* Lines */
   .hamburger-btn .line {
     height: 3px;
-    background-color: var(--secondary-color); /* adapts with theme */
+    background-color:  #f3f3f3; /* adapts with theme */
     border-radius: 2px;
     align-self: flex-end;
     transition: all 0.3s ease-in-out;

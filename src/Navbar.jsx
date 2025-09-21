@@ -3,7 +3,6 @@ import { useTheme } from "./ThemeContext";
 import { useLocation, useNavigate } from "react-router-dom";
 import LightMode from "./assets/images/light-mode.png";
 import DarkMode from "./assets/images/night-mode.png";
-import closeicondark from "./assets/images/close-icon-dark.png";
 import closeiconlight from "./assets/images/close-icon-light.png";
 import { Link } from "react-router-dom";
 import { scrollToProjects } from "./scripts/scrollToProjects.js";
@@ -14,7 +13,7 @@ const Navbar = ({ toggleMenu, isMobileOpen, closeMobileNav }) => {
   const { isDarkTheme, toggleTheme } = useTheme();
   const location = useLocation();
 
-  const isCaseStudyPage = location.pathname === "/project-01-casestudy";
+  const isCaseStudyPage = location.pathname === "/skillnest-casestudy";
 
   const navigate = useNavigate();
 
@@ -58,7 +57,7 @@ const Navbar = ({ toggleMenu, isMobileOpen, closeMobileNav }) => {
             <img
               className="closeicon-mob-menu"
               onClick={closeMobileNav}
-              src={isDarkTheme ? closeicondark : closeiconlight}
+              src={closeiconlight}
               alt="Close"
             />
             <ul>
@@ -95,31 +94,53 @@ const Navbar = ({ toggleMenu, isMobileOpen, closeMobileNav }) => {
 
       {/* Show case study navigation ONLY on case study page */}
       {isCaseStudyPage && (
-        <div className="casestudy-navigation">
-          <ul>
-            <li className="cs-navigationpc">
-              <Link to="/home">Turn back to Home</Link>
-            </li>
-            <li className="cs-navigationpc">
-              <a onClick={handleAllWorks}>All Works</a>
-            </li>
+        <>
+          <div className="casestudy-navigation ">
+            <ul>
+              <li className="cs-navigationpc">
+                <Link to="/home">Turn back to Home</Link>
+              </li>
+              <li className="cs-navigationpc">
+                <a onClick={handleAllWorks}>All Works</a>
+              </li>
+              <li className="cs-navigationpc" id="contactpc">
+                <a onClick={toggleMenu} href="#">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+          {/* Mobile Navigation */}
 
-            <li className="cs-navigationpc" id="contactpc">
-              <a onClick={toggleMenu} href="#">
-                Contact
-              </a>
-            </li>
-            <li className="cs-navigationpc">
-              <a href="#" onClick={toggleTheme}>
-                <img
-                  id="theme-pc"
-                  src={isDarkTheme ? DarkMode : LightMode}
-                  alt="Toggle Theme"
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
+          <div className={`navigation-mobile ${isMobileOpen ? "open" : ""}`}>
+            <img
+              className="closeicon-mob-menu"
+              onClick={closeMobileNav}
+              src={ closeiconlight}
+              alt="Close"
+            />
+            <ul>
+              <li className="options-mobile">
+                <a
+                  onClick={() => {
+                    closeMobileNav();
+                    navigate("/home");
+                  }}
+                >
+                  Turn Back Home
+                </a>
+              </li>
+              <li className="options-mobile">
+                <a onClick={handleAllWorks}>All Works</a>
+              </li>
+              <li className="options-mobile" id="contactpc">
+                <a onClick={toggleMenu} href="#">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </>
       )}
     </div>
   );

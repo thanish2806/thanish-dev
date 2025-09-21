@@ -56,21 +56,21 @@ function P1CsHeroSection() {
           <h1 className="p1-cs-title-main">Project Skillnest</h1>
           <p className="p1-cs-title1">A Platfrom for upskilling</p>
         </div>
-        <div class="p1-cs-context-stripe">
-          <ul class="context-stripe-focus-area is-loaded">
+        <div className="p1-cs-context-stripe">
+          <ul className="context-stripe-focus-area is-loaded">
             <li>
               <strong>Role</strong>{" "}
-              <span class="stripe-baffle">Front-end Developer</span>
+              <span className="stripe-baffle">Front-end Developer</span>
             </li>
             <li>
               <strong>Context</strong>{" "}
-              <span class="stripe-baffle">
+              <span className="stripe-baffle">
                 Building a scalable Web App;ication
               </span>
             </li>
             <li>
               <strong>Period</strong>{" "}
-              <span class="stripe-baffle">Early 2025</span>
+              <span className="stripe-baffle">Early 2025</span>
             </li>
           </ul>
         </div>
@@ -122,7 +122,7 @@ function P1CsHeroSection() {
               <h3 className="casestudy-section-content-title">
                 An elegant design.
               </h3>
-              <div class="casestudy-section-content-separator"></div>
+              <div className="casestudy-section-content-separator"></div>
               <div className="casestudy-section-content-desc">
                 <p>
                   As the <strong>Front-end Developer</strong>, I was responsible
@@ -183,11 +183,11 @@ function P1CsHeroSection() {
               <img src={Skillnestuipagination} alt="cerasa ui pagination" />
             </div>
           </div>
-          <a class="next-work">
-            <h5 class="next-work-lead">Next Work</h5>
-            <h4 class="next-work-title">Comming Soon</h4>
-            <div class="casestudy-section-content-separator"></div>
-            <div class="next-work-arrow">
+          <a className="next-work">
+            <h5 className="next-work-lead">Next Work</h5>
+            <h4 className="next-work-title">Comming Soon</h4>
+            <div className="casestudy-section-content-separator"></div>
+            <div className="next-work-arrow">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 476.213 476.213"

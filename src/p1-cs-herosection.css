@@ -5,6 +5,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
+  background-color: #1c1d25;
   overflow-x: hidden; /* Prevent horizontal scroll on zoom-out */
   -webkit-overflow-scrolling: touch; /* Fade-in effect on load */
 }
@@ -38,7 +39,7 @@
   text-align: center;
   justify-content: center;
   text-decoration: none;
-  color: var(--secondary-color);
+  color: #f3f3f3;
   font-size: 20px;
   font-family: Roliderounded;
   font-style: normal;
@@ -68,14 +69,14 @@
 .p1-cs-title-main {
   position: relative;
   justify-self: center;
-  color: var(--secondary-color);
+  color: #f3f3f3;
   font-family: leaguespartan;
   font-size: 63.9614px;
 }
 .p1-cs-title1 {
   position: relative;
   justify-self: center;
-  color: var(--secondary-color);
+  color: #f3f3f3;
   font-family: playwritedku;
   font-size: 18.985px;
 }
@@ -140,22 +141,24 @@ li:hover .stripe-baffle {
   justify-self: center;
   position: relative;
   margin: auto 0;
-  width: 40%;
+  width: 100%;
   height: 55vh;
   padding: 60px 0px;
+  background-color: #262626;
 }
 .p1-cs-intro-title {
   position: relative;
   justify-self: center;
-  color: var(--secondary-color);
+  color: #f3f3f3;
   font-family: leaguespartan;
   font-size: 63.9614px;
 }
 .p1-cs-intro-subtitle {
   position: relative;
   justify-self: center;
-  color: var(--secondary-color);
+  color: #f3f3f3;
   font-family: Roliderounded;
+  width: 40%;
   font-size: 18.985px;
   text-align: justify;
 }
@@ -177,7 +180,7 @@ li:hover .stripe-baffle {
   gap: 10px;
   padding: 12px 20px;
   background: transparent;
-  color: var(--secondary-color);
+  color: #f3f3f3;
   background: transparent;
   font-size: 18px;
   font-family: Roliderounded, sans-serif;
@@ -440,4 +443,11 @@ li:hover .stripe-baffle {
   width: 50%;
   object-fit: contain;
   scale: 2.5;
+}
+
+@media (max-width: 600px) {
+  .casestudy-navigation {
+    display: none;
+  }
+  
 }

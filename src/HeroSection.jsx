@@ -37,6 +37,7 @@ function HeroSection() {
   useEffect(() => {
     setIsActive(true); // triggers animation once after mount
   }, []);
+
   return (
     <div className="herosection" onMouseMove={handleMouseMove}>
       {/* Top logo + navbar */}
