@@ -2,6 +2,7 @@ import Footer from "./footer";
 import Loader from "./loader.jsx";
 import P1CsHeroSection from "./p1-cs-herosection.jsx";
 import { useEffect, useState } from "react";
+import "./project-01-casestudy.css";
 function Project01CaseStudy() {
   const [loading, setLoading] = useState(true);
 
