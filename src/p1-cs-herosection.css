@@ -11,6 +11,13 @@
 }
 .background-logo-p1-casestudy {
   position: absolute;
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+.background-logo-p1-casestudy {
+  position: absolute;
   height: 90vh;
   width: 100%;
   object-fit: cover;
@@ -462,12 +469,12 @@ li:hover .stripe-baffle {
     -webkit-overflow-scrolling: touch; /* Fade-in effect on load */
   }
   .background-logo-p1-casestudy {
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  object-fit: cover;
-  opacity: 0.3;
-}
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+  }
   .p1-casestudy-title-container {
     display: flex;
     flex-direction: column;
