@@ -24,7 +24,7 @@ function P1CsHeroSection() {
   return (
     <div className="project-01-casestudy">
       {/* Background logo */}
-      <div className="casestudy-container">
+      <section className="casestudy-container">
         <img
           src={skillnest}
           className="background-logo-p1-casestudy"
@@ -74,7 +74,7 @@ function P1CsHeroSection() {
             </li>
           </ul>
         </div>
-      </div>
+      </section>
 
       <section className="p1-cs-intro-section">
         <h2 className="p1-cs-intro-title">The Project</h2>
