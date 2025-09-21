@@ -1,25 +1,27 @@
 .project-01-casestudy {
   min-width: 100%;
-  position: relative;
+  position: relative; /* required for absolute children */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%; /* Add this */
+  height: 100%; /* ensures full viewport height */
   overflow-x: hidden;
   overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
+
 .casestudy-container {
   display: flex;
   flex-direction: column;
-  height: 90vh;
+  height: 90vh; /* take full viewport height */
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #1c1d25;
-  overflow-x: hidden; /* Prevent horizontal scroll on zoom-out */
+  background-color: #1c1d2509;
+  overflow-x: hidden;
   overflow-y: hidden;
-  -webkit-overflow-scrolling: touch; /* Fade-in effect on load */
+  -webkit-overflow-scrolling: touch;
 }
 
 .background-logo-p1-casestudy {
@@ -28,6 +30,7 @@
   width: 100%;
   object-fit: cover;
   opacity: 0.3;
+  z-index: -1; /* keep behind content */
 }
 .casestudy-navigation {
   float: right;
