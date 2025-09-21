@@ -449,5 +449,63 @@ li:hover .stripe-baffle {
   .casestudy-navigation {
     display: none;
   }
-  
+  .p1-cs-title-main {
+    font-size: 43.9614px;
+  }
+  .p1-cs-title1 {
+    font-size: 18.985px;
+  }
+ .p1-cs-context-stripe {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.context-stripe-focus-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* evenly space items */
+  align-items: center;
+  gap: 0px; /* consistent spacing */
+  height: 40%;
+  width: 80%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #fff;
+  font-family: "louisgeorgecafe", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.context-stripe-focus-area li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 7px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.context-stripe-focus-area strong {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.stripe-baffle {
+  font-size: 15px;
+  opacity: 0.9;
+  font-style: italic;
+  transition: opacity 0.3s ease;
+}
+
+li:hover .stripe-baffle {
+  opacity: 1;
+}
 }
