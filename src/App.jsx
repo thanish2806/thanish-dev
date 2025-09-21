@@ -10,7 +10,7 @@ function App() {
     <ThemeProvider>
       <Router>
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/skillnest-casestudy" element={<Project01CaseStudy />} />
         </Routes>
       </Router>

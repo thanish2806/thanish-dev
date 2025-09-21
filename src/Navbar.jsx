@@ -18,7 +18,7 @@ const Navbar = ({ toggleMenu, isMobileOpen, closeMobileNav }) => {
   const navigate = useNavigate();
 
   const handleAllWorks = () => {
-    navigate("/home");
+    navigate("/");
     setTimeout(() => {
       scrollToProjects();
     }, 2800); // wait a moment for Home to mount
@@ -65,7 +65,7 @@ const Navbar = ({ toggleMenu, isMobileOpen, closeMobileNav }) => {
                 <a
                   onClick={() => {
                     closeMobileNav();
-                    navigate("/home");
+                    navigate("/");
                   }}
                 >
                   Home
@@ -98,7 +98,7 @@ const Navbar = ({ toggleMenu, isMobileOpen, closeMobileNav }) => {
           <div className="casestudy-navigation ">
             <ul>
               <li className="cs-navigationpc">
-                <Link to="/home">Turn back to Home</Link>
+                <Link to="/">Turn back to Home</Link>
               </li>
               <li className="cs-navigationpc">
                 <a onClick={handleAllWorks}>All Works</a>
@@ -124,7 +124,7 @@ const Navbar = ({ toggleMenu, isMobileOpen, closeMobileNav }) => {
                 <a
                   onClick={() => {
                     closeMobileNav();
-                    navigate("/home");
+                    navigate("/");
                   }}
                 >
                   Turn Back Home

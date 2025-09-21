@@ -65,7 +65,7 @@ function P1CsHeroSection() {
             <li>
               <strong>Context</strong>{" "}
               <span className="stripe-baffle">
-                Building a scalable Web App;ication
+                Building a scalable Web Application
               </span>
             </li>
             <li>
