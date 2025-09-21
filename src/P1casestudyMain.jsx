@@ -1,8 +1,8 @@
-import Footer from "./footer";
+import Footer from "./footer.jsx";
 import Loader from "./loader.jsx";
-import P1CsHeroSection from "./p1-cs-herosection.jsx";
 import { useEffect, useState } from "react";
-import "./project-01-casestudy.css";
+import P1CsHeroSection from "./P1csherosection.jsx";
+import "./P1casestudyMain.css";
 function Project01CaseStudy() {
   const [loading, setLoading] = useState(true);
 

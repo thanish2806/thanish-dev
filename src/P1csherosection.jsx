@@ -4,7 +4,7 @@ import skillnest from "./assets/images/hero-illustration.png";
 import Mainmenu from "./mainmenu.jsx";
 import SkillnestUIEg from "./assets/images/skillnest User Interface Example.png";
 import Skillnestuipagination from "./assets/images/skillnest ui pagination.png";
-import "./p1-cs-herosection.css";
+import "./P1csherosection.css";
 import Navbar from "./Navbar.jsx";
 
 function P1CsHeroSection() {
