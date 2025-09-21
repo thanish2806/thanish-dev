@@ -1,9 +1,15 @@
 import React from "react";
 import "./projects.css";
 import cardgameimg from "./assets/images/cardgame.jpeg";
-import skillnest from "./assets/images/hero-illustration.png";
+import skillnest from "./assets/images/skillnest-thumbnail.png";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 function Projects() {
+  const navigate = useNavigate();
+
+  const handleproject01casestudy = () => {
+    navigate("/skillnest-casestudy");
+  };
   return (
     <div className="projects" id="projects">
       <p className="heading-1">CASE STUDIES</p>
@@ -29,7 +35,20 @@ function Projects() {
           <div className="project-cover1">
             <p className="p-name1">Skill Nest</p>
             <p className="p-title1">A Platfrom for upskilling</p>
-            <Link className="casestudy1" to="/skillnest-casestudy">
+            <button
+              className="casestudy1"
+              type="button"
+              target="_blank"
+              onClick={handleproject01casestudy}
+            >
+              Click here
+            </button>
+            <Link
+              className="casestudy1"
+              type="button"
+              target="_blank"
+              to="/project-01-casestud"
+            >
               Case Study
             </Link>
           </div>
