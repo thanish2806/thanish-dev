@@ -640,7 +640,7 @@ li:hover .stripe-baffle {
     justify-self: center;
     position: relative;
     display: flex;
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
   }
   .casestudy-section-subtitle {
