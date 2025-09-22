@@ -12,7 +12,7 @@
 .background-logo-container {
   display: flex;
   flex-direction: column;
-  height: 90vh; /* take full viewport height */
+  min-height: 90vh; /* take full viewport height */
   width: 100%;
   margin: 0;
   padding: 0;
@@ -22,7 +22,7 @@
 
 .background-logo-p1-casestudy {
   position: absolute;
-  height: 90vh;
+  min-height: 90vh;
   width: 100%;
   object-fit: cover;
   opacity: 0.3;
