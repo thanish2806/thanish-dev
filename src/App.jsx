@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./ThemeContext";
 import Home from "./Home";
-import Project01CaseStudy from "./P1casestudyMain.jsx";
+import Project01CaseStudy from "./Project01CaseStudy/P1casestudyMain.jsx";
 import "./App.css";
 
 function App() {

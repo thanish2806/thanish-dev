@@ -1,9 +1,10 @@
-import Footer from "./footer.jsx";
-import Loader from "./loader.jsx";
+import React from "react";
+import "./P1casestudyMain.css";
 import { useEffect, useState } from "react";
 import P1CsHeroSection from "./P1csherosection.jsx";
-import "./P1casestudyMain.css";
-
+import P1CaseStudyProjectIntroSection from "./P1casestudyprojectintrosection.jsx";
+import Footer from "../footer.jsx";
+import Loader from "../loader.jsx";
 
 function Project01CaseStudy() {
   const [loading, setLoading] = useState(true);
@@ -23,6 +24,11 @@ function Project01CaseStudy() {
       {!loading && (
         <>
           <P1CsHeroSection />
+
+          <P1CaseStudyIntroSection />
+
+          <P1CaseStudyProjectIntroSection />
+
           <Footer />
         </>
       )}
