@@ -49,8 +49,10 @@ function P1CsHeroSection() {
       </div>
       {/* Main content */}
 
-      <h1 className="p1-cs-title-main">Project Skillnest</h1>
-      <p className="p1-cs-title1">A Platfrom for upskilling</p>
+      <div className="p1-casestudy-title-container">
+        <h1 className="p1-cs-title-main">Project Skillnest</h1>
+        <p className="p1-cs-title1">A Platfrom for upskilling</p>
+      </div>
 
       <div className="p1-cs-context-stripe">
         <ul className="context-stripe-focus-area is-loaded">
