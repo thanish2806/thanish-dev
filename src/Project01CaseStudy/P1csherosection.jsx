@@ -3,8 +3,7 @@ import "./P1csherosection.css";
 import Mylogoicon from "../assets/images/my-logo-icon.png";
 import skillnest from "../assets/images/hero-illustration.png";
 import Mainmenu from "../mainmenu.jsx";
-
-import Navbar from "../Navbar.js";
+import Navbar from "../Navbar.jsx";
 
 function P1CsHeroSection() {
   const [isActive, setIsActive] = useState(false);
