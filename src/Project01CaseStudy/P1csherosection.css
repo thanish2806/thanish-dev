@@ -4,10 +4,17 @@
 }
 
 .background-logo-container {
-  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 90vh;
   width: 100%;
   margin: 0;
   padding: 0;
+  background-color: transparent;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch; /* Fade-in effect on load */
 
 }
 
