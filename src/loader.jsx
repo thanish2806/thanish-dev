@@ -5,7 +5,7 @@ const Loader = () => {
   const [active, setActive] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setActive(false), 2800); // matches animation duration
+    const timer = setTimeout(() => setActive(false), 3000); // matches animation duration
     return () => clearTimeout(timer);
   }, []);
 
