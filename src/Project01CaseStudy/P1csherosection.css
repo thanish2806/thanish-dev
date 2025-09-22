@@ -1,5 +1,5 @@
 .casestudy-conatainer {
-  min-width: 100%; /* Set maximum width for content */
+  width: 100%; /* Set maximum width for content */
   margin: 0 auto; /* Horizontally center the container */ /* Optional padding */
   position: relative; /* So children like .background-logo can be absolutely positioned if needed */
   display: flex;
@@ -244,7 +244,7 @@ li:hover .stripe-baffle {
   justify-self: center;
   position: relative;
   display: flex;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
 }
 .casestudy-section-subtitle {
@@ -465,7 +465,7 @@ li:hover .stripe-baffle {
     display: none;
   }
   .casestudy-conatainer {
-    min-width: 100%; /* Set maximum width for content */
+    width: 100%; /* Set maximum width for content */
     margin: 0 auto; /* Horizontally center the container */ /* Optional padding */
     position: relative; /* So children like .background-logo can be absolutely positioned if needed */
     display: flex;
