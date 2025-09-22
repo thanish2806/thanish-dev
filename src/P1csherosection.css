@@ -1,4 +1,15 @@
+.casestudy-conatainer {
+  height: 100%;
+  width: 100%;
+}
 
+.background-logo-container {
+  min-height: 90vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+}
 
 .background-logo-p1-casestudy {
   position: absolute;
