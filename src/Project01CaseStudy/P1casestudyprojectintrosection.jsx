@@ -1,7 +1,7 @@
 import React from "react";
 import "./P1casestudyprojectintrosection.css";
-import SkillnestUIEg from "./assets/images/skillnest User Interface Example.png";
-import Skillnestuipagination from "./assets/images/skillnest ui pagination.png";
+import SkillnestUIEg from "../assets/images/skillnest User Interface Example.png";
+import Skillnestuipagination from "../assets/images/skillnest ui pagination.png";
 
 const P1CaseStudyProjectIntroSection = () => (
   <section className="project-details-section">

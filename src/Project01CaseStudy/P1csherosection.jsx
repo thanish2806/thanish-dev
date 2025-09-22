@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./P1csherosection.css";
-import Mylogoicon from "./assets/images/my-logo-icon.png";
-import skillnest from "./assets/images/hero-illustration.png";
+import Mylogoicon from "../assets/images/my-logo-icon.png";
+import skillnest from "../assets/images/skillnest-logo.png";
 import Mainmenu from "../mainmenu.js";
 
 import Navbar from "../Navbar.js";
