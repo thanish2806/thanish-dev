@@ -10,6 +10,7 @@
 body {
   animation: fadeIn 0.5s ease-in-out;
 }
+
 .project-01-casestudy-main {
   min-width: 100%; /* Set maximum width for content */
   margin: 0 auto; /* Horizontally center the container */ /* Optional padding */
@@ -19,6 +20,5 @@ body {
   align-items: center; /* Center child items horizontally */
   justify-content: center; /* Optional: vertically center if needed */ /* Take full viewport height */
   overflow-x: hidden; /* Prevent horizontal scroll on zoom-out */
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch; /* Fade-in effect on load */
 }
