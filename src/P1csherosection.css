@@ -1,4 +1,4 @@
-.project-01-casestudy-main {
+.casestudy-conatainer {
   min-width: 100%;
   position: relative; /* required for absolute children */
   display: flex;
@@ -19,8 +19,6 @@
   margin: 0;
   padding: 0;
   background-color: #1c1d2509;
-  overflow-x: hidden;
-  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -465,7 +463,7 @@ li:hover .stripe-baffle {
   .casestudy-navigation {
     display: none;
   }
-  .project-01-casestudy {
+  .casestudy-conatainer {
     min-width: 100%; /* Set maximum width for content */
     margin: 0 auto; /* Horizontally center the container */ /* Optional padding */
     position: relative; /* So children like .background-logo can be absolutely positioned if needed */
@@ -477,7 +475,7 @@ li:hover .stripe-baffle {
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
   }
-  .casestudy-container {
+  .background-logo-container {
     display: flex;
     flex-direction: column;
     height: 100vh;
