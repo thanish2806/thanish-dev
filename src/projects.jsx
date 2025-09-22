@@ -40,7 +40,7 @@ function Projects() {
               target="_blank"
               onClick={handleproject01casestudy}
             >
-              Click here
+              Case Study
             </button>
             
           </div>
