@@ -732,8 +732,8 @@ li:hover .stripe-baffle {
     width: 500px;
   }
   .casestudy-section-ui-image-container img {
-    height: 100%;
-    width: auto;
+    height: 50%;
+    width: 50%;
     object-fit: cover;
     position: relative;
     scale: 1.2;
