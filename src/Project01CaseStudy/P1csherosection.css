@@ -388,6 +388,20 @@ li:hover .stripe-baffle {
   width: 423px;
   text-align: justify;
 }
+.single-work-ui-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+  width: 800px;
+  overflow: hidden;
+}
+.single-work-ui-image img {
+  height: 50%;
+  width: 50%;
+  object-fit: contain;
+  scale: 2.5;
+}
 .next-work {
   display: block;
   width: 100%;
@@ -405,7 +419,8 @@ li:hover .stripe-baffle {
   text-decoration: none;
   color: #636ae8;
   font-size: 20.234;
-  font-weight: 400;
+  font-weight: 800;
+  letter-spacing: 1px;
 }
 .next-work-title {
   font-family: leaguespartan;
@@ -445,20 +460,7 @@ li:hover .stripe-baffle {
   left: 0;
   padding: 20px 0;
 }
-.single-work-ui-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 800px;
-  width: 800px;
-  overflow: hidden;
-}
-.single-work-ui-image img {
-  height: 50%;
-  width: 50%;
-  object-fit: contain;
-  scale: 2.5;
-}
+
 
 @media (max-width: 600px) {
   .casestudy-navigation {
