@@ -6,8 +6,6 @@
   align-items: center;
   justify-content: center;
   height: 100%; /* ensures full viewport height */
-  overflow-x: hidden;
-  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -478,18 +476,18 @@ li:hover .stripe-baffle {
   .background-logo-container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: #1c1d25;
-    overflow-x: hidden; /* Prevent horizontal scroll on zoom-out */
+    background-color: transparent;
+    overflow-x: hidden;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch; /* Fade-in effect on load */
   }
   .background-logo-p1-casestudy {
     position: absolute;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     object-fit: cover;
     opacity: 0.3;
