@@ -49,7 +49,7 @@ function Footer() {
       {/* Copyright bottom */}
       <div className="footer-credit">
         <p className="footer-credit">
-          © {new Date().getFullYear()} designed and developed by Techshark
+          © {new Date().getFullYear()} Designed and developed by Techshark
           Digital. All Rights Reserved.
         </p>
       </div>
