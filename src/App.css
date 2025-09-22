@@ -45,9 +45,11 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
-body,html{
-  background-color: transparent;
+body {
+  background-color: var(--primary-color);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -55,6 +57,5 @@ body,html{
   display: flex;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
