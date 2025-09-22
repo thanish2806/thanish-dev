@@ -6,7 +6,6 @@ import DarkMode from "./assets/images/night-mode.png";
 import closeiconlight from "./assets/images/close-icon-light.png";
 import { Link } from "react-router-dom";
 import { scrollToProjects } from "./scripts/scrollToProjects.js";
-
 import "./Navbar.css";
 
 const Navbar = ({ toggleMenu, isMobileOpen, closeMobileNav }) => {
@@ -33,15 +32,13 @@ const Navbar = ({ toggleMenu, isMobileOpen, closeMobileNav }) => {
           <div className="navigation">
             <ul>
               <li className="navigationpc">
-                <a href="#projects">Case Studies</a>
+                <a onClick={scrollToProjects}>Case Studies</a>
               </li>
               <li className="navigationpc" id="contactpc">
-                <a onClick={toggleMenu} href="#">
-                  Contact
-                </a>
+                <a onClick={toggleMenu}>Contact</a>
               </li>
               <li className="navigationpc">
-                <a href="#" onClick={toggleTheme}>
+                <a onClick={toggleTheme}>
                   <img
                     id="theme-pc"
                     src={isDarkTheme ? DarkMode : LightMode}
@@ -72,7 +69,12 @@ const Navbar = ({ toggleMenu, isMobileOpen, closeMobileNav }) => {
                 </a>
               </li>
               <li className="options-mobile">
-                <a href="#projects" onClick={closeMobileNav}>
+                <a
+                  onClick={() => {
+                    closeMobileNav();
+                    scrollToProjects();
+                  }}
+                >
                   Case Studies
                 </a>
               </li>
@@ -82,7 +84,6 @@ const Navbar = ({ toggleMenu, isMobileOpen, closeMobileNav }) => {
                     closeMobileNav();
                     toggleMenu();
                   }}
-                  href="#"
                 >
                   Contact
                 </a>
@@ -104,9 +105,7 @@ const Navbar = ({ toggleMenu, isMobileOpen, closeMobileNav }) => {
                 <a onClick={handleAllWorks}>All Works</a>
               </li>
               <li className="cs-navigationpc" id="contactpc">
-                <a onClick={toggleMenu} href="#">
-                  Contact
-                </a>
+                <a onClick={toggleMenu}>Contact</a>
               </li>
             </ul>
           </div>
@@ -116,7 +115,7 @@ const Navbar = ({ toggleMenu, isMobileOpen, closeMobileNav }) => {
             <img
               className="closeicon-mob-menu"
               onClick={closeMobileNav}
-              src={ closeiconlight}
+              src={closeiconlight}
               alt="Close"
             />
             <ul>
