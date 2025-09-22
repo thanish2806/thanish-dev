@@ -47,7 +47,7 @@ html {
   scroll-behavior: smooth;
 }
 body,html{
-  background-color: var(--primary-color);
+  background-color: transparent;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
