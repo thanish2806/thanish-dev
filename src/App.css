@@ -1,34 +1,34 @@
 @font-face {
   font-family: "aquafont";
-  src: url("/fonts/aqua.ttf") format("truetype");
+  src: url("fonts/aqua.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roliderounded";
-  src: url("/fonts/RolideRounded-Regular.otf") format("opentype");
+  src: url("fonts/RolideRounded-Regular.otf") format("opentype");
 }
 
 @font-face {
   font-family: "louisgeorgecafe";
-  src: url("/fonts/Louis George Cafe.ttf") format("truetype");
+  src: url("fonts/Louis George Cafe.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "louisgeorgecafebold";
-  src: url("/fonts/Louis George Cafe Bold.ttf") format("truetype");
+  src: url("fonts/Louis George Cafe Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "kionaregular";
-  src: url("/fonts/Kiona-Regular.ttf") format("truetype");
+  src: url("fonts/Kiona-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "leaguespartan";
-  src: url("/fonts/LeagueSpartan-Bold.ttf") format("truetype");
+  src: url("fonts/LeagueSpartan-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "playwritedku";
-  src: url("/fonts/PlaywriteDKUloopet-VariableFont_wght.ttf") format("truetype");
+  src: url("fonts/PlaywriteDKUloopet-VariableFont_wght.ttf") format("truetype");
 }
 :root {
   --primary-color: #1c1d25;
