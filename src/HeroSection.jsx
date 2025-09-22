@@ -102,7 +102,7 @@ function HeroSection() {
       {/* Social icons right */}
       <div className="icon">
         <a
-          href="https://www.linkedin.com/in/thanish-p-421204200"
+          href="https://www.linkedin.com/in/thanish-dev"
           target="_blank"
           rel="noopener noreferrer"
         >
