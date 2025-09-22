@@ -46,7 +46,7 @@
 html {
   scroll-behavior: smooth;
 }
-body {
+body,html{
   background-color: var(--primary-color);
   background-size: cover;
   background-repeat: no-repeat;
