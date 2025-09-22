@@ -728,12 +728,15 @@ li:hover .stripe-baffle {
     padding: 20px 0;
   }
   .casestudy-section-ui-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 500px;
     width: 500px;
   }
   .casestudy-section-ui-image-container img {
-    height: 50%;
-    width: 50%;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
     position: relative;
     scale: 1.2;
@@ -741,10 +744,9 @@ li:hover .stripe-baffle {
   .casestudy-section-color-palette-section {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    align-items: self-start;
+    align-items: center;
     justify-content: space-around;
-    width: 40%;
+    width: 80%;
     margin: 30px;
     left: 0;
     padding: 70px 0;
@@ -753,6 +755,13 @@ li:hover .stripe-baffle {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 20px;
+    transition: scale 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  .color-palette-container:hover .color-palette{
+    transform: scale(1.05);
+    box-shadow: 5px 5px 15px #3a3a3a50;
+    cursor: pointer;
   }
   .color-palette {
     height: 150px;
