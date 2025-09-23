@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   -webkit-overflow-scrolling: touch;
   animation: fadeIn 0.4s ease-in-out;
   position: relative;
@@ -19,12 +19,13 @@ ul {
 /* Background logo */
 .background-logo {
   position: absolute;
+  right: min(-10%, -15%);
+  top: min(5%, 50);
   opacity: 0.6;
-  transform: translate(-50%, -50%);
   height: auto;
-  max-width: 2200px; /* prevent it from being too big */
-  z-index: 0; /* stays behind content */
-  pointer-events: none; /* don’t block clicks */
+  max-width: 113%;
+  z-index: 0;
+  pointer-events: none;
 }
 .top-content {
   width: 85%;
@@ -193,37 +194,21 @@ ul {
   display: none;
 }
 
-@media (max-width: 600px) {
-  .herosection {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* pushes top to top, works to bottom */
-    align-items: center;
-    height: 100vh;
-    -webkit-overflow-scrolling: touch;
-  }
+ @media (max-width: 700px) {
+
 
   ul {
     list-style-type: none;
   }
 
-  /* Wrapper to crop the logo */
-  .background-logo-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%; /* show only 75% horizontally */
-    height: 600px;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  /* Actual logo image */
   .background-logo {
-    width: 600px; /* scale back so full image fits inside wrapper */
-    height: 600px;
+    position: absolute;
+    opacity: 0.6;
+    transform: translate(-50%, -50%);
+    height: auto;
+    max-width: 150%;
+    z-index: 0;
+    pointer-events: none;
   }
 
   .top-content {
@@ -235,7 +220,6 @@ ul {
     padding: 10px;
   }
 
-  /* Top logo */
   .top-logo {
     position: relative;
     display: flex;
@@ -251,7 +235,6 @@ ul {
     height: 50px;
     width: 50px;
   }
-  /* Hamburger button container */
   .hamburger-btn {
     background: none;
     border: none;
@@ -266,10 +249,9 @@ ul {
     z-index: 99;
   }
 
-  /* Lines */
   .hamburger-btn .line {
     height: 3px;
-    background-color:  #f3f3f3; /* adapts with theme */
+    background-color: #f3f3f3;
     border-radius: 2px;
     align-self: flex-end;
     transition: all 0.3s ease-in-out;
@@ -284,7 +266,6 @@ ul {
     width: 20px;
   }
 
-  /* Info section */
   .info {
     color: var(--secondary-color);
     display: flex;
@@ -294,7 +275,7 @@ ul {
     height: 120px;
     text-align: left;
     width: 90%;
-    margin: auto 0; /* centers in middle space */
+    margin: auto 0;
     left: 70px;
     z-index: 1;
   }
@@ -311,7 +292,6 @@ ul {
     margin: 10px 0 0;
   }
 
-  /* About Me button */
   .aboutme {
     position: relative;
     height: 30px;
@@ -337,15 +317,14 @@ ul {
     transform: scale(1.01);
   }
 
-  /* Works section */
   .works {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center; /* centers buttons horizontally */
+    align-items: center;
     justify-content: center;
-    width: 100%; /* allow flex centering */
-    margin-bottom: 55px; /* small spacing from bottom */
+    width: 100%;
+    margin-bottom: 55px;
   }
 
   .works-button,
@@ -367,7 +346,6 @@ ul {
     height: auto;
   }
 
-  /* Social icons */
   .icon {
     display: none;
   }
@@ -382,9 +360,8 @@ ul {
     opacity: 1;
   }
 
-  /* Footer credit */
   .credit {
     position: relative;
     text-align: right;
   }
-}
+} 

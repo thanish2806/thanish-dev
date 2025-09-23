@@ -347,7 +347,7 @@ li:hover .stripe-baffle {
   align-items: center;
   justify-content: space-around;
   gap: 20px;
-  width: 80%;
+  width: 90%;
   margin: 70px 0;
 }
 .title-font-style-1 {
@@ -357,16 +357,15 @@ li:hover .stripe-baffle {
   font-family: "Ubuntu", sans-serif;
 }
 .casestudy-section-font-style-1 {
-  display: flex;
-  flex-direction: column;
-  font-size: 25.245px;
   margin-top: 20px;
   font-family: "Ubuntu", sans-serif;
-  color: #3a3a3a;
-  line-height: 0.6;
-  letter-spacing: 0.8px;
-  width: 423px;
+  position: relative;
+  justify-self: center;
+  font-family: Roliderounded;
+  width: 90%;
+  font-size: 18.985px;
   text-align: justify;
+  width: 90%;
 }
 
 .title-font-style-2 {
@@ -377,17 +376,17 @@ li:hover .stripe-baffle {
   font-family: Be Vietnam Pro, sans-serif;
 }
 .casestudy-section-font-style-2 {
-  display: flex;
-  flex-direction: column;
-  font-size: 25.245px;
   margin-top: 20px;
   font-family: Be Vietnam Pro, sans-serif;
-  color: #3a3a3a;
-  line-height: 0.6;
-  letter-spacing: 0.8px;
-  width: 423px;
+  position: relative;
+  justify-self: center;
+  font-family: Roliderounded;
+  width: 90%;
+  font-size: 18.985px;
   text-align: justify;
+  width: 90%;
 }
+
 .single-work-ui-image {
   display: flex;
   align-items: center;
@@ -461,8 +460,7 @@ li:hover .stripe-baffle {
   padding: 20px 0;
 }
 
-
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .casestudy-navigation {
     display: none;
   }
@@ -733,23 +731,24 @@ li:hover .stripe-baffle {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 500px;
-    width: 500px;
+    height: auto;
+    width: 90%;
   }
   .casestudy-section-ui-image-container img {
     height: 100%;
     width: 100%;
+    left: 10%;
     object-fit: cover;
     position: relative;
-    scale: 1.2;
+    scale: 1.4;
   }
   .casestudy-section-color-palette-section {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    width: 80%;
-    margin: 30px;
+    width: 100%;
+    margin: 5%;
     left: 0;
     padding: 70px 0;
   }
@@ -757,17 +756,17 @@ li:hover .stripe-baffle {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
+    margin: 10px;
     transition: scale 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
-  .color-palette-container:hover .color-palette{
+  .color-palette-container:hover .color-palette {
     transform: scale(1.05);
     box-shadow: 5px 5px 15px #3a3a3a50;
     cursor: pointer;
   }
   .color-palette {
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
     box-shadow: 3px 3px 10px #3a3a3a34;
   }
@@ -783,25 +782,16 @@ li:hover .stripe-baffle {
     width: 90%;
     margin: 70px 0px;
   }
+
+  .casestudy-section-font-style-1 {
+    width: 90%;
+  }
   .title-font-style-1 {
     font-size: 32px;
     margin: 20px;
     color: #425c64;
     font-family: "Ubuntu", sans-serif;
   }
-  .casestudy-section-font-style-1 {
-    display: flex;
-    flex-direction: column;
-    font-size: 22.245px;
-    margin-top: 20px;
-    font-family: "Ubuntu", sans-serif;
-    color: #3a3a3a;
-    line-height: 0.6;
-    letter-spacing: 0.8px;
-    width: 100%;
-    text-align: justify;
-  }
-
   .title-font-style-2 {
     font-size: 32px;
     margin: 20px;
@@ -810,16 +800,15 @@ li:hover .stripe-baffle {
     font-family: Be Vietnam Pro, sans-serif;
   }
   .casestudy-section-font-style-2 {
-    display: flex;
-    flex-direction: column;
-    font-size: 22.245px;
     margin-top: 20px;
     font-family: Be Vietnam Pro, sans-serif;
-    color: #3a3a3a;
-    line-height: 0.6;
-    letter-spacing: 0.8px;
+    position: relative;
+    justify-self: center;
+    font-family: Roliderounded;
     width: 100%;
+    font-size: 18.985px;
     text-align: justify;
+    width: 90%;
   }
   .casestudy-section-ui-container {
     display: flex;
@@ -836,20 +825,20 @@ li:hover .stripe-baffle {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 400px;
-    width: 400px;
-    overflow: hidden;
+    height: auto;
+    width: 90%;
   }
   .single-work-ui-image img {
-    height: 50%;
-    width: 50%;
-    object-fit: contain;
-    scale: 2.5;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    scale: 1.4;
   }
   .next-work {
     display: block;
     width: 100%;
-    padding: 25px 0;
+    padding: 25px 10px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -864,6 +853,7 @@ li:hover .stripe-baffle {
     color: #636ae8;
     font-size: 22.234;
     font-weight: 800;
+    margin: 7%;
   }
   .next-work-title {
     font-family: leaguespartan;

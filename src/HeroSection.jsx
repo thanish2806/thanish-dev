@@ -10,8 +10,8 @@ import githublight from "./assets/images/github-light.png";
 import downarrowdark from "./assets/images/down-arrow-dark.png";
 import downarrowlight from "./assets/images/down-arrow-light.png";
 import Navbar from "./Navbar.jsx";
-import Bglogo from "./assets/images/my-logo-icon.png";
-import Mylogoicon from "./assets/images/my-logo-icon.png";
+import Bglogo from "./assets/images/my-logo-icon.svg";
+import Mylogoicon from "./assets/images/my-logo-icon.svg";
 import { scrollToProjects } from "./scripts/scrollToProjects.js";
 
 function HeroSection() {

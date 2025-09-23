@@ -54,15 +54,11 @@ const P1CaseStudyProjectIntroSection = () => (
       <div className="casestudy-section-fonts-block">
         <div className="casestudy-section-font-style-1">
           <h2 className="title-font-style-1">Title</h2>
-          <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-          <p>abcdefghijklmnopqrstuvwxyz</p>
-          <p>1234567890</p>
+          <p>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890</p>
         </div>
         <div className="casestudy-section-font-style-2">
           <h2 className="title-font-style-2">Title</h2>
-          <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-          <p>abcdefghijklmnopqrstuvwxyz</p>
-          <p>1234567890</p>
+          <p>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890</p>
         </div>
       </div>
       <div className="casestudy-section-ui-container">
