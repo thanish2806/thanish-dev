@@ -22,7 +22,7 @@ function Project01CaseStudy() {
   }, []);
 
   return (
-    <div className="project-01-casestudy-main">
+    <div className="project-01-casestudy-container-main">
       {loading && <Loader />} {/* show loader while loading */}
       {!loading && (
         <>
