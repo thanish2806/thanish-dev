@@ -10,7 +10,7 @@
   margin: 0 auto;
   overflow: hidden;
 }
-.background-logo-container {
+.herosection-container {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@
   z-index: 1;
   overflow: hidden;
 }
-.background-logo-p1-casestudy {
+.background-logo-p1 {
   position: absolute;
   min-height: 90vh;
   width: 100%;

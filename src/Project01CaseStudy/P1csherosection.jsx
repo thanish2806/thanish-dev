@@ -20,12 +20,8 @@ function P1CsHeroSection() {
   }, []);
 
   return (
-    <section className="background-logo-container">
-      <img
-        src={skillnest}
-        className="background-logo-p1-casestudy"
-        alt="Logo"
-      />
+    <section className="herosection-container">
+      <img src={skillnest} className="background-logo-p1" alt="Logo" />
       <div className={`top-content ${isActive ? "active" : ""}`}>
         <div className="top-logo">
           <img
