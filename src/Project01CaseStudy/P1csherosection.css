@@ -26,7 +26,7 @@
 }
 .background-logo-p1-casestudy {
   position: absolute;
-  min-height: 90vh;
+  min-height: 100dvh;
   width: 100%;
   object-fit: cover;
   opacity: 0.3;
@@ -474,7 +474,7 @@ li:hover .stripe-baffle {
   }
   .background-logo-p1-casestudy {
     position: absolute;
-    height: 90vh;
+    height: 100dvh;
     width: 100%;
     object-fit: cover;
     opacity: 0.3;
