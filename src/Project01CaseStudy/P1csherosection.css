@@ -1,26 +1,16 @@
-.casestudy-conatainer {
-  width: 100%; /* Set maximum width for content */
-  margin: 0 auto; /* Horizontally center the container */ /* Optional padding */
-  position: relative; /* So children like .background-logo can be absolutely positioned if needed */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center child items horizontally */
-  justify-content: center; /* Optional: vertically center if needed */ /* Take full viewport height */
-  overflow-x: hidden; /* Prevent horizontal scroll on zoom-out */
-  -webkit-overflow-scrolling: touch; /* Fade-in effect on load */
-}
 .background-logo-container {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  height: 90vh;
+  justify-content: space-between;
   width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch; /* Fade-in effect on load */
+  height: 100vh;
+  -webkit-overflow-scrolling: touch;
+  animation: fadeIn 0.4s ease-in-out;
+  position: relative;
+  box-shadow: 1px 1px 35px #0d0d0d;
+  z-index: 1;
+  overflow: hidden;
 }
 
 .background-logo-p1-casestudy {
@@ -235,17 +225,6 @@ li:hover .stripe-baffle {
   width: 100%;
   background-color: #f3f3f3;
   padding: 40px 0;
-}
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  justify-self: center;
-  position: relative;
-  display: flex;
-  width: 100%;
-  margin: 10px auto;
 }
 .casestudy-section-subtitle {
   font-size: 15.354px;
@@ -464,29 +443,20 @@ li:hover .stripe-baffle {
   .casestudy-navigation {
     display: none;
   }
-  .casestudy-conatainer {
-    width: 100%; /* Set maximum width for content */
-    margin: 0 auto; /* Horizontally center the container */ /* Optional padding */
-    position: relative; /* So children like .background-logo can be absolutely positioned if needed */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center child items horizontally */
-    justify-content: center; /* Optional: vertically center if needed */ /* Take full viewport height */
-    overflow-x: hidden; /* Prevent horizontal scroll on zoom-out */
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-  }
+
   .background-logo-container {
+    position: relative;
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    justify-content: space-between;
     width: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch; /* Fade-in effect on load */
+    height: 100vh;
+    -webkit-overflow-scrolling: touch;
+    animation: fadeIn 0.4s ease-in-out;
+    position: relative;
+    box-shadow: 1px 1px 35px #0d0d0d;
+    z-index: 1;
+    overflow: hidden;
   }
   .background-logo-p1-casestudy {
     position: absolute;
@@ -669,6 +639,7 @@ li:hover .stripe-baffle {
     display: flex;
     width: 100%;
     margin: 0 auto;
+    overflow: hidden;
   }
   .casestudy-section-subtitle {
     font-size: 15.354px;
