@@ -1,0 +1,245 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.herosection-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  animation: fadeIn 0.4s ease-in-out;
+  position: relative;
+  box-shadow: 1px 1px 35px #0d0d0d;
+  z-index: 1;
+  overflow: hidden;
+}
+.background-logo-p1 {
+  position: absolute;
+  min-height: 90vh;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  z-index: -1; /* keep behind content */
+}
+.casestudy-navigation {
+  float: right;
+  position: relative;
+  align-self: flex-end;
+  transition: transform 0.3s ease-in-out scale ease-in-out 0.3s opacity
+    ease-in-out 0.3s;
+}
+.casestudy-navigation ul {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+  background-color: none;
+  position: relative;
+  right: 0;
+}
+.casestudy-navigation a {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #f3f3f3;
+  font-size: 20px;
+  font-family: Roliderounded;
+  font-style: normal;
+  margin-left: 20px;
+  opacity: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+.casestudy-navigation a:hover {
+  transform: scale(1.01);
+  opacity: 80%;
+  cursor: pointer;
+}
+.casestudy-navigation li {
+  float: right;
+  justify-content: center;
+}
+.p1-casestudy-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0px 0px;
+  height: 75%;
+}
+
+.p1-cs-title-main {
+  position: relative;
+  justify-self: center;
+  color: #f3f3f3;
+  font-family: leaguespartan;
+  font-size: 63.9614px;
+}
+.p1-cs-title1 {
+  position: relative;
+  justify-self: center;
+  color: #f3f3f3;
+  font-family: playwritedku;
+  font-size: 18.985px;
+}
+.p1-cs-context-stripe {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.context-stripe-focus-area {
+  display: flex;
+  justify-content: space-around; /* evenly space items */
+  align-items: center;
+  gap: 0px; /* consistent spacing */
+  width: 80%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #fff;
+  font-family: "louisgeorgecafe", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.context-stripe-focus-area li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 7px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.context-stripe-focus-area strong {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.stripe-baffle {
+  font-size: 15px;
+  opacity: 0.9;
+  font-style: italic;
+  transition: opacity 0.3s ease;
+}
+
+li:hover .stripe-baffle {
+  opacity: 1;
+}
+
+
+@media (max-width: 700px) {
+  .casestudy-navigation {
+    display: none;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .p1-casestudy-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0px 0px;
+    height: 75%;
+  }
+
+  .p1-cs-title-main {
+    position: relative;
+    justify-self: center;
+    color: #f3f3f3;
+    font-family: leaguespartan;
+    font-size: 43.9614px;
+  }
+  .p1-cs-title1 {
+    position: relative;
+    justify-self: center;
+    color: #f3f3f3;
+    font-family: playwritedku;
+    font-size: 18.985px;
+  }
+  .p1-cs-context-stripe {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .context-stripe-focus-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* evenly space items */
+    align-items: center;
+    gap: 7px; /* consistent spacing */
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #fff;
+    font-family: "louisgeorgecafe", sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  .context-stripe-focus-area li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 7px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .context-stripe-focus-area strong {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+  }
+
+  .stripe-baffle {
+    font-size: 15px;
+    opacity: 0.9;
+    font-style: italic;
+    transition: opacity 0.3s ease;
+  }
+
+  li:hover .stripe-baffle {
+    opacity: 1;
+  }
+
+ 
+}
