@@ -1,5 +1,5 @@
 import React from "react";
-import "./P1csmain.css";
+import "./home.css";
 import { useEffect, useState } from "react";
 import P1CsHeroSection from "./P1csherosection.jsx";
 import P1CaseStudyProjectIntroSection from "./P1casestudyprojectintrosection.jsx";
@@ -20,7 +20,7 @@ function Project01CaseStudy() {
   }, []);
 
   return (
-    <div className="project01main">
+    <div className="home">
       {loading && <Loader />} {/* show loader while loading */}
       {!loading && (
         <>
