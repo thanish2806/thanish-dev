@@ -691,12 +691,10 @@ li:hover .stripe-baffle {
   }
   .casestudy-section-inner-container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 85%;
-    margin: 0;
-    left: 0;
-    padding: 20px 0;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 90%;
   }
   .casestudy-section-ui-image-container {
     display: flex;
@@ -708,7 +706,6 @@ li:hover .stripe-baffle {
   .casestudy-section-ui-image-container img {
     height: 100%;
     width: 100%;
-    left: 10%;
     object-fit: cover;
     position: relative;
     scale: 1.4;
