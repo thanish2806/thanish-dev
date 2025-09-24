@@ -285,28 +285,8 @@ body.menu-open {
 }
 
 @media (max-width: 600px) {
-  body.menu-open {
-    overflow: hidden;
-  }
-
-  .menupage {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; /* full viewport */
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 999;
-    overflow-y: auto; /* allow scrolling inside overlay */
-    -webkit-overflow-scrolling: touch; /* smooth iOS scrolling */
-  }
-
   .aboutmenu {
-    min-height: 45vh;
+    height: auto;
     width: 100%;
     position: relative;
     left: 0px;
@@ -344,7 +324,6 @@ body.menu-open {
   }
   .aboutmetext-bg {
     position: absolute;
-    top: -180px;
     left: 0px;
     z-index: -1;
     color: var(
@@ -394,7 +373,7 @@ body.menu-open {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    min-height: 60vh;
+    overflow: hidden;
     width: 100%;
     z-index: 999;
     background-color: var(--primary-color);
@@ -441,11 +420,10 @@ body.menu-open {
   }
   .contactmenutitle-bg {
     position: absolute;
-    top: -180px;
     left: 0px;
     z-index: -1;
     color: var(
-      --primary-text-low-opacity
+      --secondary-text-low-opacity
     ); /* Light color for background text */
     font-size: 180px;
     font-family: aquafont;
@@ -567,5 +545,79 @@ body.menu-open {
     cursor: pointer;
     box-shadow: 1px 1px 8px var(--secondary-color);
     transform: scale(1.01);
+  }
+  /* Lock background scroll */
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  /* Fullscreen, scrollable menu page */
+  .menupage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse; /* stack menus vertically */
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: auto; /* allow scroll */
+    -webkit-overflow-scrolling: touch; /* smooth iOS scrolling */
+    background: rgba(0, 0, 0, 0.8);
+    padding-bottom: 50px; /* prevent cutoff at bottom */
+    z-index: 1000;
+    overflow-x: hidden;
+  }
+
+  /* About and Contact menus */
+  .aboutmenu,
+  .contactmenu {
+    width: 100%;
+    height: auto; /* expand with content */
+    overflow: visible; /* ensure inner content visible */
+    transform: translateY(0); /* remove offscreen transform */
+    opacity: 1;
+    animation: none; /* disable slide animation */
+    box-shadow: 0px 0px 30px #1b1b23;
+  }
+
+  /* About menu content tweaks */
+  .aboutmetext {
+    padding: 10px 20px;
+    font-size: 30px;
+  }
+  .aboutmerole {
+    padding-left: 20px;
+    font-size: 20px;
+  }
+  .aboutcontent {
+    padding: 20px;
+    font-size: 17px;
+  }
+
+  /* Contact menu tweaks */
+  .contactmenutitle,
+  .contactmenusubtitle {
+    padding-left: 20px;
+  }
+
+  #contactForm {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 0;
+    gap: 20px;
+  }
+
+  .submit {
+    font-size: 14px;
+    width: auto;
+    padding: 12px 15px;
+  }
+
+  .closeicon {
+    left: auto;
+    right: 10px;
+    margin-left: 0;
   }
 }

@@ -312,13 +312,13 @@ li:hover .stripe-baffle {
   scale: 1.5;
 }
 .casestudy-section-color-palette-section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    width: 95%;
-    left: 0;
-    padding: 70px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 95%;
+  left: 0;
+  padding: 70px 20px;
 }
 .color-palette-container {
   display: flex;
@@ -464,7 +464,7 @@ li:hover .stripe-baffle {
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     -webkit-overflow-scrolling: touch;
     animation: fadeIn 0.4s ease-in-out;
     position: relative;
@@ -565,7 +565,7 @@ li:hover .stripe-baffle {
     position: relative;
     margin: auto 0;
     width: 100%;
-    height: 55vh;
+    height: auto;
     padding: 60px 0px;
     background-color: #262626;
   }
@@ -752,12 +752,18 @@ li:hover .stripe-baffle {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+
     gap: 20px;
     width: 90%;
     margin: 70px 0px;
   }
 
-  .casestudy-section-font-style-1 {
+  .casestudy-section-font-style-1,
+  .casestudy-section-font-style-2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     width: 90%;
   }
   .title-font-style-1 {
@@ -776,8 +782,6 @@ li:hover .stripe-baffle {
   .casestudy-section-font-style-2 {
     margin-top: 20px;
     font-family: Be Vietnam Pro, sans-serif;
-    position: relative;
-    justify-self: center;
     font-family: Roliderounded;
     width: 100%;
     font-size: 18.985px;
