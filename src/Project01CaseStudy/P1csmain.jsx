@@ -1,5 +1,5 @@
 import React from "react";
-import "./home.css";
+import "../home.css";
 import { useEffect, useState } from "react";
 import P1CsHeroSection from "./P1csherosection.jsx";
 import P1CaseStudyProjectIntroSection from "./P1casestudyprojectintrosection.jsx";
