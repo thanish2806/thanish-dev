@@ -17,7 +17,6 @@
   justify-content: space-between;
   width: 100%;
   height: 100vh;
-  -webkit-overflow-scrolling: touch;
   animation: fadeIn 0.4s ease-in-out;
   position: relative;
   box-shadow: 1px 1px 35px #0d0d0d;
@@ -456,28 +455,6 @@ li:hover .stripe-baffle {
 @media (max-width: 700px) {
   .casestudy-navigation {
     display: none;
-  }
-
-  .background-logo-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    height: 100dvh;
-    -webkit-overflow-scrolling: touch;
-    animation: fadeIn 0.4s ease-in-out;
-    position: relative;
-    box-shadow: 1px 1px 35px #0d0d0d;
-    z-index: 1;
-    overflow: hidden;
-  }
-  .background-logo-p1-casestudy {
-    position: absolute;
-    height: 90vh;
-    width: 100%;
-    object-fit: cover;
-    opacity: 0.3;
   }
   .p1-casestudy-title-container {
     display: flex;
