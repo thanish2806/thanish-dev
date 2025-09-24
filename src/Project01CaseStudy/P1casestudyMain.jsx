@@ -7,8 +7,6 @@ import P1CaseStudyIntroSection from "./P1casestudyintrosection.jsx";
 import Footer from "../footer.jsx";
 import Loader from "../loader.jsx";
 
-
-
 function Project01CaseStudy() {
   const [loading, setLoading] = useState(true);
 
