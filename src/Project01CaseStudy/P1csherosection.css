@@ -233,6 +233,10 @@ li:hover .stripe-baffle {
 }
 
 .project-details-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   background-color: #f3f3f3;
   padding: 40px 0;

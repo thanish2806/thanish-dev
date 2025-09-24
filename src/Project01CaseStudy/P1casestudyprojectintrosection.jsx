@@ -5,7 +5,6 @@ import Skillnestuipagination from "../assets/images/skillnest ui pagination.png"
 
 const P1CaseStudyProjectIntroSection = () => (
   <section className="project-details-section">
-    <div className="content">
       <div className="section-mask"></div>
       <h4 className="casestudy-section-subtitle">Analysis &amp; Preparation</h4>
       <h2 className="casestudy-section-title">Branding</h2>
@@ -78,7 +77,6 @@ const P1CaseStudyProjectIntroSection = () => (
           </svg>
         </div>
       </a>
-    </div>
   </section>
 );
 
