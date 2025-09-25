@@ -1,5 +1,5 @@
 import React from "react";
-import "./CsProjectIntroSection.css";
+import "./CsProjectIntro.css";
 
 const CsProjectIntroSection = () => {
   return (
