@@ -17,7 +17,7 @@ function Project01CaseStudy() {
   }, []);
 
   return (
-    <div className="home">
+    <div className="cs-home">
       {loading && <Loader />} {/* show loader while loading */}
       {!loading && (
         <>

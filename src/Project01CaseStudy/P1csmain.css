@@ -11,7 +11,7 @@ body {
   animation: fadeIn 0.5s ease-in-out;
 }
 /* home.css */
-.home {
+.cs-home {
   min-width: 100%; /* Set maximum width for content */
   margin: 0 auto; /* Horizontally center the container */ /* Optional padding */
   position: relative; /* So children like .background-logo can be absolutely positioned if needed */
