@@ -5,7 +5,7 @@ import Mylogoicon from "../assets/images/my-logo-icon.png";
 import Mainmenu from "../mainmenu.jsx";
 import Navbar from "../Navbar.jsx";
 
-function CsProjectHeroSec() {
+function CsProjectHeroSection() {
   const [isActive, setIsActive] = useState(false);
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -76,4 +76,4 @@ function CsProjectHeroSec() {
   );
 }
 
-export default CsProjectHeroSec;
+export default CsProjectHeroSection;
