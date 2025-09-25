@@ -3,7 +3,7 @@ import "./CsProjectIntroSec.css";
 
 const CsProjectIntroSec = () => {
   return (
-    <section className="p1-cs-intro-section">
+    <section className="cs-intro-section">
       <h2 className="p1-cs-intro-title">The Project</h2>
 
       <div className="p1-cs-intro-subtitle">
