@@ -17,11 +17,6 @@
   font-family: "louisgeorgecafebold";
   src: url("/fonts/Louis George Cafe Bold.ttf") format("truetype");
 }
-
-@font-face {
-  font-family: "kionaregular";
-  src: url("/fonts/Kiona-Regular.ttf") format("truetype");
-}
 @font-face {
   font-family: "leaguespartan";
   src: url("/fonts/LeagueSpartan-Bold.ttf") format("truetype");

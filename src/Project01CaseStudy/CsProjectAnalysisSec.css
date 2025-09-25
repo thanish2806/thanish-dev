@@ -10,7 +10,6 @@
 .casestudy-section-subtitle {
   font-size: 15.354px;
   margin: 8px;
-  font-family: kionaregular;
   color: #6a5555;
   align-items: center;
   text-align: center;
@@ -49,7 +48,6 @@
   flex-direction: column;
   font-size: 20.245px;
   margin-top: 20px;
-  font-family: kionaregular;
   color: #3a3a3a;
   line-height: 1.6;
   width: 423px;
@@ -233,7 +231,6 @@
   .casestudy-section-subtitle {
     font-size: 15.354px;
     margin: 8px;
-    font-family: kionaregular;
     color: #6a5555;
     align-items: center;
     text-align: center;
@@ -272,7 +269,6 @@
     flex-direction: column;
     font-size: 20.245px;
     margin-top: 20px;
-    font-family: kionaregular;
     color: #3a3a3a;
     line-height: 1.6;
     width: 100%;
