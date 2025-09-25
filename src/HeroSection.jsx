@@ -39,7 +39,7 @@ function HeroSection() {
   }, []);
 
   return (
-    <div id="herosection" onMouseMove={handleMouseMove}>
+    <div className="herosection" onMouseMove={handleMouseMove}>
       {/* Top logo + navbar */}
 
       <div className={`top-content ${isActive ? "active" : ""}`}>
