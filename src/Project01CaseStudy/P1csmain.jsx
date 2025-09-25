@@ -1,5 +1,5 @@
 import React from "react";
-import "../home.css";
+import "./P1csmain.css";
 import { useEffect, useState } from "react";
 import Footer from "../footer.jsx";
 import Loader from "../loader.jsx";
