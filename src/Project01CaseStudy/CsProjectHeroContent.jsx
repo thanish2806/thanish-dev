@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./CsProjectHeroContent.css";
 import skillnest from "../assets/images/hero-illustration.png";
 import Mylogoicon from "../assets/images/my-logo-icon.png";
+import Navbar from "../Navbar";
+import Mainmenu from "../mainmenu";
 function CsProjectHeroSection() {
   const [isActive, setIsActive] = useState(false);
   const [isMenuVisible, setIsMenuVisible] = useState(false);
