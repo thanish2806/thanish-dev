@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Footer from "../footer.jsx";
 import Loader from "../loader.jsx";
 import CsProjectHeroSec from "./CsProjectHeroSec.jsx";
-import CsProjectIntroSection from "./CsProjectIntro.jsx";
 
 function Project01CaseStudy() {
   const [loading, setLoading] = useState(true);
@@ -24,8 +23,6 @@ function Project01CaseStudy() {
       {!loading && (
         <>
           <CsProjectHeroSec />
-
-          <CsProjectIntroSection />
 
           <Footer />
         </>
