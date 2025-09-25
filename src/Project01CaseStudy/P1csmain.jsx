@@ -2,7 +2,7 @@ import React from "react";
 import "./P1csmain.css";
 import { useEffect, useState } from "react";
 import Loader from "../loader.jsx";
-import CsProjectHeroSec from "./CsProjectHeroSec.jsx";
+import CsProjectHeroSec from "./CsProjectHeroContent.jsx";
 
 function Project01CaseStudy() {
   const [loading, setLoading] = useState(true);

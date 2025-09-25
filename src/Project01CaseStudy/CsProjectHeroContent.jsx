@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./CsProjectHeroSec.css";
+import "./CsProjectHeroContent.css";
 import Mylogoicon from "../assets/images/my-logo-icon.png";
 import skillnest from "../assets/images/hero-illustration.png";
 import Mainmenu from "../mainmenu.jsx";
