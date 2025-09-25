@@ -1,14 +1,10 @@
 import React from "react";
 import "./CsProjectHeroContent.css";
+import skillnest from "../assets/images/hero-illustration.png";
 function CsProjectHeroSection() {
   return (
     <div className="cs-hero-section">
-      <div className="cs-hero-content">
-        <h1 className="cs-hero-title">SkillNest</h1>
-        <p className="cs-hero-subtitle">
-          A Modern Job Preparation Platform for Skill Enhancement
-        </p>
-      </div>
+      <img src={skillnest} className="background-logo-p1" alt="Logo" />
     </div>
   );
 }
