@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./CsProjectHeroContent.css";
 import Mylogoicon from "../assets/images/my-logo-icon.png";
-import skillnest from "../assets/images/hero-illustration.png";
+// import skillnest from "../assets/images/hero-illustration.png";
 import Mainmenu from "../mainmenu.jsx";
 import Navbar from "../Navbar.jsx";
 
@@ -21,7 +21,7 @@ function CsProjectHeroSec() {
 
   return (
     <div className="cs-herosection">
-      <img src={skillnest} className="background-logo-p1" alt="Logo" />
+      {/* <img src={skillnest} className="background-logo-p1" alt="Logo" /> */}
       <div className={`top-content ${isActive ? "active" : ""}`}>
         <div className="top-logo">
           <img
