@@ -1,5 +1,5 @@
 import React from "react";
-import "./P1casestudyprojectintrosection.css";
+import "./CsProjectAnalysisSec.css";
 import SkillnestUIEg from "../assets/images/skillnest User Interface Example.png";
 import Skillnestuipagination from "../assets/images/skillnest ui pagination.png";
 
