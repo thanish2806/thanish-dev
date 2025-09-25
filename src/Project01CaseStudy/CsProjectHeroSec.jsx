@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./Csherosection.css";
+import "./CsProjectHeroSec.css";
 import Mylogoicon from "../assets/images/my-logo-icon.png";
 import skillnest from "../assets/images/hero-illustration.png";
 import Mainmenu from "../mainmenu.jsx";
 import Navbar from "../Navbar.jsx";
 
-function CsHeroSection() {
+function CsProjectHeroSec() {
   const [isActive, setIsActive] = useState(false);
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -76,4 +76,4 @@ function CsHeroSection() {
   );
 }
 
-export default CsHeroSection;
+export default CsProjectHeroSec;

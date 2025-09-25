@@ -5,7 +5,7 @@ import Footer from "../footer.jsx";
 import Loader from "../loader.jsx";
 import CsProjectIntroSec from "./CsProjectIntroSec.jsx";
 import CsProjectAnalysisSec from "./CsProjectAnalysisSec.jsx";
-import CsHeroSection from "./Csherosection.jsx";
+import CsProjectHeroSec from "./CsProjectHeroSec.jsx";
 
 function Project01CaseStudy() {
   const [loading, setLoading] = useState(true);
@@ -24,7 +24,7 @@ function Project01CaseStudy() {
       {loading && <Loader />} {/* show loader while loading */}
       {!loading && (
         <>
-          <CsHeroSection />
+          <CsProjectHeroSec />
 
           <CsProjectIntroSec />
 
