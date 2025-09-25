@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Loader from "../loader.jsx";
 import CsProjectHeroSection from "./CsProjectHeroContent.jsx";
 import CsProjectIntroSection from "./CsProjectIntro.jsx";
+import CsProjectAnalysisSec from "./CsProjectAnalysisSec.jsx";
 
 function Project01CaseStudy() {
   const [loading, setLoading] = useState(true);
@@ -26,6 +27,7 @@ function Project01CaseStudy() {
 
           <CsProjectIntroSection />
 
+          <CsProjectAnalysisSec />
         </>
       )}
     </div>
