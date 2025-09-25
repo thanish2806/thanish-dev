@@ -3,7 +3,6 @@ import "./P1csmain.css";
 import { useEffect, useState } from "react";
 import Footer from "../footer.jsx";
 import Loader from "../loader.jsx";
-import CsProjectAnalysisSec from "./CsProjectAnalysisSec.jsx";
 import CsProjectHeroSec from "./CsProjectHeroSec.jsx";
 import CsProjectIntroSection from "./CsProjectIntro.jsx";
 
@@ -27,8 +26,6 @@ function Project01CaseStudy() {
           <CsProjectHeroSec />
 
           <CsProjectIntroSection />
-
-          <CsProjectAnalysisSec />
 
           <Footer />
         </>
