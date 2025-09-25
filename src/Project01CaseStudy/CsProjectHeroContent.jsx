@@ -20,7 +20,7 @@ function CsProjectHeroSec() {
   }, []);
 
   return (
-    <div className="herosection-container">
+    <div className="cs-herosection">
       <img src={skillnest} className="background-logo-p1" alt="Logo" />
       <div className={`top-content ${isActive ? "active" : ""}`}>
         <div className="top-logo">

@@ -1,16 +1,4 @@
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  justify-self: center;
-  position: relative;
-  display: flex;
-  width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-}
-.herosection-container {
+.cs-herosection {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -147,7 +135,6 @@ li:hover .stripe-baffle {
   opacity: 1;
 }
 
-
 @media (max-width: 700px) {
   .casestudy-navigation {
     display: none;
@@ -240,6 +227,4 @@ li:hover .stripe-baffle {
   li:hover .stripe-baffle {
     opacity: 1;
   }
-
- 
 }
