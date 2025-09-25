@@ -12,14 +12,14 @@
   padding: 60px 0px;
   background-color: #1c1d25;
 }
-.p1-cs-intro-title {
+.cs-intro-title {
   position: relative;
   justify-self: center;
   color: #f3f3f3;
   font-family: leaguespartan;
   font-size: 63.9614px;
 }
-.p1-cs-intro-subtitle {
+.cs-intro-subtitle {
   position: relative;
   justify-self: center;
   color: #f3f3f3;
@@ -83,7 +83,7 @@
 }
 
 @media (max-width: 700px) {
-  .p1-cs-intro-section {
+  .cs-intro-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,14 +97,14 @@
     padding: 60px 0px;
     background-color: #262626;
   }
-  .p1-cs-intro-title {
+  .cs-intro-title {
     position: relative;
     justify-self: center;
     color: #f3f3f3;
     font-family: leaguespartan;
     font-size: 53.9614px;
   }
-  .p1-cs-intro-subtitle {
+  .cs-intro-subtitle {
     position: relative;
     justify-self: center;
     color: #f3f3f3;

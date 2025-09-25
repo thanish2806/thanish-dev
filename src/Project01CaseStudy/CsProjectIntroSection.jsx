@@ -1,12 +1,12 @@
 import React from "react";
-import "./CsProjectIntroSec.css";
+import "./CsProjectIntroSection.css";
 
-const CsProjectIntroSec = () => {
+const CsProjectIntroSection = () => {
   return (
     <section className="cs-intro-section">
-      <h2 className="p1-cs-intro-title">The Project</h2>
+      <h2 className="cs-intro-title">The Project</h2>
 
-      <div className="p1-cs-intro-subtitle">
+      <div className="cs-intro-subtitle">
         <p itemProp="description">
           SkillNest is a modern job preparation platform designed to help
           learners upskill efficiently. It combines curated resources,
@@ -40,4 +40,4 @@ const CsProjectIntroSec = () => {
   );
 };
 
-export default CsProjectIntroSec;
+export default CsProjectIntroSection;
