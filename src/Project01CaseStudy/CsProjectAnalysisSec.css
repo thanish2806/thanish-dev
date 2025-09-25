@@ -162,9 +162,18 @@
   object-fit: contain;
   scale: 2.5;
 }
+.next-work-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0px 0;
+  background-color: #f3f3f3;
+}
 .next-work {
   display: block;
-  width: 100%;
+  width: 80%;
   padding: 25px 0;
   position: relative;
   overflow: hidden;
@@ -189,7 +198,7 @@
   font-size: 2.5em;
   line-height: 1.2;
   margin: 30px;
-  color: #425c64;
+  color: #262626;
   max-width: 600px;
 }
 .next-work-arrow svg {
