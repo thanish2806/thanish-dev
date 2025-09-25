@@ -20,7 +20,7 @@ function CsProjectHeroSec() {
   }, []);
 
   return (
-    <section className="herosection-container">
+    <div className="herosection-container">
       <img src={skillnest} className="background-logo-p1" alt="Logo" />
       <div className={`top-content ${isActive ? "active" : ""}`}>
         <div className="top-logo">
@@ -72,7 +72,7 @@ function CsProjectHeroSec() {
       {isMenuVisible && (
         <Mainmenu isVisible={isMenuVisible} onClose={toggleMenu} />
       )}
-    </section>
+    </div>
   );
 }
 
