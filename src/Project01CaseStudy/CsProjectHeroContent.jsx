@@ -21,7 +21,6 @@ function CsProjectHeroSection() {
 
   return (
     <div id="cs-hero-content">
-      <img src={skillnest} className="background-logo-p1" alt="Logo" />
       <div className={`top-content ${isActive ? "active" : ""}`}>
         <div className="top-logo">
           <img
@@ -36,6 +35,7 @@ function CsProjectHeroSection() {
           isMobileOpen={isMobileOpen}
           closeMobileNav={() => setIsMobileOpen(false)}
         />
+        <img src={skillnest} className="background-logo-p1" alt="Logo" />
         {/* Hamburger for mobile */}
         <button className="hamburger-btn" onClick={toggleMobileNav}>
           <span className="line line-1"></span>
