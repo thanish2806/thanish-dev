@@ -3,9 +3,9 @@ import "../home.css";
 import { useEffect, useState } from "react";
 import Footer from "../footer.jsx";
 import Loader from "../loader.jsx";
-import CsHeroSectionP1 from "./Csherosection-p1.jsx";
 import CsProjectIntroSec from "./CsProjectIntroSec.jsx";
 import CsProjectAnalysisSec from "./CsProjectAnalysisSec.jsx";
+import CsHeroSection from "./Csherosection.jsx";
 
 function Project01CaseStudy() {
   const [loading, setLoading] = useState(true);
@@ -24,7 +24,7 @@ function Project01CaseStudy() {
       {loading && <Loader />} {/* show loader while loading */}
       {!loading && (
         <>
-          <CsHeroSectionP1 />
+          <CsHeroSection />
 
           <CsProjectIntroSec />
 
