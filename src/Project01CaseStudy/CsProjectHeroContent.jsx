@@ -42,6 +42,30 @@ function CsProjectHeroSection() {
           <span className="line line-3"></span>
         </button>
       </div>
+      <div className="p1-casestudy-title-container">
+        <h1 className="p1-cs-title-main">Project Skillnest</h1>
+        <p className="p1-cs-title1">A Platfrom for upskilling</p>
+      </div>
+
+      <div className="p1-cs-context-stripe">
+        <ul className="context-stripe-focus-area is-loaded">
+          <li>
+            <strong>Role</strong>{" "}
+            <span className="stripe-baffle">Front-end Developer</span>
+          </li>
+          <li>
+            <strong>Context</strong>{" "}
+            <span className="stripe-baffle">
+              Building a scalable Web Application
+            </span>
+          </li>
+          <li>
+            <strong>Period</strong>{" "}
+            <span className="stripe-baffle">Early 2025</span>
+          </li>
+        </ul>
+      </div>
+
       {isMenuVisible && (
         <Mainmenu isVisible={isMenuVisible} onClose={toggleMenu} />
       )}
