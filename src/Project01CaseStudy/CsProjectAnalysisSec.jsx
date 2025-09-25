@@ -3,7 +3,7 @@ import "./CsProjectAnalysisSec.css";
 import SkillnestUIEg from "../assets/images/skillnest User Interface Example.png";
 import Skillnestuipagination from "../assets/images/skillnest ui pagination.png";
 
-const P1CaseStudyProjectIntroSection = () => (
+const CsProjectAnalysisSec = () => (
   <section className="project-analysis-section">
     <div className="section-mask"></div>
     <h4 className="casestudy-section-subtitle">Analysis &amp; Preparation</h4>
@@ -78,4 +78,4 @@ const P1CaseStudyProjectIntroSection = () => (
   </section>
 );
 
-export default P1CaseStudyProjectIntroSection;
+export default CsProjectAnalysisSec;
