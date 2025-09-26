@@ -210,7 +210,7 @@ ul {
   .background-logo {
     position: absolute;
     right: min(-10%, -15%);
-    top: max(5%, 30%);
+    top: max(5%, 26%);
     opacity: 0.6;
     height: auto;
     max-width: 113%;
