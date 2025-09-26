@@ -20,7 +20,7 @@ ul {
 .background-logo {
   position: absolute;
   right: min(-10%, -15%);
-  top: min(5%, 50);
+  top: min(5%, 40%);
   opacity: 0.6;
   height: auto;
   max-width: 113%;
@@ -194,23 +194,30 @@ ul {
   display: none;
 }
 
- @media (max-width: 700px) {
-
-
+@media (max-width: 700px) {
   ul {
     list-style-type: none;
   }
-
   .background-logo {
     position: absolute;
+    justify-self: center;
     opacity: 0.6;
     transform: translate(-50%, -50%);
     height: auto;
-    max-width: 150%;
+    width: 150%;
     z-index: 0;
     pointer-events: none;
   }
-
+  .background-logo {
+    position: absolute;
+    right: min(-10%, -15%);
+    top: max(5%, 35%);
+    opacity: 0.6;
+    height: auto;
+    max-width: 113%;
+    z-index: 0;
+    pointer-events: none;
+  }
   .top-content {
     width: 95%;
     display: flex;
@@ -363,4 +370,4 @@ ul {
     position: relative;
     text-align: right;
   }
-} 
+}

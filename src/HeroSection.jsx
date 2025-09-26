@@ -64,17 +64,14 @@ function HeroSection() {
         </button>
       </div>
 
-      {/* Background logo */}
-      <div className="background-logo-wrapper">
-        <img
-          src={Bglogo}
-          className="background-logo"
-          alt="Logo"
-          style={{
-            transform: `translate(${mouseX / 80}px, ${mouseY / 80}px)`,
-          }}
-        />
-      </div>
+      <img
+        src={Bglogo}
+        className="background-logo"
+        alt="Logo"
+        style={{
+          transform: `translate(${mouseX / 80}px, ${mouseY / 80}px)`,
+        }}
+      />
 
       {/* Info left */}
       <div className="info">
