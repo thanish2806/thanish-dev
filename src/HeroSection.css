@@ -202,7 +202,6 @@ ul {
     position: absolute;
     justify-self: center;
     opacity: 0.6;
-    transform: translate(-50%, -50%);
     height: auto;
     width: 150%;
     z-index: 0;
@@ -211,7 +210,7 @@ ul {
   .background-logo {
     position: absolute;
     right: min(-10%, -15%);
-    top: max(5%, 35%);
+    top: max(5%, 30%);
     opacity: 0.6;
     height: auto;
     max-width: 113%;
