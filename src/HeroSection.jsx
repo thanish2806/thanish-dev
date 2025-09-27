@@ -7,6 +7,8 @@ import linkedindark from "./assets/images/linkedin-dark.png";
 import linkedinlight from "./assets/images/linkedin-light.png";
 import githubdark from "./assets/images/github-dark.png";
 import githublight from "./assets/images/github-light.png";
+import CodePenLight from "./assets/images/codepen-light.png";
+import CodePenDark from "./assets/images/codepen-dark.png";
 import downarrowdark from "./assets/images/down-arrow-dark.png";
 import downarrowlight from "./assets/images/down-arrow-light.png";
 import Navbar from "./Navbar.jsx";
@@ -118,6 +120,17 @@ function HeroSection() {
             className="github"
             src={isDarkTheme ? githubdark : githublight}
             alt="GitHub"
+          />
+        </a>
+        <a
+          href="https://codepen.io/Thanish2806"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="github"
+            src={isDarkTheme ? CodePenDark : CodePenLight}
+            alt="CodePen"
           />
         </a>
       </div>
