@@ -5,6 +5,7 @@ import Loader from "../loader.jsx";
 import CsProjectHeroSection from "./CsProjectHeroContent.jsx";
 import CsProjectIntroSection from "./CsProjectIntro.jsx";
 import CsProjectAnalysisSec from "./CsProjectAnalysisSec.jsx";
+import Footer from "../footer.jsx";
 
 function Project01CaseStudy() {
   const [loading, setLoading] = useState(true);
@@ -28,6 +29,8 @@ function Project01CaseStudy() {
           <CsProjectIntroSection />
 
           <CsProjectAnalysisSec />
+
+          <Footer />
         </>
       )}
     </div>
