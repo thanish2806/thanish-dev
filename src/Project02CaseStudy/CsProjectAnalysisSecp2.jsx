@@ -1,51 +1,57 @@
 import { useNavigate } from "react-router-dom";
-import "./CsProjectAnalysisSec.css";
-import SkillnestUIEg from "../assets/images/Skillnest-Ui/skillnest User Interface Example.png";
-import Skillnestuipagination from "../assets/images/Skillnest-Ui/skillnest ui pagination.png";
+import "./CsProjectAnalysisSecp2.css";
+import NanalCafeUI from "../assets/Nanalcafe-Ui/nanalcafe-ui.png";
+import NanalCafePages from "../assets/Nanalcafe-Ui/nanalcafe-ui-pages.png";
 
 function CsProjectAnalysisSec() {
-  const Naviagte = useNavigate();
+  const navigate = useNavigate();
 
   function navigateToProject02() {
-    Naviagte("/nanalcafe-casestudy");
+    navigate("/nanalcafe-casestudy");
   }
+
   return (
     <section className="project-analysis-section">
       <div className="section-mask"></div>
+
       <h4 className="casestudy-section-subtitle">Analysis &amp; Preparation</h4>
       <h2 className="casestudy-section-title">Branding</h2>
+
       <div className="casestudy-section-inner-container">
         <div className="single-work-text-content is-left single-work-first-anim-blocks">
           <h3 className="casestudy-section-content-title">
-            An elegant design.
+            A Warm and Inviting Design
           </h3>
           <div className="casestudy-section-content-separator"></div>
           <div className="casestudy-section-content-desc">
             <p>
-              As the <strong>Front-end Developer</strong>, I was responsible for
-              building the entire UI for the new website, redefining the User
-              Experience and studying new interactions between the User and the
-              Interface.
+              As the <strong>Front-end Developer & UI Designer</strong>, I
+              created the entire interface for the NanalCafe website. The focus
+              was on enhancing the user experience and creating a visually
+              appealing platform for showcasing the cafe’s dishes.
             </p>
             <p>
-              One of the most exciting experiences was integrating the entire
-              front-end system with the{" "}
-              <strong>backend in a way that felt seamless to the user </strong>
-              and the change page animation.
+              One key highlight was implementing the{" "}
+              <strong>infinite autoplay slider</strong>
+              for dishes and designing a smooth, responsive navigation for both
+              desktop and mobile users.
             </p>
           </div>
         </div>
+
         <div className="casestudy-section-ui-image-container">
-          <img src={SkillnestUIEg} alt="Skillnest User Interface Example" />
+          <img src={NanalCafeUI} alt="NanalCafe User Interface Example" />
         </div>
       </div>
+
+      {/* Color Palette */}
       <div className="casestudy-section-color-palette-section">
         {[
-          { color: "#0f172a", name: "$Prussian Blue" },
-          { color: "#262626", name: "$Rich Black" },
-          { color: "#fdfdff", name: "$Ghost White" },
-          { color: "#000054", name: "$Navy" },
-          { color: "#4f46e5", name: "$Indigo" },
+          { color: "#f2f2ef", name: "$ Soft Ivory" },
+          { color: "#fe6d73", name: "$ Coral Pink" },
+          { color: "#262626", name: "$ Rich Black" },
+          { color: "#f3d127", name: "$ Golden Glow" },
+          { color: "#61e56a", name: "$ Spring Mint" },
         ].map((palette, idx) => (
           <div key={idx} className="color-palette-container">
             <div
@@ -56,27 +62,33 @@ function CsProjectAnalysisSec() {
           </div>
         ))}
       </div>
+
+      {/* Fonts */}
       <div className="casestudy-section-fonts-block">
         <div className="casestudy-section-font-style-1">
-          <h2 className="title-font-style-1">Title</h2>
-          <p>ABC abc 123</p>
+          <h2 className="title-font-style-1">Heading Font</h2>
+          <p>Code. Create. Repeat — 24/7 innovation starts here.</p>
         </div>
         <div className="casestudy-section-font-style-2">
-          <h2 className="title-font-style-2">Title</h2>
-          <p>ABC abc 123</p>
+          <h2 className="title-font-style-2">Body Font</h2>
+          <p>Code. Create. Repeat — 24/7 innovation starts here.</p>
         </div>
       </div>
+
+      {/* UI Components */}
       <div className="casestudy-section-ui-container">
-        <h4 className="casestudy-section-subtitle">UI &amp; Components.</h4>
-        <h2 className="casestudy-section-title">Design</h2>
+        <h4 className="casestudy-section-subtitle">UI &amp; Components</h4>
+        <h2 className="casestudy-section-title">Interactive Elements</h2>
         <div className="single-work-ui-image">
-          <img src={Skillnestuipagination} alt="cerasa ui pagination" />
+          <img src={NanalCafePages} alt="NanalCafe Slider Component" />
         </div>
       </div>
+
+      {/* Next Project Link */}
       <div className="next-work-container" onClick={navigateToProject02}>
         <a className="next-work">
           <h5 className="next-work-lead">Next Work</h5>
-          <h4 className="next-work-title">Nanal Cafe - Web Redesign</h4>
+          <h4 className="next-work-title">Coming Soon</h4>
           <div className="casestudy-section-content-separator"></div>
           <div className="next-work-arrow">
             <svg

@@ -12,7 +12,7 @@ const Navbar = ({ toggleMenu, isMobileOpen, closeMobileNav }) => {
   const { isDarkTheme, toggleTheme } = useTheme();
   const location = useLocation();
 
-  const isCaseStudyPage = location.pathname === "/skillnest-casestudy";
+  const isCaseStudyPage = location.pathname != "/";
 
   const navigate = useNavigate();
 

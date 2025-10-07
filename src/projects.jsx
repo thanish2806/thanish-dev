@@ -1,6 +1,6 @@
 import React from "react";
 import "./projects.css";
-import cardgameimg from "./assets/images/cardgame.jpeg";
+import redesign from "./assets/Nanalcafe-Ui/nanalcafe-thumbnail.png";
 import skillnest from "./assets/images/hero-illustration.png";
 import { useNavigate } from "react-router-dom";
 function Projects() {
@@ -8,6 +8,9 @@ function Projects() {
 
   const handleproject01casestudy = () => {
     navigate("/skillnest-casestudy");
+  };
+  const handleproject02casestudy = () => {
+    navigate("/nanalcafe-casestudy");
   };
   return (
     <div className="projects" id="projects">
@@ -20,11 +23,7 @@ function Projects() {
         </div>
         <div className="image-cover1">
           <div className="projectcover"></div>
-          <a
-            href="https://jobfinder-frontend.onrender.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a target="_blank" rel="noopener noreferrer">
             <img
               className="project-image1"
               src={skillnest}
@@ -42,7 +41,6 @@ function Projects() {
             >
               Case Study
             </button>
-            
           </div>
         </div>
       </div>
@@ -53,17 +51,19 @@ function Projects() {
         </div>
         <div className="image-cover2">
           <div className="projectcover"></div>
-          <a
-            href="https://thanish2806.github.io/cardgame/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img className="project-image2" src={cardgameimg} alt="cardgame" />
+          <a target="_blank" rel="noopener noreferrer">
+            <img className="project-image2" src={redesign} alt="cardgame" />
 
             <div className="project-cover2">
-              <p className="p-name2">Puzzle Game</p>
-              <p className="p-title2">A Mind tricky game</p>
-              <button className="casestudy2" type="button">
+              <p className="p-name2">Nanal cafe - Redesign</p>
+              <p className="p-title2">
+                A Modern, Mobile-First Restaurant Website
+              </p>
+              <button
+                className="casestudy2"
+                type="button"
+                onClick={handleproject02casestudy}
+              >
                 Click here
               </button>
             </div>

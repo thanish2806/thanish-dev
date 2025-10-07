@@ -1,0 +1,169 @@
+.cs-intro-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  justify-content: space-around;
+  justify-self: center;
+  position: relative;
+  margin: auto 0;
+  width: 100%;
+  height: 55vh;
+  padding: 60px 0px;
+  background-color: #1c1d25;
+}
+.cs-intro-title {
+  position: relative;
+  justify-self: center;
+  color: #f3f3f3;
+  font-family: leaguespartan;
+  font-size: 63.9614px;
+}
+.cs-intro-subtitle {
+  position: relative;
+  justify-self: center;
+  color: #f3f3f3;
+  font-family: Roliderounded;
+  width: 40%;
+  font-size: 18.985px;
+  text-align: justify;
+}
+
+/* site-link Container */
+.site-link-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Button */
+.site-link-button {
+  display: inline-flex; /* aligns text + arrow */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: transparent;
+  color: #f3f3f3;
+  background: transparent;
+  font-size: 18px;
+  font-family: Roliderounded, sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-width: 2px;
+  text-decoration: none; /* remove underline for <a> */
+  opacity: 0.7;
+}
+
+/* Hover */
+.site-link-button:hover {
+  color: rgb(255, 255, 255);
+  opacity: 1;
+}
+
+/* Arrow container */
+.forward-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Arrow icon */
+.forward-icon svg {
+  width: 25px;
+  position: relative;
+  transition: transform 0.3s ease-in-out, fill 0.3s ease;
+}
+
+/* Animate arrow on hover */
+.site-link-button:hover .forward-icon svg {
+  fill: #fff;
+  transform: translateX(4px); /* optional movement */
+}
+
+@media (max-width: 768px) {
+  .cs-intro-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    justify-content: space-around;
+    justify-self: center;
+    position: relative;
+    margin: auto 0;
+    width: 100%;
+    height: auto;
+    padding: 60px 0px;
+    background-color: #262626;
+  }
+  .cs-intro-title {
+    position: relative;
+    justify-self: center;
+    color: #f3f3f3;
+    font-family: leaguespartan;
+    font-size: 53.9614px;
+  }
+  .cs-intro-subtitle {
+    position: relative;
+    justify-self: center;
+    color: #f3f3f3;
+    font-family: Roliderounded;
+    width: 65%;
+    font-size: 18.985px;
+    text-align: justify;
+  }
+
+  /* site-link Container */
+  .site-link-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Button */
+  .site-link-button {
+    display: inline-flex; /* aligns text + arrow */
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: transparent;
+    color: #f3f3f3;
+    background: transparent;
+    font-size: 16px;
+    font-family: Roliderounded, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-width: 2px;
+    text-decoration: none; /* remove underline for <a> */
+    opacity: 0.7;
+  }
+
+  /* Hover */
+  .site-link-button:active {
+    color: rgb(255, 255, 255);
+    opacity: 1;
+  }
+
+  /* Arrow container */
+  .forward-icon {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Arrow icon */
+  .forward-icon svg {
+    width: 20px;
+    position: relative;
+    transition: transform 0.3s ease-in-out, fill 0.3s ease;
+  }
+
+  /* Animate arrow on hover */
+  .site-link-button:hover .forward-icon svg {
+    fill: #fff;
+    transform: translateX(4px); /* optional movement */
+  }
+}
