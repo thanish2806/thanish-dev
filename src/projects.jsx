@@ -64,7 +64,7 @@ function Projects() {
                 type="button"
                 onClick={handleproject02casestudy}
               >
-                Click here
+                Case Study
               </button>
             </div>
           </a>
