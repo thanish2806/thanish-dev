@@ -236,6 +236,46 @@
   left: 0;
   padding: 20px 0;
 }
+.buynow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  gap: 15px;
+  background-color: #181717;
+  outline: 3px #181717 solid;
+  outline-offset: -3px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.buynow .text {
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
+}
+
+.buynow svg path {
+  transition: 400ms;
+}
+
+.buynow:hover {
+  background-color: transparent;
+}
+.buynow:active {
+  background-color: #636ae8;
+}
+
+.buynow:hover .text {
+  color: #181717;
+}
+
+.buynow:hover svg path {
+  fill: #181717;
+}
 
 @media (max-width: 768px) {
   .project-details-section {
