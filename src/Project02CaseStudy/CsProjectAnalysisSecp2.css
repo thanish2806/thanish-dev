@@ -236,7 +236,7 @@
   left: 0;
   padding: 20px 0;
 }
-.buynow {
+/* .buynow {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -275,7 +275,7 @@
 
 .buynow:hover svg path {
   fill: #181717;
-}
+} */
 
 @media (max-width: 768px) {
   .project-details-section {
