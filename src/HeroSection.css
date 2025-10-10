@@ -158,7 +158,7 @@ ul {
 /* Social icons */
 .icon {
   position: absolute;
-  right: 20px;
+  right: 40px;
   top: 300px;
   display: flex;
   flex-direction: column;
