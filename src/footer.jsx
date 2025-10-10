@@ -1,12 +1,14 @@
 import React from "react";
 import "./footer.css";
 import Bglogo from "./assets/images/my-logo-icon.png";
-import linkedindark from "./assets/images/linkedin-dark.png";
-import linkedinlight from "./assets/images/linkedin-light.png";
-import githubdark from "./assets/images/github-dark.png";
-import githublight from "./assets/images/github-light.png";
-import CodePenLight from "./assets/images/codepen-light.png";
-import CodePenDark from "./assets/images/codepen-dark.png";
+import linkedindark from "./assets/images/Icons/linkedin-dark.png";
+import linkedinlight from "./assets/images/Icons/linkedin-light.png";
+import githubdark from "./assets/images/Icons/github-dark.png";
+import githublight from "./assets/images/Icons/github-light.png";
+import CodePenLight from "./assets/images/Icons/codepen-light.png";
+import CodePenDark from "./assets/images/Icons/codepen-dark.png";
+import Dribblelight from "./assets/images/Icons/dribble-light.png";
+import DribbleDark from "./assets/images/Icons/dribble-dark.png";
 import { useTheme } from "./ThemeContext.jsx";
 
 function Footer() {
@@ -55,6 +57,17 @@ function Footer() {
             className="github"
             src={isDarkTheme ? CodePenDark : CodePenLight}
             alt="CodePen"
+          />
+        </a>
+        <a
+          href="https://dribbble.com/thanish2806"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="dribble"
+            src={isDarkTheme ? DribbleDark : Dribblelight}
+            alt="dribble"
           />
         </a>
       </div>
