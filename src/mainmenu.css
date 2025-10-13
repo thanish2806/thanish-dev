@@ -284,6 +284,10 @@ body.menu-open {
   opacity: 80%;
 }
 
+
+
+
+
 @media (max-width: 600px) {
   .aboutmenu {
     height: auto;
@@ -559,10 +563,10 @@ body.menu-open {
     width: 100%;
     height: 100dvh;
     display: flex;
-    flex-direction: column-reverse; /* stack menus vertically */
+    flex-direction: column-reverse; 
     align-items: center;
     justify-content: flex-start;
-    overflow-y: auto; /* allow scroll */
+    overflow-y: auto; 
     -webkit-overflow-scrolling: touch; /* smooth iOS scrolling */
     background: rgba(0, 0, 0, 0.8);
     padding-bottom: 50px; /* prevent cutoff at bottom */

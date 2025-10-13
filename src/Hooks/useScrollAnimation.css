@@ -1,0 +1,26 @@
+/* Default hidden state */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 0.6s ease-out;
+}
+
+/* Becomes visible when in view */
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* You can add variations later */
+.scroll-animate.slide-left {
+  transform: translateX(-40px);
+}
+.scroll-animate.slide-right {
+  transform: translateX(40px);
+}
+.scroll-animate.zoom {
+  transform: scale(0.9);
+}
+.scroll-animate.visible.zoom {
+  transform: scale(1);
+}
