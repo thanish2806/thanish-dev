@@ -4,6 +4,7 @@ import Projects from "./projects";
 import Footer from "./footer";
 import Loader from "./loader.jsx";
 import "./home.css";
+import OpenSourceSection from "./OpenSourceSection.jsx";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -20,7 +21,6 @@ function Home() {
   return (
     <div className="home">
       {loading && <Loader />} {/* show loader while loading */}
-
       {!loading && (
         <>
           <HeroSection />
@@ -37,6 +37,7 @@ function Home() {
           */}
 
           <Projects />
+          <OpenSourceSection />
           <Footer />
         </>
       )}

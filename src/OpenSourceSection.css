@@ -1,0 +1,217 @@
+/* --- Base Containers (Existing/Modified) --- */
+
+.opensource-section {
+  width: 100%;
+  /* Use min-height for sections, not just height: fit-content; for better responsiveness */
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #f2f2f2;
+}
+
+.element-container-main {
+  position: relative;
+  /* CRITICAL: Hides the cover as it slides up outside the container boundaries */
+  overflow: hidden;
+  min-height: 400px; /* Ensure there's content area for the cover to animate over */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- The Cover Element (Existing/Modified) --- */
+
+.element-container-cover-1 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #0400ff; /* Blue cover color */
+
+  /* Initial State (Crucial for transition setup) */
+  transform: translateY(350);
+  opacity: 1;
+  z-index: 1; /* Set a high z-index to ensure it covers the content */
+
+  /* CRITICAL: Define the animation property and duration */
+  transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 1s ease-out;
+  transition-delay: 0.5s;
+}
+.opensource-section.visible .element-container-cover-1 {
+  /* Move the element up by 100% of its own height (slides off-screen to the top) */
+  transform: translateY(-100%);
+  transition-delay: 0.5s;
+}
+.element-container-cover-2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #ff0000; /* Blue cover color */
+
+  /* Initial State (Crucial for transition setup) */
+  transform: translateY(0);
+  z-index: 2;
+  transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 1s ease-out;
+}
+.opensource-section.visible .element-container-cover-2 {
+  /* Move the element up by 100% of its own height (slides off-screen to the top) */
+  transform: translateY(-100%);
+}
+.element-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 50%;
+  box-shadow: 1px 1px 10px #8989898b inset;
+}
+.loader-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f2027;
+  background-repeat: repeat-x;
+  backdrop-filter: blur(700px);
+}
+
+.motion-circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 1);
+}
+
+.c1 {
+  background-color: #2c5364;
+  margin-right: 20px;
+  animation: zoom-out-zoom-in 1.5s infinite;
+}
+
+.c2 {
+  background-color: #00c9ff;
+  margin-right: 20px;
+  animation: zoom-out-zoom-in 1.5s infinite;
+  animation-delay: 0.2s;
+}
+
+.c3 {
+  background-color: #0400ff;
+  margin-right: 20px;
+  animation: zoom-out-zoom-in 1.5s infinite;
+  animation-delay: 0.4s;
+}
+
+.c4 {
+  background-color: #92fe9d;
+  margin-right: 20px;
+  animation: zoom-out-zoom-in 1.5s infinite;
+  animation-delay: 0.6s;
+}
+
+@keyframes zoom-out-zoom-in {
+  0% {
+    transform: scale(1);
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    transform: scale(0.1);
+    box-shadow: 1px 1px 60px rgba(0, 0, 0, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 1px 1px 100px rgba(0, 0, 0, 0.8);
+  }
+}
+
+.book-table-button {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: clamp(400px, 10vw, 490px);
+  height: 40px;
+  gap: 20px;
+  background-color: #fe6d73;
+  padding: 16px 20px;
+  border-radius: 80px;
+  margin: 30px 0;
+  box-shadow: -2px -2px 8px #ffa4a4 inset;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.book-table-button:hover {
+  transform: scale(1.01);
+}
+.book-table-button:active {
+  transform: scale(0.99);
+}
+.book-table-button:after {
+  transform: scale(1);
+}
+.book-table {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.button-ball {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  transition: all 0.5s ease-in-out;
+}
+
+.book-table-button:hover .button-ball {
+  width: 20%;
+  border-radius: 80px; /* keeps pill shape when expanding */
+}
+.book-table-button:after .button-ball {
+  width: 20%;
+  border-radius: 80px; /* keeps pill shape when expanding */
+}
+.book-table-button:hover .button-ball h1 {
+  font-size: 1.5rem;
+  color: #262626;
+  transform: scale(1);
+}
+
+.book-table-button:active .button-ball {
+  transform: scale(0.9);
+}
+.book-table h1 {
+  position: relative;
+  color: #f2f2f2;
+  font-size: 1.8rem;
+  margin: 0;
+  padding: 0 12px;
+}
+.button-ball {
+  background-color: #f9f9f9d3;
+  padding: 5px;
+  border-radius: 50px;
+  height: 33px;
+  width: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-ball h1 {
+  color: transparent; /* hide text initially */
+  transform: scale(0);
+  transition: transform 0.5s ease, color 0.3s ease;
+}

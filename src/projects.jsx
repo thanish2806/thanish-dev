@@ -15,8 +15,10 @@ function Projects() {
   };
   return (
     <div className="projects" id="projects">
-      <p className="heading-1">CASE STUDIES</p>
-      <p className="heading-2">Latest Works</p>
+      <div className="heading-container">
+        <p className="heading-1">CASE STUDIES</p>
+        <p className="heading-2">Latest Works</p>
+      </div>
 
       <ScrollReveal animation="fade-in">
         <div className="project1">
