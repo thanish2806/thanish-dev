@@ -13,22 +13,40 @@ function OpenSourceSection() {
         <div className="element-container-cover-1"></div>
         <div className="element-container-cover-2"></div>
         <div className="element-container">
-          <div className="element-cover"></div>
-          <div class="loader-container">
-            <div class="motion-circle c1"></div>
-            <div class="motion-circle c2"></div>
-            <div class="motion-circle c3"></div>
-            <div class="motion-circle c4"></div>
+          <div className="loader-container">
+            <div className="loader-sub-container">
+              <div className="motion-circle c1"></div>
+              <div className="motion-circle c2"></div>
+              <div className="motion-circle c3"></div>
+              <div className="motion-circle c4"></div>
+            </div>
+            <div className="element-title-section">
+              <div className="element-title-container">
+                <h2 className="element-title-02">
+                  CSS3 preloader + Preloader Page
+                </h2>
+              </div>
+            </div>
           </div>
         </div>
         <div className="element-container">
-          <div className="element-cover"></div>
-          <div class="book-table-button">
-            <div class="book-table">
-              <h1>Reserve Your Table</h1>
+          <div className="loader-container">
+            <div className="loader-sub-container">
+              <div className="book-table-button">
+                <div className="book-table">
+                  <h1>Reserve Your Table</h1>
+                </div>
+                <div className="button-ball">
+                  <h1>Now!</h1>
+                </div>
+              </div>
             </div>
-            <div class="button-ball">
-              <h1>Now!</h1>
+            <div className="element-title-section">
+              <div className="element-title-container">
+                <h2 className="element-title-02">
+                  Animated Button with hover and active
+                </h2>
+              </div>
             </div>
           </div>
         </div>

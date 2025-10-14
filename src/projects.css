@@ -7,6 +7,8 @@
   align-items: center;
   justify-content: space-between;
   margin: 0px;
+
+  padding-top: 45px;
 }
 /* Animation */
 @keyframes appear {
@@ -41,9 +43,7 @@
   align-items: center;
   text-align: center;
 }
-.heading-container {
-  padding: 40px;
-}
+
 /*project 1 styles */
 .project1 {
   position: relative; /* Allows absolute positioning inside */
@@ -275,7 +275,7 @@
   margin: 0 auto;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .projects {
     background-color: #eaeaea;
     width: 100%;
