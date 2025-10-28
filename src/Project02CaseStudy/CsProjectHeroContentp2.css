@@ -75,7 +75,7 @@
   justify-self: center;
   color: #f3f3f3;
   font-family: leaguespartan;
-  font-size: 63.9614px;
+  font-size: clamp(32px, 5vw, 64px);
 }
 .p1-cs-title1 {
   position: relative;
@@ -154,10 +154,9 @@ li:hover .stripe-baffle {
 
   .p1-cs-title-main {
     position: relative;
-    justify-self: center;
     color: #f3f3f3;
     font-family: leaguespartan;
-    font-size: 43.9614px;
+
   }
   .p1-cs-title1 {
     position: relative;

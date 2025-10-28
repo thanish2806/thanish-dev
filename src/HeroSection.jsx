@@ -44,9 +44,9 @@ function HeroSection() {
   }, []);
 
   return (
-    <div className="herosection" onMouseMove={handleMouseMove}>
+    <div className="herosection-section" onMouseMove={handleMouseMove}>
       {/* Top logo + navbar */}
-
+      <div className="herosectiob-background-shape"></div>
       <div className={`top-content ${isActive ? "active" : ""}`}>
         <div className="top-logo">
           <img

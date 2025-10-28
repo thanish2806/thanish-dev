@@ -43,7 +43,7 @@ function CsProjectHeroSection2() {
         </button>
       </div>
       <div className="p1-casestudy-title-container">
-        <h1 className="p1-cs-title-main">NanalCafe Website Redesign</h1>
+        <p className="p1-cs-title-main">NanalCafe Website Redesign</p>
         <p className="p1-cs-title1">
           A Modern, Mobile-First Restaurant Website
         </p>
