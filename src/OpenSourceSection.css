@@ -344,7 +344,6 @@
     align-items: center;
     justify-content: center;
     gap: 20x;
-    padding: 20px;
   }
   .element-container {
     display: flex;
@@ -352,7 +351,7 @@
     align-items: center;
     justify-content: center;
     height: 400px;
-    width: 90%;
+    width: 100%;
     box-shadow: 1px 1px 10px #8989892b inset;
     background-color: #f2f2f2;
   }
