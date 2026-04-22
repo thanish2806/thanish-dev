@@ -27,7 +27,7 @@ function Mainmenu({ isVisible, onClose }) {
 
     emailjs
       .sendForm(
-        "service_rdx1ar9", // replace with your EmailJS service ID
+        "service_a2q9d2o", // replace with your EmailJS service ID
         "template_azflrgv", // replace with your EmailJS template ID
         form.current,
         "LxdIsE7-MlpRc98rP" // replace with your EmailJS public key
