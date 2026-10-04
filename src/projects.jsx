@@ -13,20 +13,21 @@ function Projects() {
     navigate("/nanalcafe-casestudy");
   };
   return (
-    <div className="projects" id="projects">
+    <section className="projects" id="projects" aria-label="Case Studies">
       <p className="heading-1">CASE STUDIES</p>
-      <p className="heading-2">Latest Works</p>
+      <h2 className="heading-2">Latest Works</h2>
       <div className="project1">
         <div className="projectno1">
           <h1>01</h1>
         </div>
         <div className="image-cover1">
           <div className="projectcover"></div>
-          <a target="_blank" rel="noopener noreferrer">
+          <a target="_blank" rel="noopener noreferrer" aria-hidden="true">
             <img
               className="project-image1"
               src={skillnest}
-              alt="calculator-project"
+              alt="Skill Nest project thumbnail"
+              loading="lazy"
             />
           </a>
           <div className="project-cover1">
@@ -49,8 +50,8 @@ function Projects() {
         </div>
         <div className="image-cover2">
           <div className="projectcover"></div>
-          <a target="_blank" rel="noopener noreferrer">
-            <img className="project-image2" src={redesign} alt="cardgame" />
+          <a target="_blank" rel="noopener noreferrer" aria-hidden="true">
+            <img className="project-image2" src={redesign} alt="Nanal Cafe project thumbnail" loading="lazy" />
 
             <div className="project-cover2">
               <p className="p-name2">Nanal cafe - Redesign</p>
@@ -68,7 +69,7 @@ function Projects() {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
