@@ -1,5 +1,5 @@
 /* ==========================================================================
-   EDITORIAL CASE STUDY INTRO SECTION (Nanal Cafe)
+   EDITORIAL CASE STUDY INTRO SECTION (Tasqmate)
    ========================================================================== */
 
 .cs-intro-section {
@@ -23,7 +23,7 @@
 }
 
 .cs-intro-subtitle {
-  max-width: 60ch;
+  max-width: 62ch;
   margin: 0 auto 36px;
 }
 
@@ -33,6 +33,10 @@
   line-height: 1.7;
   color: var(--text-secondary);
   margin: 0;
+}
+
+.cs-intro-subtitle strong {
+  color: var(--text-primary);
 }
 
 .site-link-container {
@@ -75,12 +79,7 @@
 }
 
 .site-link-button:hover .forward-icon {
-  transform: translateX(4px);
-}
-
-.forward-icon svg {
-  width: 16px;
-  height: 16px;
+  transform: translate(2px, -2px);
 }
 
 @media (max-width: 600px) {

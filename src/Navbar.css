@@ -1,116 +1,388 @@
-.navigation {
-  float: right;
-  position: relative;
-  align-self: flex-end;
-  top: 0px;
-  right: 0px;
+/* ==========================================================================
+   EDITORIAL HIGH-END NAVBAR (Azonix Brand + Underline Scale + Compact Scroll)
+   ========================================================================== */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 24px 0;
+  transition: padding 0.35s var(--ease-out-expo),
+              background-color 0.35s var(--ease-out-expo),
+              border-color 0.35s var(--ease-out-expo),
+              backdrop-filter 0.35s var(--ease-out-expo);
+  border-bottom: 1px solid transparent;
 }
-.navigation ul {
+
+.site-header.nav-scrolled {
+  padding: 14px 0;
+  background-color: var(--nav-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.nav-container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 32px;
   display: flex;
   align-items: center;
-  overflow: hidden;
-  padding: 0px;
-  margin: 0px;
-  list-style-type: none;
-  background-color: none;
-  position: relative;
-  right: 0;
-}
-.navigation a {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  text-decoration: none;
-  color: var(--secondary-color);
-  font-size: 20px;
-  font-family: Roliderounded;
-  font-style: normal;
-  margin-left: 20px;
-  opacity: 100%;
+  justify-content: space-between;
 }
 
-.navigation li {
-  float: right;
-  justify-content: center;
+/* --------------------------------------------------------------------------
+   Left: Brand Identity
+   -------------------------------------------------------------------------- */
+.nav-brand-wrapper {
+  display: flex;
+  align-items: center;
 }
-.navigation a:hover {
-  transform: scale(1.01);
-  opacity: 80%;
+
+.nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-primary);
   cursor: pointer;
 }
-.logo {
-  height: 70px;
-  width: 70px;
+
+.nav-brand-text {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: var(--text-primary);
+  transition: color 0.25s var(--ease-out-expo);
 }
 
-#theme-pc {
-  bottom: 133px;
-  height: 30px;
-  width: 30px;
-  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out,
-    opacity 0.3s;
+.nav-brand:hover .nav-brand-text {
+  color: var(--accent-primary);
 }
-.navigation-mobile {
+
+/* --------------------------------------------------------------------------
+   Center: Desktop Navigation with 1px Left-to-Right Underline Scale
+   -------------------------------------------------------------------------- */
+.nav-links-center {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.nav-link {
+  position: relative;
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 4px 0;
+  cursor: pointer;
+  transition: color 0.22s var(--ease-out-expo);
+}
+
+.nav-btn-link {
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--accent-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.28s var(--ease-out-expo);
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent-primary);
+}
+
+.nav-arrow-left {
+  transition: transform 0.2s var(--ease-out-expo);
+}
+
+.nav-back-link:hover .nav-arrow-left {
+  transform: translateX(-4px);
+}
+
+/* --------------------------------------------------------------------------
+   Right: Actions (Theme Toggle Pill + Primary CTA)
+   -------------------------------------------------------------------------- */
+.nav-actions-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.theme-toggle-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border-radius: 9999px;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-surface);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.22s var(--ease-out-expo);
+}
+
+.theme-toggle-pill:hover {
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+  background-color: var(--bg-elevated);
+}
+
+.theme-toggle-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: var(--accent-primary);
+}
+
+.nav-primary-cta {
+  padding: 8px 18px;
+  border-radius: 9999px;
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  border: 1px solid transparent;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  transition: all 0.22s var(--ease-out-expo);
+}
+
+.nav-primary-cta:hover {
+  background-color: var(--accent-primary);
+  color: #ffffff;
+  transform: scale(1.02);
+}
+
+.nav-primary-cta:active {
+  transform: scale(0.98);
+}
+
+/* --------------------------------------------------------------------------
+   Minimal 2-Line Animated Mobile Hamburger (<768px)
+   -------------------------------------------------------------------------- */
+.hamburger-editorial {
   display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  width: 38px;
+  height: 38px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 7px;
+  z-index: 1100;
 }
-@media (max-width: 600px) {
-  .navigation {
+
+.h-line {
+  display: block;
+  height: 1.5px;
+  background-color: var(--text-primary);
+  border-radius: 2px;
+  transition: transform 0.3s var(--ease-out-expo), width 0.3s var(--ease-out-expo), opacity 0.2s ease;
+}
+
+.h-line-1 {
+  width: 24px;
+}
+
+.h-line-2 {
+  width: 16px;
+}
+
+.hamburger-editorial:hover .h-line-2 {
+  width: 24px;
+}
+
+.hamburger-editorial.is-active .h-line-1 {
+  width: 22px;
+  transform: translateY(4.25px) rotate(45deg);
+}
+
+.hamburger-editorial.is-active .h-line-2 {
+  width: 22px;
+  transform: translateY(-4.25px) rotate(-45deg);
+}
+
+/* --------------------------------------------------------------------------
+   Full-Viewport Editorial Mobile Menu Overlay
+   -------------------------------------------------------------------------- */
+.mobile-editorial-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-primary);
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 32px 48px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity 0.35s var(--ease-out-expo), transform 0.35s var(--ease-out-expo);
+}
+
+.mobile-editorial-overlay.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.mobile-close-btn {
+  background: none;
+  border: 1px solid var(--border-subtle);
+  border-radius: 9999px;
+  color: var(--text-primary);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.mobile-menu-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  padding: 48px 0 16px;
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.mobile-nav-item {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.mobile-nav-idx {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-primary);
+  letter-spacing: 0.1em;
+}
+
+.mobile-nav-anchor {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text-primary);
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s var(--ease-out-expo), color 0.2s var(--ease-out-expo);
+}
+
+.mobile-nav-anchor:hover {
+  color: var(--accent-primary);
+  transform: translateX(6px);
+}
+
+.mobile-menu-footer {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-footer-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+.mobile-footer-status {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .nav-links-center {
     display: none;
   }
-  .navigation-mobile {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow-y: auto;
-    background: linear-gradient(270deg, rgb(35, 90, 166), rgb(16, 27, 59));
-    z-index: 1000;
 
+  .nav-primary-cta {
+    display: none;
+  }
+
+  .hamburger-editorial {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
   }
-  /* When menu is open */
-  .navigation-mobile.open {
-    transform: translateX(0); /* ✅ slide in */
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 20px;
   }
 
-  .navigation-mobile ul {
-    list-style: none;
-    padding: 0;
-    margin: 50px 0 0 0;
-    text-align: center;
+  .mobile-editorial-overlay {
+    padding: 20px 20px 32px;
   }
 
-  .navigation-mobile a {
-    padding: 15px;
-    display: block;
-    text-decoration: none;
-    color: #f3f3f3;
-    font-size: 28px;
-    font-family: Roliderounded;
-    font-weight: 400;
-    margin: 10px 0;
-    opacity: 1;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-  }
-
-  .navigation-mobile a:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
-  }
-
-  .closeicon-mob-menu {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 10px;
-    width: 32px;
-    cursor: pointer;
-    z-index: 2002;
+  .mobile-nav-anchor {
+    font-size: 1.8rem;
   }
 }

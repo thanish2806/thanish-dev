@@ -1,220 +1,161 @@
+/* ==========================================================================
+   EDITORIAL CASE STUDY HERO (Nanal Cafe)
+   ========================================================================== */
+
 .cs-hero-section {
   position: relative;
+  min-height: 92vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
-  width: 100%;
-  height: 100dvh;
-  animation: fadeIn 0.4s ease-in-out;
-  position: relative;
-  box-shadow: 1px 1px 35px #0d0d0d;
-  z-index: 1;
-  overflow: hidden;
-}
-.background-img-p1 {
-  position: absolute;
-  height: 100dvh;
-  width: 100%;
-  object-fit: cover;
-  opacity: 0.7;
-  z-index: -1; /* keep behind content */
-}
-.casestudy-navigation {
-  float: right;
-  position: relative;
-  align-self: flex-end;
-  transition: transform 0.3s ease-in-out scale ease-in-out 0.3s opacity
-    ease-in-out 0.3s;
-}
-.casestudy-navigation ul {
-  display: flex;
   align-items: center;
+  padding: 140px 0 40px;
+  background-color: var(--bg-primary);
   overflow: hidden;
-  padding: 0px;
-  margin: 0px;
-  list-style-type: none;
-  background-color: none;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.cs-hero-ambient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.background-img-p1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.16;
+  filter: grayscale(100%) contrast(130%);
+}
+
+.cs-hero-vignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, transparent 10%, var(--bg-primary) 85%);
+}
+
+/* --------------------------------------------------------------------------
+   Title Stage
+   -------------------------------------------------------------------------- */
+.cs-title-stage {
   position: relative;
-  right: 0;
-}
-.casestudy-navigation a {
-  display: flex;
+  z-index: 1;
   text-align: center;
-  justify-content: center;
-  text-decoration: none;
-  color: #f3f3f3;
-  font-size: 20px;
-  font-family: Roliderounded;
-  font-style: normal;
-  margin-left: 20px;
-  opacity: 100%;
-  transition: transform 0.3s ease-in-out;
+  max-width: 900px;
+  padding: 40px 20px;
+  margin: auto 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
 }
-.casestudy-navigation a:hover {
-  transform: scale(1.01);
-  opacity: 80%;
-  cursor: pointer;
+
+.cs-title-stage.is-active {
+  opacity: 1;
+  transform: translateY(0);
 }
-.casestudy-navigation li {
-  float: right;
-  justify-content: center;
+
+.cs-badge-idx {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--accent-primary);
+  display: inline-block;
+  margin-bottom: 16px;
 }
-.p1-casestudy-title-container {
+
+.cs-title-main {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6.5vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  color: var(--text-primary);
+  margin: 0 0 16px;
+}
+
+.cs-title-sub {
+  font-family: var(--font-body);
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 54ch;
+}
+
+/* --------------------------------------------------------------------------
+   Context Stripe (Hairline Grid)
+   -------------------------------------------------------------------------- */
+.cs-context-stripe {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 32px;
+}
+
+.cs-context-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 24px 32px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+}
+
+.context-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  padding: 0px 0px;
-  height: 75%;
+  gap: 6px;
 }
 
-.p1-cs-title-main {
-  position: relative;
-  justify-self: center;
-  color: #f3f3f3;
-  font-family: leaguespartan;
-  font-size: clamp(32px, 5vw, 64px);
-}
-.p1-cs-title1 {
-  position: relative;
-  justify-self: center;
-  color: #f3f3f3;
-  font-family: playwritedku;
-  font-size: 18.985px;
-}
-.p1-cs-context-stripe {
-  width: 100%;
-  padding: 20px 0;
-  display: flex;
-  justify-content: center;
-  z-index: 1;
+.context-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
 }
 
-.context-stripe-focus-area {
-  display: flex;
-  justify-content: space-around; /* evenly space items */
-  align-items: center;
-  gap: 0px; /* consistent spacing */
-  width: 80%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  color: #fff;
-  font-family: "louisgeorgecafe", sans-serif;
-  font-size: 16px;
-  letter-spacing: 0.5px;
+.context-val {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
-.context-stripe-focus-area li {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  text-align: center;
-  gap: 7px;
-  transition: transform 0.3s ease, color 0.3s ease;
+.status-live {
+  color: #10b981;
 }
 
-.context-stripe-focus-area strong {
-  font-weight: bold;
-  font-size: 18px;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #ffffff;
+/* --------------------------------------------------------------------------
+   Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 860px) {
+  .cs-context-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 20px;
+  }
 }
 
-.stripe-baffle {
-  font-size: 15px;
-  opacity: 0.9;
-  font-style: italic;
-  transition: opacity 0.3s ease;
-}
-
-li:hover .stripe-baffle {
-  opacity: 1;
-}
-
-@media (max-width: 768px) {
-  .casestudy-navigation {
-    display: none;
+@media (max-width: 480px) {
+  .cs-hero-section {
+    padding: 110px 0 32px;
   }
 
-  .p1-casestudy-title-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 0px 0px;
-    height: 75%;
+  .cs-context-stripe {
+    padding: 0 20px;
   }
 
-  .p1-cs-title-main {
-    position: relative;
-    color: #f3f3f3;
-    font-family: leaguespartan;
-
-  }
-  .p1-cs-title1 {
-    position: relative;
-    justify-self: center;
-    color: #f3f3f3;
-    font-family: playwritedku;
-    font-size: 18.985px;
-  }
-  .p1-cs-context-stripe {
-    width: 100%;
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-    z-index: 1;
-  }
-
-  .context-stripe-focus-area {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around; /* evenly space items */
-    align-items: center;
-    gap: 7px; /* consistent spacing */
-    width: 80%;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    color: #fff;
-    font-family: "louisgeorgecafe", sans-serif;
-    font-size: 16px;
-    letter-spacing: 0.5px;
-  }
-
-  .context-stripe-focus-area li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    gap: 7px;
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-
-  .context-stripe-focus-area strong {
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #ffffff;
-  }
-
-  .stripe-baffle {
-    font-size: 15px;
-    opacity: 0.9;
-    font-style: italic;
-    transition: opacity 0.3s ease;
-  }
-
-  li:hover .stripe-baffle {
-    opacity: 1;
+  .cs-context-grid {
+    grid-template-columns: 1fr;
   }
 }

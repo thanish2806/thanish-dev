@@ -1,7 +1,5 @@
-// scrollToProjects.js
+import { scrollToTarget } from "../Hooks/useSmoothScroll.js";
+
 export function scrollToProjects() {
-  const element = document.getElementById("projects");
-  if (element) {
-    element.scrollIntoView({ behavior: "smooth" });
-  }
+  scrollToTarget("#projects", -32);
 }

@@ -1,8 +1,8 @@
 /* ==========================================================================
-   EDITORIAL CASE STUDY HERO (Skill Nest)
+   EDITORIAL CASE STUDY HERO (Tasqmate - Smart Task Manager)
    ========================================================================== */
 
-.cs-hero-section {
+.cs-hero-tasqmate {
   position: relative;
   min-height: 92vh;
   display: flex;
@@ -29,8 +29,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.16;
-  filter: grayscale(100%) contrast(130%);
+  opacity: 0.14;
+  filter: grayscale(100%) contrast(140%);
 }
 
 .cs-hero-vignette {
@@ -42,9 +42,6 @@
   background: radial-gradient(circle at 50% 50%, transparent 10%, var(--bg-primary) 85%);
 }
 
-/* --------------------------------------------------------------------------
-   Title Stage
-   -------------------------------------------------------------------------- */
 .cs-title-stage {
   position: relative;
   z-index: 1;
@@ -90,9 +87,6 @@
   max-width: 54ch;
 }
 
-/* --------------------------------------------------------------------------
-   Context Stripe (Hairline Grid)
-   -------------------------------------------------------------------------- */
 .cs-context-stripe {
   position: relative;
   z-index: 1;
@@ -135,9 +129,6 @@
   color: #10b981;
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Media Queries
-   -------------------------------------------------------------------------- */
 @media (max-width: 860px) {
   .cs-context-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -147,7 +138,7 @@
 }
 
 @media (max-width: 480px) {
-  .cs-hero-section {
+  .cs-hero-tasqmate {
     padding: 110px 0 32px;
   }
 

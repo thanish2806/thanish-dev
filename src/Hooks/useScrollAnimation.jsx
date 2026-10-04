@@ -1,29 +1,36 @@
 import { useEffect, useRef } from "react";
 import "./useScrollAnimation.css";
 
-function useScrollAnimation() {
+function useScrollAnimation(options = {}) {
   const ref = useRef(null);
+  const { threshold = 0.15 } = options;
 
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
 
+    // Respect user's motion preference
+    if (typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      element.classList.add("visible");
+      return;
+    }
+
     const observer = new IntersectionObserver(
-      (entries, observer) => {
+      (entries, obs) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
-            observer.unobserve(entry.target); // stop watching once visible
+            obs.unobserve(entry.target); // triggerOnce: true
           }
         });
       },
-      { threshold: 0.2 } // 👈 threshold should go here, not inside dependencies
+      { threshold }
     );
 
     observer.observe(element);
 
     return () => observer.disconnect();
-  }, []); // 👈 empty dependency array — runs only once
+  }, [threshold]);
 
   return ref;
 }

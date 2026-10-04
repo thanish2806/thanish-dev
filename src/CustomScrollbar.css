@@ -1,0 +1,154 @@
+/* ==========================================================================
+   CUSTOM SCROLLBAR & SMOOTH ANIMATION STYLES
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Bespoke Floating Scrollbar Dock (Right Edge)
+   -------------------------------------------------------------------------- */
+.custom-scrollbar-dock {
+  position: fixed;
+  top: 16px;
+  right: 6px;
+  bottom: 16px;
+  width: 20px;
+  z-index: 99998;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.custom-scrollbar-dock.is-active {
+  opacity: 1;
+}
+
+/* Subtle Hairline Rail */
+.custom-scrollbar-rail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--border-subtle);
+  border-radius: 9999px;
+  transition: width 0.25s var(--ease-out-expo), background-color 0.25s var(--ease-out-expo);
+}
+
+.custom-scrollbar-dock:hover .custom-scrollbar-rail {
+  width: 4px;
+  background-color: var(--border-hover);
+}
+
+/* --------------------------------------------------------------------------
+   3. Smooth Animated Thumb Pill
+   -------------------------------------------------------------------------- */
+.custom-scrollbar-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+  will-change: transform;
+  transition: transform 0.04s linear;
+}
+
+.custom-scrollbar-dock.is-dragging .custom-scrollbar-thumb {
+  cursor: grabbing;
+}
+
+/* Tactile Pill inside the thumb */
+.thumb-core-pill {
+  width: 4px;
+  height: 100%;
+  border-radius: 9999px;
+  background-color: var(--text-muted);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  transition: width 0.25s var(--ease-out-expo), background-color 0.25s var(--ease-out-expo), box-shadow 0.25s var(--ease-out-expo), transform 0.25s var(--ease-out-expo);
+}
+
+.custom-scrollbar-dock:hover .thumb-core-pill {
+  width: 8px;
+  background-color: var(--accent-primary);
+  box-shadow: 0 0 14px rgba(255, 90, 54, 0.6);
+}
+
+.custom-scrollbar-dock.is-dragging .thumb-core-pill {
+  width: 10px;
+  background-color: var(--accent-primary);
+  box-shadow: 0 0 18px rgba(255, 90, 54, 0.85);
+  transform: scaleY(1.05);
+}
+
+/* --------------------------------------------------------------------------
+   4. Floating Percentage Capsule Badge
+   -------------------------------------------------------------------------- */
+.thumb-percentage-badge {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%) translateX(6px) scale(0.9);
+  padding: 3px 8px;
+  border-radius: 6px;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-hover);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s var(--ease-out-expo), transform 0.2s var(--ease-out-expo);
+  white-space: nowrap;
+}
+
+.thumb-percentage-badge.show-badge {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0) scale(1);
+}
+
+.badge-percent-num {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   5. Dragging State on Body
+   -------------------------------------------------------------------------- */
+body.scrollbar-is-dragging {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  cursor: grabbing !important;
+}
+
+body.scrollbar-is-dragging * {
+  cursor: grabbing !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. Reduced Motion Safety
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .custom-scrollbar-dock,
+  .custom-scrollbar-thumb,
+  .thumb-core-pill,
+  .thumb-percentage-badge {
+    transition: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. Suppress Global Scrollbar in Modal / Dossier (About & Contact)
+   -------------------------------------------------------------------------- */
+body.menu-open .custom-scrollbar-dock {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+

@@ -6,8 +6,8 @@ import NanalCafePages from "../assets/Nanalcafe-Ui/nanalcafe-ui-pages.png";
 function CsProjectAnalysisSec() {
   const navigate = useNavigate();
 
-  function navigateToProject02() {
-    navigate("/nanalcafe-casestudy");
+  function navigateToNextWork() {
+    navigate("/skillnest-casestudy");
   }
 
   return (
@@ -103,20 +103,33 @@ function CsProjectAnalysisSec() {
       </div>
 
       {/* Next Project Link */}
-      <div className="next-work-container" onClick={navigateToProject02}>
-        <a className="next-work">
+      <div
+        className="next-work-container"
+        onClick={navigateToNextWork}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            navigateToNextWork();
+          }
+        }}
+        aria-label="Navigate to Skill Nest Case Study"
+      >
+        <div className="next-work">
           <h5 className="next-work-lead">Next Work</h5>
-          <h4 className="next-work-title">Coming Soon</h4>
+          <h4 className="next-work-title">Skill Nest - Platform Case Study</h4>
           <div className="casestudy-section-content-separator"></div>
           <div className="next-work-arrow">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 476.213 476.213"
+              aria-hidden="true"
             >
               <path d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"></path>
             </svg>
           </div>
-        </a>
+        </div>
       </div>
     </section>
   );

@@ -1,83 +1,94 @@
 import React from "react";
 import "./footer.css";
-import Bglogo from "./assets/images/my-logo-icon.png";
-import linkedindark from "./assets/images/Icons/linkedin-dark.png";
-import linkedinlight from "./assets/images/Icons/linkedin-light.png";
-import githubdark from "./assets/images/Icons/github-dark.png";
-import githublight from "./assets/images/Icons/github-light.png";
-import CodePenLight from "./assets/images/Icons/codepen-light.png";
-import CodePenDark from "./assets/images/Icons/codepen-dark.png";
-import Dribblelight from "./assets/images/Icons/dribble-light.png";
-import DribbleDark from "./assets/images/Icons/dribble-dark.png";
-import { useTheme } from "./ThemeContext.jsx";
 
 function Footer() {
-  const { isDarkTheme } = useTheme();
+  const handleScrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
-    <footer className="footer">
-      {/* Logo left */}
-      <img
-        className="logo-bottom"
-        src={Bglogo}
-        alt="Logo"
-        onClick={() => (window.location.href = "")}
-      />
+    <footer className="editorial-footer" aria-label="Colophon & Footer">
+      <div className="footer-container">
+        
+        {/* Top Colophon Row */}
+        <div className="footer-top-row">
+          <div className="footer-brand-col">
+            <span className="footer-brand-title">THANISH.DEV</span>
+            <p className="footer-brand-tagline">
+              Engineering interfaces that feel as fast as they look.
+              Front-End Developer &amp; Design System Architect.
+            </p>
+          </div>
 
-      {/* Social icons center */}
-      <div className="footer-icon">
-        <a
-          href="https://www.linkedin.com/in/thanish-p-421204200"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            className="linkedin"
-            src={isDarkTheme ? linkedindark : linkedinlight}
-            alt="LinkedIn"
-          />
-        </a>
-        <a
-          href="https://github.com/thanish2806"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            className="github"
-            src={isDarkTheme ? githubdark : githublight}
-            alt="GitHub"
-          />
-        </a>
-        <a
-          href="https://codepen.io/Thanish2806"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            className="github"
-            src={isDarkTheme ? CodePenDark : CodePenLight}
-            alt="CodePen"
-          />
-        </a>
-        <a
-          href="https://dribbble.com/thanish2806"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            className="dribble"
-            src={isDarkTheme ? DribbleDark : Dribblelight}
-            alt="dribble"
-          />
-        </a>
-      </div>
+          <div className="footer-links-col">
+            <div className="footer-links-group">
+              <span className="footer-group-heading">NETWORK //</span>
+              <a
+                href="https://github.com/thanish2806"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-anchor"
+              >
+                GitHub ↗
+              </a>
+              <a
+                href="https://www.linkedin.com/in/thanish-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-anchor"
+              >
+                LinkedIn ↗
+              </a>
+              <a
+                href="https://codepen.io/Thanish2806"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-anchor"
+              >
+                CodePen ↗
+              </a>
+              <a
+                href="https://dribbble.com/thanish2806"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-anchor"
+              >
+                Dribbble ↗
+              </a>
+            </div>
 
-      {/* Copyright bottom */}
-      <div className="footer-credit">
-        <p className="footer-credit">
-          © {new Date().getFullYear()} Designed and developed by Techshark
-          Digital. All Rights Reserved.
-        </p>
+            <div className="footer-links-group">
+              <span className="footer-group-heading">DIRECT //</span>
+              <a
+                href="mailto:thanishdeveloper@gmail.com"
+                className="footer-anchor"
+              >
+                thanishdeveloper@gmail.com
+              </a>
+              <span className="footer-availability-note">
+                ● Available for New Opportunities
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar: Copyright & Back to Top */}
+        <div className="footer-bottom-bar">
+          <p className="footer-copyright">
+            © {new Date().getFullYear()} THANISH. All Rights Reserved. Built with React 19, Vite &amp; CSS Custom Tokens.
+          </p>
+
+          <button
+            type="button"
+            onClick={handleScrollTop}
+            className="footer-back-to-top"
+            aria-label="Scroll back to top of page"
+          >
+            <span>BACK TO TOP</span>
+            <span className="back-arrow" aria-hidden="true">↑</span>
+          </button>
+        </div>
+
       </div>
     </footer>
   );

@@ -7,7 +7,7 @@ function CsProjectAnalysisSec() {
   const Naviagte = useNavigate();
 
   function navigateToProject02() {
-    Naviagte("/nanalcafe-casestudy");
+    Naviagte("/tasqmate-casestudy");
   }
   return (
     <section className="project-analysis-section">
@@ -70,23 +70,41 @@ function CsProjectAnalysisSec() {
         <h4 className="casestudy-section-subtitle">UI &amp; Components.</h4>
         <h2 className="casestudy-section-title">Design</h2>
         <div className="single-work-ui-image">
-          <img src={Skillnestuipagination} alt="cerasa ui pagination" />
+          <img
+            src={Skillnestuipagination}
+            alt="SkillNest user interface pagination breakdown"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
-      <div className="next-work-container" onClick={navigateToProject02}>
-        <a className="next-work">
+      <div
+        className="next-work-container"
+        onClick={navigateToProject02}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            navigateToProject02();
+          }
+        }}
+        aria-label="Navigate to next case study: Tasqmate Smart Task Manager"
+      >
+        <div className="next-work">
           <h5 className="next-work-lead">Next Work</h5>
-          <h4 className="next-work-title">Nanal Cafe - Web Redesign</h4>
+          <h4 className="next-work-title">Tasqmate - Smart Task Manager &amp; Voice UI</h4>
           <div className="casestudy-section-content-separator"></div>
           <div className="next-work-arrow">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 476.213 476.213"
+              aria-hidden="true"
             >
               <path d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"></path>
             </svg>
           </div>
-        </a>
+        </div>
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   EDITORIAL CASE STUDY ANALYSIS & DESIGN SECTION (Skill Nest)
+   EDITORIAL CASE STUDY ANALYSIS & DESIGN SECTION (Tasqmate)
    ========================================================================== */
 
 .project-analysis-section {
@@ -29,9 +29,6 @@
   margin: 0 0 64px;
 }
 
-/* --------------------------------------------------------------------------
-   Narrative + UI Screenshot Layout
-   -------------------------------------------------------------------------- */
 .casestudy-section-inner-container {
   display: grid;
   grid-template-columns: 1fr 1.25fr;
@@ -71,23 +68,52 @@
   color: var(--text-primary);
 }
 
-.casestudy-section-ui-image-container {
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid var(--border-subtle);
+/* Tasqmate Feature Spec Grid */
+.tasqmate-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.spec-card {
+  padding: 24px;
+  border-radius: 14px;
   background-color: var(--bg-surface);
-  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.45);
+  border: 1px solid var(--border-subtle);
+  transition: border-color 0.22s var(--ease-out-expo);
 }
 
-.casestudy-section-ui-image-container img {
-  width: 100%;
-  height: auto;
+.spec-card:hover {
+  border-color: var(--border-hover);
+}
+
+.spec-idx {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: var(--accent-primary);
   display: block;
+  margin-bottom: 8px;
 }
 
-/* --------------------------------------------------------------------------
-   Color Palette Section
-   -------------------------------------------------------------------------- */
+.spec-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin: 0 0 8px;
+}
+
+.spec-body {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Color Palette Section */
 .casestudy-section-color-palette-section {
   display: flex;
   flex-wrap: wrap;
@@ -130,9 +156,7 @@
   margin: 0;
 }
 
-/* --------------------------------------------------------------------------
-   Typography Specimen Blocks
-   -------------------------------------------------------------------------- */
+/* Typography Specimen Blocks */
 .casestudy-section-fonts-block {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -176,37 +200,7 @@
   margin: 0;
 }
 
-/* --------------------------------------------------------------------------
-   UI Breakdown & Large Image
-   -------------------------------------------------------------------------- */
-.casestudy-section-ui-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1200px;
-  width: 100%;
-  padding: 0 32px;
-  margin-bottom: 96px;
-}
-
-.single-work-ui-image {
-  width: 100%;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid var(--border-subtle);
-  background-color: var(--bg-surface);
-  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.45);
-}
-
-.single-work-ui-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* --------------------------------------------------------------------------
-   Next Work Banner
-   -------------------------------------------------------------------------- */
+/* Next Work Banner */
 .next-work-container {
   width: 100%;
   max-width: 1200px;
@@ -251,22 +245,23 @@
 .next-work-arrow svg {
   width: 28px;
   height: 28px;
-  fill: var(--text-primary);
+  stroke: var(--text-primary);
   transition: transform 0.22s var(--ease-out-expo);
 }
 
 .next-work:hover .next-work-arrow svg {
   transform: translateX(8px);
-  fill: var(--accent-primary);
+  stroke: var(--accent-primary);
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Media Queries
-   -------------------------------------------------------------------------- */
 @media (max-width: 900px) {
   .casestudy-section-inner-container {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .tasqmate-spec-grid {
+    grid-template-columns: 1fr;
   }
 
   .casestudy-section-fonts-block {
@@ -282,7 +277,6 @@
   .casestudy-section-inner-container,
   .casestudy-section-color-palette-section,
   .casestudy-section-fonts-block,
-  .casestudy-section-ui-container,
   .next-work-container {
     padding: 0 20px;
   }

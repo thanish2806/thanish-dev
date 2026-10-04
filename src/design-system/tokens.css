@@ -1,0 +1,125 @@
+/**
+ * Obsidian Photon Design Tokens — Production CSS Custom Properties
+ * Portfolio, Product Suite & UI Lab Bento
+ */
+
+:root,
+.theme-dark {
+  /* Color Canvas & Surfaces */
+  --bg-canvas: #0B0C10;
+  --bg-elevated: #14161F;
+  --bg-card: #1C1D25;
+  --bg-card-hover: #232530;
+  --bg-glass: rgba(20, 22, 31, 0.78);
+
+  /* Typography Colors */
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+
+  /* Structural Hairlines */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+
+  /* Brand Accents */
+  --accent-blue: #0016F9;
+  --accent-blue-bright: #3B82F6;
+  --accent-crimson: #D10D04;
+  --accent-crimson-bright: #EF4444;
+  --brand-gradient: linear-gradient(135deg, #0016F9 0%, #6D28D9 52%, #D10D04 100%);
+  --brand-gradient-subtle: linear-gradient(135deg, rgba(0, 22, 249, 0.16) 0%, rgba(109, 40, 217, 0.14) 50%, rgba(209, 13, 4, 0.16) 100%);
+
+  /* Elevation & Shadows */
+  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.25);
+  --shadow-elevated: 0 24px 48px -12px rgba(0, 0, 0, 0.65);
+  --watermark-color: rgba(255, 255, 255, 0.035);
+}
+
+.theme-light {
+  /* Color Canvas & Surfaces */
+  --bg-canvas: #F8FAFC;
+  --bg-elevated: #F1F5F9;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F8FAFC;
+  --bg-glass: rgba(255, 255, 255, 0.85);
+
+  /* Typography Colors */
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+
+  /* Structural Hairlines */
+  --border-subtle: rgba(15, 23, 42, 0.09);
+  --border-strong: rgba(15, 23, 42, 0.18);
+
+  /* Brand Accents */
+  --accent-blue: #0016F9;
+  --accent-blue-bright: #2563EB;
+  --accent-crimson: #D10D04;
+  --accent-crimson-bright: #DC2626;
+  --brand-gradient: linear-gradient(135deg, #0016F9 0%, #6D28D9 52%, #D10D04 100%);
+  --brand-gradient-subtle: linear-gradient(135deg, rgba(0, 22, 249, 0.08) 0%, rgba(109, 40, 217, 0.08) 50%, rgba(209, 13, 4, 0.08) 100%);
+
+  /* Elevation & Shadows */
+  --shadow-card: 0 2px 12px -2px rgba(15, 23, 42, 0.06);
+  --shadow-elevated: 0 20px 40px -15px rgba(15, 23, 42, 0.10);
+  --watermark-color: rgba(15, 23, 42, 0.045);
+}
+
+/* Typographic Utility Classes */
+.font-display {
+  font-family: 'Syne', 'League Spartan', sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Gradient Utilities */
+.brand-gradient-bg {
+  background: var(--brand-gradient);
+}
+
+.brand-gradient-text {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-gradient-border {
+  border-image: var(--brand-gradient) 1;
+}
+
+/* Glassmorphism Surface */
+.surface-glass {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+}
+
+/* Kinetic Transitions */
+.transition-snappy {
+  transition: all 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.transition-smooth {
+  transition: all 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reduced Motion Safety */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,46 +1,30 @@
-import { useEffect, useState } from "react";
-import HeroSection from "./HeroSection";
-import Projects from "./projects";
-import Footer from "./footer";
-import Loader from "./loader.jsx";
-import "./home.css";
+import React, { useState } from "react";
+import Navbar from "./Navbar.jsx";
+import HeroSection from "./HeroSection.jsx";
+import Projects from "./projects.jsx";
 import OpenSourceSection from "./OpenSourceSection.jsx";
+import Footer from "./footer.jsx";
+import Mainmenu from "./mainmenu.jsx";
+import "./home.css";
 
 function Home() {
-  const [loading, setLoading] = useState(true);
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
 
-  useEffect(() => {
-    // simulate loading delay, e.g., fetching data or heavy components
-    const timer = setTimeout(() => {
-      setLoading(false); // hide loader after 2.5s
-    }, 1800);
-
-    return () => clearTimeout(timer);
-  }, []);
+  const toggleMenu = () => setIsMenuVisible((prev) => !prev);
+  const closeMenu = () => setIsMenuVisible(false);
 
   return (
-    <div className="home">
-      {loading && <Loader />} {/* show loader while loading */}
-      {!loading && (
-        <>
-          <HeroSection />
+    <div className="home-editorial-wrapper">
+      <Navbar toggleMenu={toggleMenu} />
+      <main className="home" id="main-content">
+        <HeroSection toggleMenu={toggleMenu} />
+        <Projects />
+        <OpenSourceSection />
+      </main>
+      <Footer />
 
-          {/* Background logo with animation */}
-
-          {/* Dynamic text movement 
-          <div
-            className="animated-text"
-            style={{
-              transform: `translate(${mouseX / 100}px, ${mouseY / 100}px)`,
-            }}
-          ></div>
-          */}
-
-          <Projects />
-          <OpenSourceSection />
-          <Footer />
-        </>
-      )}
+      {/* Global Dossier & Contact Modal */}
+      <Mainmenu isVisible={isMenuVisible} onClose={closeMenu} />
     </div>
   );
 }

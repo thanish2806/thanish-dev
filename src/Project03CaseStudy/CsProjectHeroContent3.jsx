@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import bgimage from "../assets/images/HeroSectionBgImg.webp";
 import Navbar from "../Navbar.jsx";
 import Mainmenu from "../mainmenu.jsx";
-import "./CsProjectHeroContentp2.css";
+import HeroBgImg from "../assets/images/HeroSectionBgImg.webp";
+import "./CsProjectHeroContent3.css";
 
-function CsProjectHeroSection2() {
+function CsProjectHeroSection3() {
   const [isActive, setIsActive] = useState(false);
   const [isMenuVisible, setIsMenuVisible] = useState(false);
 
@@ -16,11 +16,11 @@ function CsProjectHeroSection2() {
   }, []);
 
   return (
-    <section className="cs-hero-section" aria-label="Nanal Cafe Case Study Hero">
+    <section className="cs-hero-section cs-hero-tasqmate" aria-label="Tasqmate Case Study Hero">
       {/* Background Graphic Canvas */}
       <div className="cs-hero-ambient" aria-hidden="true">
         <img
-          src={bgimage}
+          src={HeroBgImg}
           className="background-img-p1"
           alt=""
           loading="eager"
@@ -33,9 +33,9 @@ function CsProjectHeroSection2() {
 
       {/* Hero Title & Identity */}
       <div className={`cs-title-stage ${isActive ? "is-active" : ""}`}>
-        <span className="cs-badge-idx">CASE STUDY // 02</span>
-        <h1 className="cs-title-main">Nanal Cafe</h1>
-        <p className="cs-title-sub">A Modern, Mobile-First Restaurant Website &amp; Interactive Ordering Experience</p>
+        <span className="cs-badge-idx">CASE STUDY // 03</span>
+        <h1 className="cs-title-main">Tasqmate</h1>
+        <p className="cs-title-sub">Smart Task Manager &amp; Interactive Productivity Dashboard</p>
       </div>
 
       {/* Context Stripe */}
@@ -43,15 +43,15 @@ function CsProjectHeroSection2() {
         <div className="cs-context-grid">
           <div className="context-item">
             <span className="context-label">ROLE</span>
-            <span className="context-val">UI/UX Designer &amp; Developer</span>
+            <span className="context-val">Frontend Architect &amp; Developer</span>
           </div>
           <div className="context-item">
             <span className="context-label">CONTEXT</span>
-            <span className="context-val">Brand Overhaul &amp; Mobile Web App</span>
+            <span className="context-val">Voice Recognition &amp; Productivity UI</span>
           </div>
           <div className="context-item">
-            <span className="context-label">PERIOD</span>
-            <span className="context-val">2024 — 2025</span>
+            <span className="context-label">TECH STACK</span>
+            <span className="context-val">ES6+, Web Speech API, LocalStorage</span>
           </div>
           <div className="context-item">
             <span className="context-label">STATUS</span>
@@ -66,4 +66,4 @@ function CsProjectHeroSection2() {
   );
 }
 
-export default CsProjectHeroSection2;
+export default CsProjectHeroSection3;

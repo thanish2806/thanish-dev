@@ -1,627 +1,331 @@
+/* ==========================================================================
+   EDITORIAL MODAL & DOSSIER CONTACT DIALOG
+   ========================================================================== */
+
 body.menu-open {
   overflow: hidden;
 }
 
-.menupage {
-  display: flex; /* Show when active */
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+.editorial-modal-backdrop {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
-  z-index: 5;
-  animation: fadeIn 0.4s ease-in-out;
-  -webkit-overflow-scrolling: touch;
-}
-
-.menupage.hidden {
-  display: none; /* Hide when inactive */
-  opacity: 0;
-  animation: fadeIn 0.4s ease-in-out;
-}
-.aboutmenu {
-  height: 600px;
-  width: 500px;
-  position: relative;
-  z-index: 999;
-  background-color: var(--secondary-color);
-  box-shadow: 0px 0px 30px #1b1b23;
-  flex-direction: column;
-  list-style-type: none;
-  overflow: hidden;
-  transform: translateY(-100%);
-  opacity: 0;
-}
-.menupage.active .aboutmenu {
-  animation: slideInFromTop 0.8s ease-in-out forwards;
-}
-
-@keyframes slideInFromTop {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-.aboutmetext {
-  padding-top: 50px;
-  padding-left: 70px;
-  display: block;
-  text-align: left;
-  text-decoration: none;
-  color: var(--primary-color);
-  font-size: 30px;
-  font-family: aquafont;
-  font-weight: 400;
-  font-style: normal;
-  margin-right: 20px;
-  opacity: 100%;
-  transition: transform 0.3s ease-in-out;
-}
-.aboutmetext-bg {
-  position: absolute;
-  top: -180px;
-  left: 0px;
-  z-index: -1;
-  color: var(--secondary-text-low-opacity);
-  font-size: 180px;
-  font-family: aquafont;
-  font-weight: 400;
-  font-style: normal;
-  user-select: none; /* Prevent text selection */
-}
-.aboutmerole {
-  padding-left: 70px;
-  display: block;
-  text-align: left;
-  text-decoration: none;
-  color: var(--primary-color);
-  font-size: 17px;
-  font-family: louisgeorgecafe;
-  font-weight: 400;
-  font-style: normal;
-  margin-right: 20px;
-  opacity: 100%;
-  transition: transform 0.3s ease-in-out;
-}
-.aboutcontent {
-  padding: 60px;
-  display: block;
-  text-align: left;
-  text-decoration: none;
-  color: var(--primary-color);
-  font-size: 17.5px;
-  font-family: Roliderounded;
-  font-weight: 400;
-  font-style: normal;
-  margin-right: 13px;
-  opacity: 100%;
-  transition: transform 0.3s ease-in-out;
-  line-height: 1.6;
-}
-.highlightwords {
-  color: var(--highlight-text);
-}
-
-.contactmenu {
-  height: 600px;
-  width: 500px;
-  position: relative;
-  z-index: 999;
-  background-color: var(--primary-color);
-  box-shadow: 0px 0px 30px #1b1b23;
-  flex-direction: column;
-  list-style-type: none;
-  overflow: hidden;
-  transform: translateY(100%);
-  opacity: 0;
-}
-.menupage.active .contactmenu {
-  animation: slideInFromBottom 0.8s ease-in-out forwards;
-}
-
-@keyframes slideInFromBottom {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-/* Contact Form Container */
-#contactForm {
+  background-color: rgba(9, 9, 11, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 2000;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 420px;
-  margin: 0 auto;
-}
-.contactmenutitle {
-  padding-top: 0px;
-  padding-left: 40px;
-  display: block;
-  text-align: left;
-  text-decoration: none;
-  color: var(--secondary-color);
-  font-size: 30px;
-  font-family: aquafont;
-  font-weight: 400;
-  font-style: normal;
-  margin-right: 20px;
-  opacity: 100%;
-  transition: transform 0.3s ease-in-out;
-}
-.contactmenutitle-bg {
-  position: absolute;
-  top: 10px;
-  left: 0px;
-  z-index: -1;
-  color: var(--primary-text-low-opacity);
-  font-size: 180px;
-  font-family: aquafont;
-  font-weight: 400;
-  font-style: normal;
-  user-select: none; /* Prevent text selection */
-}
-.contactmenusubtitle {
-  padding-left: 40px;
-  display: block;
-  text-align: left;
-  text-decoration: none;
-  color: var(--secondary-color);
-  font-size: 16px;
-  font-family: aquafont;
-  font-style: normal;
-  margin-right: 20px;
-  opacity: 100%;
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Form groups */
-.form-group {
-  position: relative;
-}
-
-/* Inputs + Textarea */
-#contactForm input,
-#contactForm textarea {
-  width: 100%;
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid var(--secondary-color);
-  color: var(--secondary-color);
-  font-family: louisgeorgecafe, sans-serif;
-  font-size: 16px;
-  outline: none;
-  padding: 8px 4px;
-  transition: border-color 0.3s ease;
-}
-
-/* Placeholder style */
-#contactForm input::placeholder,
-#contactForm textarea::placeholder {
-  color: rgba(234, 234, 234, 0.5);
-}
-
-/* Floating Labels */
-.form-group label {
-  position: absolute;
-  left: 5px;
-  top: 10px;
-  font-family: louisgeorgecafe, sans-serif;
-  color: var(--secondary-color);
-  font-size: 16px;
-  letter-spacing: 1px;
-  pointer-events: none;
-  transition: all 0.3s ease;
-  opacity: 1;
-}
-
-/* Floating effect */
-#contactForm input:focus + label,
-#contactForm input:not(:placeholder-shown) + label,
-#contactForm textarea:focus + label,
-#contactForm textarea:not(:placeholder-shown) + label {
-  top: -12px;
-  font-size: 14px;
-  opacity: 0.7;
-}
-
-/* Textarea tweaks */
-#contactForm textarea {
-  min-height: 180px;
-  resize: vertical;
-}
-
-/* Validation feedback */
-#contactForm input:invalid,
-#contactForm textarea:invalid {
-  border-color: #d10d04; /* red */
-}
-
-#contactForm input:valid,
-#contactForm textarea:valid {
-  border-color: #0016f9; /* blue */
-}
-.submit {
-  content: "";
-  padding: 15px;
-  height: 36px;
-  width: auto;
-  border-radius: 0px;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  color: #f7f7f7;
-  background: linear-gradient(to right, #0016f9, #d10d04);
-  border: none;
-  transition: box-shadow 0.3s;
-  font-family: Roliderounded;
-  font-size: 17px;
-  letter-spacing: 2px;
-  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out,
-    background -color 0.3s ease-in-out;
-  cursor: pointer;
+  justify-content: center;
+  padding: 32px 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s var(--ease-out-expo);
 }
-.submit:hover {
-  cursor: pointer;
-  box-shadow: 1px 1px 8px var(--secondary-color);
-  transform: scale(1.01);
+
+.editorial-modal-backdrop.is-active {
+  opacity: 1;
+  pointer-events: auto;
 }
-.closeicon {
-  width: 26px;
-  display: flex;
+
+.editorial-modal-window {
   position: relative;
-  margin: 20px;
-  left: 430px;
+  width: 100%;
+  max-width: 1040px;
+  max-height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-hover) transparent;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-hover);
+  border-radius: 20px;
+  box-shadow: 0 32px 64px -16px rgba(0, 0, 0, 0.7);
+  transform: scale(0.96) translateY(12px);
+  transition: transform 0.35s var(--ease-out-expo);
 }
 
-.closeicon:hover {
+/* Dedicated sleek transparent scrollbar for modal window */
+.editorial-modal-window::-webkit-scrollbar {
+  width: 5px;
+}
+
+.editorial-modal-window::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 18px 0;
+}
+
+.editorial-modal-window::-webkit-scrollbar-thumb {
+  background-color: var(--border-hover);
+  border-radius: 9999px;
+  transition: background-color 0.2s var(--ease-out-expo);
+}
+
+.editorial-modal-window::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-primary);
+}
+
+.editorial-modal-backdrop.is-active .editorial-modal-window {
+  transform: scale(1) translateY(0);
+}
+
+.modal-close-trigger {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-elevated);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  transform: scale(1.05);
-  opacity: 80%;
+  z-index: 10;
+  transition: all 0.22s var(--ease-out-expo);
 }
 
+.modal-close-trigger:hover {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: #ffffff;
+  transform: scale(1.05);
+}
 
+/* --------------------------------------------------------------------------
+   2-Column Split Grid
+   -------------------------------------------------------------------------- */
+.modal-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+}
 
+.modal-about-col {
+  padding: 38px 42px;
+  background-color: var(--bg-elevated);
+  border-right: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+}
 
+.modal-contact-col {
+  padding: 38px 42px;
+  display: flex;
+  flex-direction: column;
+}
 
-@media (max-width: 600px) {
-  .aboutmenu {
-    height: auto;
-    width: 100%;
-    position: relative;
-    left: 0px;
-    z-index: 999;
-    background-color: var(--secondary-color);
-    box-shadow: 0px 0px 30px #1b1b23;
-    flex-direction: column;
-    list-style-type: none;
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  .menupage.active .aboutmenu {
-    animation: slideInFromTop 0.8s ease-in-out forwards;
-  }
-  @keyframes slideInFromTop {
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  .aboutmetext {
-    padding-top: 10px;
-    padding-left: 20px;
-    display: block;
-    text-align: left;
-    text-decoration: none;
-    color: var(--primary-color);
-    font-size: 30px;
-    font-family: aquafont;
-    font-weight: 400;
-    font-style: normal;
-    margin-right: 20px;
-    opacity: 100%;
-    transition: transform 0.3s ease-in-out;
-  }
-  .aboutmetext-bg {
-    position: absolute;
-    left: 0px;
-    z-index: -1;
-    color: var(
-      --secondary-text-low-opacity
-    ); /* Light color for background text */
-    font-size: 180px;
-    font-family: aquafont;
-    font-weight: 400;
-    font-style: normal;
-    user-select: none; /* Prevent text selection */
-  }
-  .aboutmerole {
-    padding-left: 20px;
-    display: block;
-    text-align: left;
-    text-decoration: none;
-    color: var(--primary-color);
-    font-size: 20px;
-    font-weight: 400;
-    font-style: normal;
-    margin-right: 20px;
-    opacity: 100%;
-    transition: transform 0.3s ease-in-out;
-    font-family: aquafont;
-  }
-  .aboutcontent {
-    padding: 20px;
-    display: block;
-    text-align: left;
-    text-decoration: none;
-    color: var(--primary-color);
-    font-size: 17px;
-    font-family: Roliderounded;
-    font-weight: 400;
-    font-style: normal;
-    margin-right: 13px;
-    opacity: 100%;
-    transition: transform 0.3s ease-in-out;
-    line-height: 1.6;
-  }
-  .highlightwords {
-    color: var(--highlight-text);
-  }
+.modal-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--accent-primary);
+  margin-bottom: 8px;
+}
 
-  .contactmenu {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    overflow: hidden;
-    width: 100%;
-    z-index: 999;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    box-shadow: 0px 0px 30px #e0e0e7b6;
-    flex-direction: column;
-    list-style-type: none;
-    padding: 10px 0px;
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  .menupage.active .contactmenu {
-    animation: slideInFromBottom 0.8s ease-in-out forwards;
-  }
-  @keyframes slideInFromBottom {
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  .closeicon {
-    width: 26px;
-    display: flex;
-    position: absolute;
-    margin: 20px;
-    left: 0px;
-    margin-left: 90%;
-  }
+.modal-title {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin: 0 0 4px;
+}
 
-  .contactmenutitle {
-    padding-top: 0px;
-    padding-left: 40px;
-    display: block;
-    text-align: left;
-    text-decoration: none;
-    color: var(--secondary-color);
-    font-size: 30px;
-    font-family: aquafont;
-    font-weight: 400;
-    font-style: normal;
-    margin-right: 20px;
-    transition: transform 0.3s ease-in-out;
-    width: fit-content;
-  }
-  .contactmenutitle-bg {
-    position: absolute;
-    left: 0px;
-    z-index: -1;
-    color: var(
-      --secondary-text-low-opacity
-    ); /* Light color for background text */
-    font-size: 180px;
-    font-family: aquafont;
-    font-weight: 400;
-    font-style: normal;
-    user-select: none; /* Prevent text selection */
-  }
-  .contactmenusubtitle {
-    padding-left: 40px;
-    display: block;
-    text-align: left;
-    text-decoration: none;
-    color: var(--secondary-color);
-    font-size: 16px;
-    font-family: aquafont;
-    font-style: normal;
-    margin-right: 20px;
-    transition: transform 0.3s ease-in-out;
-  }
-  /* Contact Form Container */
-  #contactForm {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-    width: 80%;
-    margin: 0 auto;
-    padding: 5px;
-    text-align: left;
-  }
+.modal-role {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin: 0 0 24px;
+}
 
-  /* Form groups */
-  .form-group {
-    position: relative;
-  }
+.modal-bio {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin: 0 0 16px;
+}
 
-  /* Inputs + Textarea */
-  #contactForm input,
-  #contactForm textarea {
-    width: 100%;
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid var(--secondary-color);
-    color: var(--secondary-color);
-    font-family: louisgeorgecafe, sans-serif;
-    font-size: 16px;
-    outline: none;
-    padding: 8px 0px;
-    transition: border-color 0.3s ease;
-  }
+.modal-bio strong {
+  color: var(--text-primary);
+}
 
-  /* Placeholder style */
-  #contactForm input::placeholder,
-  #contactForm textarea::placeholder {
-    color: rgba(234, 234, 234, 0.5);
-  }
+.modal-quick-facts {
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
 
-  /* Floating Labels */
-  .form-group label {
-    position: absolute;
-    left: 5px;
-    top: 10px;
-    font-family: louisgeorgecafe, sans-serif;
-    color: var(--secondary-color);
-    font-size: 16px;
-    letter-spacing: 1px;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    opacity: 1;
-  }
+.fact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
 
-  /* Floating effect */
-  #contactForm input:focus + label,
-  #contactForm input:not(:placeholder-shown) + label,
-  #contactForm textarea:focus + label,
-  #contactForm textarea:not(:placeholder-shown) + label {
-    top: -12px;
-    font-size: 14px;
-    opacity: 0.7;
+.fact-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.fact-val {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text-primary);
+}
+
+.fact-link {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent-primary);
+  text-decoration: none;
+}
+
+.fact-link:hover {
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Contact Form Column
+   -------------------------------------------------------------------------- */
+.modal-contact-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  margin: 0 0 8px;
+}
+
+.modal-contact-desc {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0 0 18px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.field-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+}
+
+.modal-input {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 11px 15px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s var(--ease-out-expo);
+}
+
+.modal-input:focus {
+  border-color: var(--accent-primary);
+}
+
+.modal-textarea {
+  resize: vertical;
+  min-height: 84px;
+}
+
+.form-submit-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.btn-modal-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 24px;
+  border-radius: 9999px;
+  background-color: var(--accent-primary);
+  color: #ffffff;
+  border: 1px solid var(--accent-primary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.22s var(--ease-out-expo);
+}
+
+.btn-modal-submit:hover:not(:disabled) {
+  background-color: #ff6e4d;
+  transform: scale(1.02);
+}
+
+.btn-modal-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-status-feedback {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #10b981;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 860px) {
+  .editorial-modal-backdrop {
+    align-items: flex-start;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 16px;
   }
 
-  /* Textarea tweaks */
-  #contactForm textarea {
-    min-height: 150px;
-    resize: vertical;
+  .editorial-modal-window {
+    max-height: none;
+    margin: auto 0;
   }
 
-  /* Validation feedback */
-  #contactForm input:invalid,
-  #contactForm textarea:invalid {
-    border-color: #d10d04; /* red */
+  .modal-split-grid {
+    grid-template-columns: 1fr;
   }
 
-  #contactForm input:valid,
-  #contactForm textarea:valid {
-    border-color: #0016f9; /* blue */
+  .modal-about-col {
+    padding: 32px 24px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
   }
 
-  .submit {
-    content: "";
-    padding: 15px;
-    height: 36px;
-    width: auto;
-    border-radius: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #f7f7f7;
-    background: linear-gradient(to right, #0016f9, #d10d04);
-    border: none;
-    transition: box-shadow 0.3s;
-    font-family: Roliderounded;
-    font-size: 14px;
-    letter-spacing: 2px;
-    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out,
-      background -color 0.3s ease-in-out;
-    cursor: pointer;
-  }
-  .submit:active {
-    cursor: pointer;
-    box-shadow: 1px 1px 8px var(--secondary-color);
-    transform: scale(1.01);
-  }
-  /* Lock background scroll */
-  body.menu-open {
-    overflow: hidden;
-  }
-
-  /* Fullscreen, scrollable menu page */
-  .menupage {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100dvh;
-    display: flex;
-    flex-direction: column-reverse; 
-    align-items: center;
-    justify-content: flex-start;
-    overflow-y: auto; 
-    -webkit-overflow-scrolling: touch; /* smooth iOS scrolling */
-    background: rgba(0, 0, 0, 0.8);
-    padding-bottom: 50px; /* prevent cutoff at bottom */
-    z-index: 1000;
-    overflow-x: hidden;
-  }
-
-  /* About and Contact menus */
-  .aboutmenu,
-  .contactmenu {
-    width: 100%;
-    height: auto; /* expand with content */
-    overflow: visible; /* ensure inner content visible */
-    transform: translateY(0); /* remove offscreen transform */
-    opacity: 1;
-    animation: none; /* disable slide animation */
-    box-shadow: 0px 0px 30px #1b1b23;
-  }
-
-  /* About menu content tweaks */
-  .aboutmetext {
-    padding: 10px 20px;
-    font-size: 30px;
-  }
-  .aboutmerole {
-    padding-left: 20px;
-    font-size: 20px;
-  }
-  .aboutcontent {
-    padding: 20px;
-    font-size: 17px;
-  }
-
-  /* Contact menu tweaks */
-  .contactmenutitle,
-  .contactmenusubtitle {
-    padding-left: 20px;
-  }
-
-  #contactForm {
-    width: 90%;
-    margin: 0 auto;
-    padding: 10px 0;
-    gap: 20px;
-  }
-
-  .submit {
-    font-size: 14px;
-    width: auto;
-    padding: 12px 15px;
-  }
-
-  .closeicon {
-    left: auto;
-    right: 10px;
-    margin-left: 0;
+  .modal-contact-col {
+    padding: 32px 24px;
   }
 }
