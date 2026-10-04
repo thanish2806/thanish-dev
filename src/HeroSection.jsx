@@ -62,7 +62,12 @@ function HeroSection() {
           closeMobileNav={() => setIsMobileOpen(false)}
         />
         {/* Hamburger for mobile */}
-        <button className="hamburger-btn" onClick={toggleMobileNav} aria-label="Toggle Mobile Menu" aria-expanded={isMobileOpen}>
+        <button
+          className="hamburger-btn"
+          onClick={toggleMobileNav}
+          aria-label="Toggle mobile menu"
+          aria-expanded={isMobileOpen}
+        >
           <span className="line line-1"></span>
           <span className="line line-2"></span>
           <span className="line line-3"></span>

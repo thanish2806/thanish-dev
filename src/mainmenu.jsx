@@ -24,6 +24,7 @@ function Mainmenu({ isVisible, onClose }) {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setStatusMessage("Sending...");
 
     emailjs
       .sendForm(
