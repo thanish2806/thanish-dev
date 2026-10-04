@@ -24,7 +24,7 @@ const Navbar = ({ toggleMenu, isMobileOpen, closeMobileNav }) => {
   };
 
   return (
-    <div className="content">
+    <nav className="content" aria-label="Main Navigation">
       {/* Show normal navigation if NOT case study page */}
       {!isCaseStudyPage && (
         <>
@@ -96,7 +96,7 @@ const Navbar = ({ toggleMenu, isMobileOpen, closeMobileNav }) => {
       {/* Show case study navigation ONLY on case study page */}
       {isCaseStudyPage && (
         <>
-          <div className="casestudy-navigation ">
+          <nav className="casestudy-navigation " aria-label="Case Study Navigation">
             <ul>
               <li className="cs-navigationpc">
                 <Link to="/">Turn back to Home</Link>
@@ -108,7 +108,7 @@ const Navbar = ({ toggleMenu, isMobileOpen, closeMobileNav }) => {
                 <a onClick={toggleMenu}>Contact</a>
               </li>
             </ul>
-          </div>
+          </nav>
           {/* Mobile Navigation */}
 
           <div className={`navigation-mobile ${isMobileOpen ? "open" : ""}`}>
@@ -141,7 +141,7 @@ const Navbar = ({ toggleMenu, isMobileOpen, closeMobileNav }) => {
           </div>
         </>
       )}
-    </div>
+    </nav>
   );
 };
 

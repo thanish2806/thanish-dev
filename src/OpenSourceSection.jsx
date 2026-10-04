@@ -7,10 +7,10 @@ function OpenSourceSection() {
   const [hovered, setHovered] = useState(null);
   const containerRef = useScrollAnimation();
   return (
-    <div className="opensource-section" ref={containerRef}>
+    <section className="opensource-section" ref={containerRef} aria-label="Experiments and Open Source">
       <div className="heading-container">
         <p className="heading-1">Experiments & Open Source</p>
-        <p className="heading-2">Web is fun.</p>
+        <h2 className="heading-2">Web is fun.</h2>
       </div>
       <div className="element-container-main">
         <div className="element-container-cover-1"></div>
@@ -85,7 +85,7 @@ function OpenSourceSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

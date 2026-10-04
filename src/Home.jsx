@@ -19,7 +19,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="home">
+    <main className="home">
       {loading && <Loader />} {/* show loader while loading */}
       {!loading && (
         <>
@@ -41,7 +41,7 @@ function Home() {
           <Footer />
         </>
       )}
-    </div>
+    </main>
   );
 }
 
