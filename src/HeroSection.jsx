@@ -44,10 +44,10 @@ function HeroSection() {
   }, []);
 
   return (
-    <div className="herosection-section" onMouseMove={handleMouseMove}>
+    <section className="herosection-section" onMouseMove={handleMouseMove}>
       {/* Top logo + navbar */}
       <div className="herosectiob-background-shape"></div>
-      <div className={`top-content ${isActive ? "active" : ""}`}>
+      <header className={`top-content ${isActive ? "active" : ""}`}>
         <div className="top-logo">
           <img
             onClick={handleImageClick}
@@ -62,17 +62,18 @@ function HeroSection() {
           closeMobileNav={() => setIsMobileOpen(false)}
         />
         {/* Hamburger for mobile */}
-        <button className="hamburger-btn" onClick={toggleMobileNav}>
+        <button className="hamburger-btn" onClick={toggleMobileNav} aria-label="Toggle Mobile Menu" aria-expanded={isMobileOpen}>
           <span className="line line-1"></span>
           <span className="line line-2"></span>
           <span className="line line-3"></span>
         </button>
-      </div>
+      </header>
 
       <img
         src={Bglogo}
         className="background-logo"
-        alt="Logo"
+        alt=""
+        aria-hidden="true"
         style={{
           transform: `translate(${mouseX / 80}px, ${mouseY / 80}px)`,
         }}
@@ -92,11 +93,12 @@ function HeroSection() {
         <button onClick={scrollToProjects} className="works-button">
           Works
         </button>
-        <button onClick={scrollToProjects} className="arrow-button">
+        <button onClick={scrollToProjects} className="arrow-button" aria-label="Scroll to Works">
           <img
             className="arrow"
             src={isDarkTheme ? downarrowdark : downarrowlight}
-            alt="Arrow"
+            alt=""
+            aria-hidden="true"
           />
         </button>
       </div>
@@ -153,7 +155,7 @@ function HeroSection() {
       {isMenuVisible && (
         <Mainmenu isVisible={isMenuVisible} onClose={toggleMenu} />
       )}
-    </div>
+    </section>
   );
 }
 

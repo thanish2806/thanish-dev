@@ -20,7 +20,7 @@ function Footer() {
       <img
         className="logo-bottom"
         src={Bglogo}
-        alt="Logo"
+        alt="Thanish Logo"
         onClick={() => (window.location.href = "")}
       />
 
@@ -52,6 +52,7 @@ function Footer() {
           href="https://codepen.io/Thanish2806"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="CodePen"
         >
           <img
             className="github"
@@ -63,11 +64,12 @@ function Footer() {
           href="https://dribbble.com/thanish2806"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Dribbble"
         >
           <img
             className="dribble"
             src={isDarkTheme ? DribbleDark : Dribblelight}
-            alt="dribble"
+            alt="Dribbble"
           />
         </a>
       </div>

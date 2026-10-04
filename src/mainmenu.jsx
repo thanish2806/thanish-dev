@@ -27,10 +27,10 @@ function Mainmenu({ isVisible, onClose }) {
 
     emailjs
       .sendForm(
-        "service_a2q9d2o", // replace with your EmailJS service ID
-        "template_azflrgv", // replace with your EmailJS template ID
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        "LxdIsE7-MlpRc98rP" // replace with your EmailJS public key
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -84,8 +84,16 @@ function Mainmenu({ isVisible, onClose }) {
         <img
           className="closeicon"
           onClick={onClose}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              onClose();
+            }
+          }}
           src={isDarkTheme ? closeicondark : closeiconlight}
-          alt="Close"
+          alt="Close Contact Menu"
+          aria-label="Close Contact Menu"
+          role="button"
+          tabIndex={0}
         />
         <p className="contactmenutitle">Let's Talk.</p>
         <p className="contactmenutitle-bg">Contact Me.`</p>
