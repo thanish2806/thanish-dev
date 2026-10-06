@@ -1,0 +1,3 @@
+## 2024-03-24 - React Code Splitting for Route Components
+**Learning:** In a single-page application, all route components are bundled into the main index JS file by default, causing unnecessary initial page load size for components that are rarely visited by default.
+**Action:** Implemented React.lazy code splitting for Case Study pages in App.jsx. This reduced the main index chunk size from ~418.77 kB to ~400.43 kB. Used `Loader` component as fallback in `React.Suspense`.
