@@ -88,7 +88,7 @@ const Navbar = ({ toggleMenu }) => {
             className="nav-brand"
             aria-label="Thanish Dev Portfolio - Return to top"
           >
-            <span className="nav-brand-text">THANISH.DEV</span>
+            <span className="nav-brand-text">THANISH P</span>
           </a>
         </div>
 

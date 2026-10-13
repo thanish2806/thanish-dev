@@ -161,43 +161,6 @@ function HeroSection({ toggleMenu }) {
               </a>
             </div>
           </div>
-
-          {/* Right Column: Interactive Browser Frame Stage */}
-          <div className="hero-stage-col">
-            <div className="editorial-browser-frame">
-              {/* Browser Chrome Header */}
-              <div className="browser-chrome-bar">
-                <div className="browser-traffic-dots" aria-hidden="true">
-                  <span className="dot dot-close" />
-                  <span className="dot dot-min" />
-                  <span className="dot dot-max" />
-                </div>
-                <div className="browser-url-pill">
-                  <span className="url-security-icon" aria-hidden="true">🔒</span>
-                  <span className="url-text">nanalcafe.netlify.app</span>
-                </div>
-                <div className="browser-meta-status">
-                  <span className="status-live-indicator" />
-                  <span className="status-text">LIVE PREVIEW</span>
-                </div>
-              </div>
-
-              {/* Viewport Content with Subtle Elevation & Image Scale */}
-              <div className="browser-viewport">
-                <img
-                  src={NanalcafeUi}
-                  alt="Nanal Cafe Modern Restaurant Web Interface by Thanish"
-                  className="browser-screenshot"
-                  loading="eager"
-                />
-                <div className="browser-floating-badge">
-                  <span className="badge-idx">FEATURED 01</span>
-                  <span className="badge-name">Nanal Cafe Redesign</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
