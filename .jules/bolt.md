@@ -1,0 +1,3 @@
+## 2026-10-13 - Code Splitting Heavy Route Components
+**Learning:** In a single-page React application with rich visual content and animations (GSAP, framer-motion) like this portfolio, statically importing all route components (especially distinct "Case Study" pages) results in a monolithic bundle. This inflates the initial payload with CSS and JS for pages the user may never visit.
+**Action:** Always employ `React.lazy` and `Suspense` for top-level route components to enable chunking/code-splitting. This ensures users only download the assets necessary for the route they are currently viewing, vastly improving initial load performance.
